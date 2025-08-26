@@ -1,4 +1,4 @@
-import { IoSunny } from "react-icons/io5";
+import { LuSun } from "react-icons/lu";
 import { useEffect, useState } from "react";
 
 function DarkModeToggle() {
@@ -18,15 +18,15 @@ function DarkModeToggle() {
 
     return (
         <div>
-            <label class="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" value="" class="sr-only peer"/>
-                    <div class="
-                    h-6 w-13 border-1 rounded-full 
-                    peer-focus:outline-none
-                    after:absolute after:bg-black after:content-[''] after:h-5 after:w-5 after:rounded-full after:top-[2px] after:left-[3px]" ></div>
+            <label className="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" className="sr-only peer"/>
+                    <div className="h-8 w-16  rounded-full peer-focus:outline-none bg-gradient-to-b from-[#f1a902] to-[#f5e000] dark:from-[#302ca5] dark:to-[#60aee2] shadow-inner"></div>
+                    <div className="absolute bg-bg-light text-[#f1a902] dark:text-[#4a5cc0] dark:bg-bg-light-dark text-md h-6 w-6 rounded-full top-[4px] left-[5px] peer-checked:translate-x-[31px] transition-all duration-300 flex items-center justify-center">
+                       <LuSun/>
+                    </div>
+                    
             </label>
         </div>
     )
 }
-
 export default DarkModeToggle
