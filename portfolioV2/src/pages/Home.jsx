@@ -1,31 +1,23 @@
-import DarkModeToggle from "../components/DarkModeToggle"
+//Components
 import Header from "../components/Header"
-import Nav from "../components/nav"
-import DisplayMedia from "../components/DisplayMedia";
-import NavigationCard from "../components/NavigationCard";
+import SidePanelMobile from "../components/SidePanelMobile";
+
+
 // Icons
 import { MdOutlineFileDownload } from "react-icons/md";
-import { IoSchoolOutline } from "react-icons/io5";
-import { PiBagSimple } from "react-icons/pi";
-import { GoLightBulb } from "react-icons/go";
-import { FaPhoneAlt } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { FaQuoteRight } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FiGithub } from "react-icons/fi";
-import { MdMailOutline } from "react-icons/md";
-import { FaFigma } from "react-icons/fa6";
 
 
 function Home() {
     return (
         <div className="bg-bg dark:bg-bg-dark min-h-screen">
             <Header />
-
-            <section className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[100px] 2xl:px-[120px] mt-[65px]">
-
+            <section className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] mt-[65px]
+                                flex flex-col items-stretch
+                                lg:flex-row">
                 {/* Hero */}
-                <div className="mb-8 border-2 border-yellow-400">
+                <div className="mb-8 flex flex-col border-2
+                                lg:mb-0 lg:flex-3">
                     {/* Student in Engineering */}
                     <div className="mb-6 flex justify-center lg:justify-start">
                         <span className=" uppercase bg-gradient-to-l from-[#0D99FF] to-[#1483D5] bg-clip-text text-transparent tracking-widest font-poppins text-[0.8rem] font-semibold flex items-center gap-2">
@@ -49,32 +41,18 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row md:items-stretch justify-center  border-2 border-red-400">
-                    {/* Bloc 1 */}
-                    <div className="flex flex-row-reverse gap-3 mb-3 border-2">
-                        {/* Navigation Box */}
-                        <div className="bg-bg-light dark:bg-bg-light-dark inline-flex w-full md:w-[325px] flex-col rounded-md">
-                            <NavigationCard Icon={GoLightBulb} title='My project' subtitle='Over +20 projects completed' />
-                            <NavigationCard Icon={FaArrowRightLong} title='My Education' subtitle='5 years in computer science' />
-                            <NavigationCard Icon={PiBagSimple} title='My Experience' subtitle='+4 jobs hold' />
-                        </div>
-                        {/* Media */}
-                        <div className="bg-bg-light dark:bg-bg-light-dark rounded-md p-4 inline-flex flex-col justify-between">
-                            <DisplayMedia Icon={FiGithub} />
-                            <DisplayMedia Icon={MdMailOutline} />
-                            <DisplayMedia Icon={FaFigma} />
-                            <DisplayMedia Icon={FaLinkedinIn} />
-                        </div>
+
+                <div className="border-1 flex flex-2">
+                    {/* width < lg */}
+                    <div className="w-full">
+                        <SidePanelMobile/>
                     </div>
-                    {/* Quote */}
-                    <div className="flex flex-col gap-4 p-4  bg-bg-light dark:bg-bg-dark border-2">
-                        <div className="flex flex-row justify-between">
-                            <span className="text-text dark:text-text-dark font-poppins font-semibold flex items-center gap-2"><span className="bg-primary h-1 w-2 flex rounded-full"></span> Cender Xenos</span>
-                            <FaQuoteRight className="text-3xl text-[#3F3D56]" />
-                        </div>
-                        <p className="text-text-muted dark:text-text-muted-dark text-[0.85rem] text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel nisi tristique sem ultricies molestie. Fusce lacinia metus nec condimentum tincidunt. Nunc in molestie ligula.</p>
+                    {/* width > lg */}
+                    <div>
+                        
                     </div>
                 </div>
+
             </section >
         </div >
     )
