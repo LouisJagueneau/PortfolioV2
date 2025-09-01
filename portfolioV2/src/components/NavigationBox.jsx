@@ -33,7 +33,7 @@ function NavigationBox() {
         >
           {/* Bloc gauche */}
           <div className="flex items-center gap-5">
-            <div className="border border-black/10 rounded-md p-2 text-xl">
+            <div className="border border-black/10 dark:border-white/10 rounded-md p-2 text-xl text-text dark:text-text-dark">
               {item.icon}
             </div>
             <div className="flex flex-col gap-1">
@@ -47,7 +47,7 @@ function NavigationBox() {
           </div>
 
           {/* Flèche */}
-          <FaArrowRightLong />
+          <FaArrowRightLong className="text-text dark:text-text-dark" />
         </div>
       ))}
     </div>

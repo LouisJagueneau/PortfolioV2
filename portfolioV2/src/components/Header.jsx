@@ -4,8 +4,8 @@ import Nav from "./nav"
 
 function Header() {
     return (
-        <div>
-            <div className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[100px] 2xl:px-[120px] py-4 border-b-1 border-black/5 dark:border-white/5">
+        <div className="border-b-1 border-black/5 dark:border-white/5">
+            <div className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] py-4 ">
                 <div className="flex items-center justify-between">
                     {/* Left-Part (Logo) */}
                     <div className="text-red-400 sm:text-gray-500 md:text-blue-400 lg:text-amber-400 xl:text-green-400 2xl:text-purple-400">
