@@ -2,9 +2,12 @@
 import Header from "../components/Header"
 import SidePanelMobile from "../components/SidePanelMobile";
 import SidePanelPC from "../components/SidePanelPC";
+import IntroductionCard from "../components/IntroductionCard";
 
 // Icons
 import { MdOutlineFileDownload } from "react-icons/md";
+
+import ProfilePictureV2 from "../assets/ProfilePictureV2.png"
 
 
 function Home() {
@@ -45,19 +48,77 @@ function Home() {
                     </div>
                 </div>
 
-
                 <div className="flex lg:flex-2 2xl:flex-3">
-                    {/* width < lg */}
                     <div className="w-full lg:hidden">
                         <SidePanelMobile />
                     </div>
-                    {/* width > lg */}
                     <div className="hidden lg:flex lg:ml-18 2xl:ml-0">
                         <SidePanelPC />
                     </div>
                 </div>
 
             </section >
+
+            {/* About me Section */}
+            <section className="bg-bg-secondary dark:bg-bg-dark">
+                <div className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] mt-[65px]">
+
+
+                    <div className="py-[50px]">
+
+                        {/* Title Div */}
+                        <div className="text-center xl:text-start mb-10">
+                            <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">About me</span>
+                            <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">My profile</h2>
+                        </div>
+
+
+                        <div className="flex flex-col justify-center items-center gap-12
+                                        xl:flex-row xl:items-stretch">
+
+                            <img src={ProfilePictureV2}
+                                alt="ProfilePictureV2"
+                                className="p-2 rounded-md w-80 xl:w-auto 2xl:w-3/4 bg-bg-light-secondary dark:bg-bg-ultralight-dark"
+                            />
+
+                            <div className="flex flex-col gap-8 items-center">
+                                
+                                <div className="text-center xl:text-start flex flex-col gap-3">
+                                    <h3 className="font-rem font-semibold text-[22px] 2xl:text-[28px] text-text dark:text-text-dark">Student in computer science</h3>
+                                    <p className="font-poppins text-[0.75rem] 2xl:text-[0.90rem] text-text-muted dark:text-text-muted-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula odio. Etiam laoreet nulla eu feugiat elementum. Ut ut pretium elit, eget finibus urna. Mauris a ante ut eros porttitor ullamcorper non eu ex. </p>
+                                </div>
+                                
+                                <div className="grid grid-cols-1 gap-y-3 
+                                                sm:w-4/5 
+                                                md:grid-cols-2 md:w-full md:gap-x-5 md:gap-y-5
+                                                2xl:gap-x-9 2xl:gap-y-9">
+
+                                    <IntroductionCard
+                                        title="Objectives"
+                                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula odio. Etiam laoreet nulla eu feugiat elementum"
+                                    />
+                                    <IntroductionCard
+                                        title="Philosophy"
+                                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula odio. Etiam laoreet nulla eu feugiat elementum"
+                                    />
+                                    <IntroductionCard
+                                        title="Team Spirit"
+                                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula odio. Etiam laoreet nulla eu feugiat elementum"
+                                    />
+                                    <IntroductionCard
+                                        title="Hobbies"
+                                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula odio. Etiam laoreet nulla eu feugiat elementum"
+                                    />
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
         </div >
     )
 }
