@@ -3,6 +3,7 @@ import Header from "../components/Header"
 import SidePanelMobile from "../components/SidePanelMobile";
 import SidePanelPC from "../components/SidePanelPC";
 import IntroductionCard from "../components/IntroductionCard";
+import CareerTimeLine from "../components/CareerTimeLine";
 
 // Icons
 import { MdOutlineFileDownload } from "react-icons/md";
@@ -74,7 +75,7 @@ function Home() {
 
 
                         <div className="flex flex-col justify-center items-center gap-12
-                                        xl:flex-row xl:items-stretch">
+                                        lg:flex-row xl:items-stretch">
 
                             <img src={ProfilePictureV2}
                                 alt="ProfilePictureV2"
@@ -82,12 +83,12 @@ function Home() {
                             />
 
                             <div className="flex flex-col gap-8 items-center">
-                                
-                                <div className="text-center xl:text-start flex flex-col gap-3">
+
+                                <div className="text-center lg:text-start flex flex-col gap-3">
                                     <h3 className="font-rem font-semibold text-[22px] 2xl:text-[28px] text-text dark:text-text-dark">Student in computer science</h3>
                                     <p className="font-poppins text-[0.75rem] 2xl:text-[0.90rem] text-text-muted dark:text-text-muted-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula odio. Etiam laoreet nulla eu feugiat elementum. Ut ut pretium elit, eget finibus urna. Mauris a ante ut eros porttitor ullamcorper non eu ex. </p>
                                 </div>
-                                
+
                                 <div className="grid grid-cols-1 gap-y-3 
                                                 sm:w-4/5 
                                                 md:grid-cols-2 md:w-full md:gap-x-5 md:gap-y-5
@@ -117,7 +118,23 @@ function Home() {
 
                     </div>
                 </div>
+            </section >
+
+            <section className="bg-bg dark:bg-bg-dark container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] my-[65px]">
+                <div>
+                    
+                    {/* Title Div */}
+                    <div className="text-center xl:text-start mb-10">
+                        <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Experiences</span>
+                        <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">Professional Pathway</h2>
+                    </div>
+                    
+                    <div>
+                        <CareerTimeLine />
+                    </div>
+                </div>
             </section>
+
 
         </div >
     )
