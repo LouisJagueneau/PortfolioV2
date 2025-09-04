@@ -4,6 +4,9 @@ import SidePanelMobile from "../components/SidePanelMobile";
 import SidePanelPC from "../components/SidePanelPC";
 import IntroductionCard from "../components/IntroductionCard";
 import CareerTimeLine from "../components/CareerTimeLine";
+import EducationCard from "../components/EducationCard";
+import WorkCard from "../components/WorkCard";
+
 
 // Icons
 import { MdOutlineFileDownload } from "react-icons/md";
@@ -122,19 +125,46 @@ function Home() {
 
             <section className="bg-bg dark:bg-bg-dark container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] my-[65px]">
                 <div>
-                    
+
                     {/* Title Div */}
                     <div className="text-center xl:text-start mb-10">
                         <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Experiences</span>
                         <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">Professional Pathway</h2>
                     </div>
-                    
+
                     <div>
                         <CareerTimeLine />
                     </div>
                 </div>
             </section>
 
+            <section className="bg-bg dark:bg-bg-dark container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] my-[65px]">
+                {/* Title Div */}
+                <div className="text-center xl:text-start mb-10">
+                    <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Education</span>
+                    <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">Diploma Pathway</h2>
+                </div>
+
+                <div className="">
+                    <EducationCard title='Work-study Engineering Programme' fromDate='2021' toDate='2025' school='CESI' tags={["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"]} borderDown='false' borderUp='true' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus' />
+                    <EducationCard title='Integrated Preparatory Class' fromDate='2019' toDate='2021' school='CESI' tags={["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"]} borderDown='false' borderUp='true' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus' />
+                    <EducationCard title='General Baccalaureate (HighSchool Diploma)' fromDate='2016' toDate='2019' school='CESI' tags={["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"]} borderDown='true' borderUp='true' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus' />
+                </div>
+            </section>
+
+            <section className="bg-bg-secondary dark:bg-bg-secondary-dark">
+                <div className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] py-[65px]">
+                    {/* Title Div */}
+                    <div className="text-center mb-10">
+                        <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Projects</span>
+                        <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">My Work</h2>
+                    </div>
+                    <div>
+                        <WorkCard />
+                    </div>
+
+                </div>
+            </section>
 
         </div >
     )
