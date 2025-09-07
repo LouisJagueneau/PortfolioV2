@@ -10,6 +10,7 @@ import WorkCard from "../components/WorkCard";
 
 // Icons
 import { MdOutlineFileDownload } from "react-icons/md";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 import ProfilePictureV2 from "../assets/ProfilePictureV2.png"
 
@@ -159,8 +160,15 @@ function Home() {
                         <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Projects</span>
                         <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">My Work</h2>
                     </div>
-                    <div>
-                        <WorkCard />
+                    <div className="border-2 gap-5 grid grid-cols-1 mb-8
+                                    md:grid-cols-2  md:gap-8 
+                                    lg:grid-cols-3 lg:gap-5 ">
+                        < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                        < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                        < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                    </div>
+                    <div className="flex justify-center">
+                        <button className="font-poppins text-white bg-primary px-4 py-2 rounded-md flex items-center font-medium gap-2">More Projects <FaArrowRightLong /></button>
                     </div>
 
                 </div>
