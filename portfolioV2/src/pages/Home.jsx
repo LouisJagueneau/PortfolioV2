@@ -6,11 +6,15 @@ import IntroductionCard from "../components/IntroductionCard";
 import CareerTimeLine from "../components/CareerTimeLine";
 import EducationCard from "../components/EducationCard";
 import WorkCard from "../components/WorkCard";
-
+import SkillBox from "../components/SkillBox";
 
 // Icons
 import { MdOutlineFileDownload } from "react-icons/md";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { IoLogoReact } from "react-icons/io5";
+import { FaFigma } from "react-icons/fa6";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { IoLogoJavascript } from "react-icons/io5";
 
 import ProfilePictureV2 from "../assets/ProfilePictureV2.png"
 
@@ -165,13 +169,74 @@ function Home() {
                                     lg:grid-cols-3 lg:gap-5 ">
                         < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
                         < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
-                        < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                        <div className="md:col-span-2 md:flex md:justify-center lg:flex-none lg:col-span-1">
+                            < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                        </div>
                     </div>
                     <div className="flex justify-center">
                         <button className="font-poppins text-white bg-primary px-4 py-2 rounded-md flex items-center font-medium gap-2">More Projects <FaArrowRightLong /></button>
                     </div>
 
                 </div>
+            </section>
+            <section className="bg-bg dark:bg-bg-dark container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] py-[65px]">
+
+                {/* Title Div */}
+                <div className="text-center mb-10">
+                    <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Projects</span>
+                    <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">My Work</h2>
+                </div>
+
+                <div className="flex flex-col gap-6 mb-10">
+                    <div className="">
+                        <h3 className="font-rem text-[1.6rem] font-medium relative inline-flex">Front-End & Design
+                            <span className="absolute bg-primary h-[0.10rem] w-[105%] rounded-full left-0 bottom-[-5px]"></span>
+                        </h3>
+                    </div>
+                    <div className="flex flex-wrap gap-4">
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={IoLogoReact} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-primary'}/>
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={FaFigma} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#f24e1f]'}/>
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={RiTailwindCssFill} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#3bb1af]'} />
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={IoLogoJavascript} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#efd81d]'} />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex flex-col gap-6 mb-10">
+                    <div className="">
+                        <h3 className="font-rem text-[1.6rem] font-medium relative inline-flex">Back-end & Databases
+                            <span className="absolute bg-primary h-[0.15rem] w-[105%] rounded-full left-0 bottom-[-5px]"></span>
+                        </h3>
+                    </div>
+                    
+                </div>
+
+                <div className="flex flex-col gap-6 mb-10">
+                    <div className="">
+                        <h3 className="font-rem text-[1.6rem] font-medium relative inline-flex">No-Code & Low-Code
+                            <span className="absolute bg-primary h-[0.15rem] w-[120%] rounded-full left-0 bottom-[-5px]"></span>
+                        </h3>
+                    </div>
+                    
+                </div>
+
+                <div className="flex flex-col gap-6 mb-10">
+                    <div className="">
+                        <h3 className="font-rem text-[1.6rem] font-medium relative inline-flex">Soft Skills
+                            <span className="absolute bg-primary h-[0.15rem] w-[120%] rounded-full left-0 bottom-[-5px]"></span>
+                        </h3>
+                    </div>
+                    
+                </div>
+
+
             </section>
 
         </div >
