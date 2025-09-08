@@ -25,6 +25,13 @@ import { DiMsqlServer } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
 import { SiMongodb } from "react-icons/si";
 
+//Images
+import DataverseIcon from '../assets/Dataverse.webp'
+import PowerFxIcon from '../assets/PowerFx.png'
+import PowerAppsIcon from '../assets/PowerApps.png'
+import PowerAutomateIcon from '../assets/PowerAutomate.png'
+import PowerBiIcon from '../assets/PowerBI.webp'
+
 
 import ProfilePictureV2 from "../assets/ProfilePictureV2.png"
 
@@ -205,10 +212,10 @@ function Home() {
                     </div>
                     <div className="flex flex-wrap gap-4">
                         <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={IoLogoReact} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-primary'}/>
+                            <SkillBox Icon={IoLogoReact} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-primary'} />
                         </div>
                         <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={FaFigma} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#f24e1f]'}/>
+                            <SkillBox Icon={FaFigma} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#f24e1f]'} />
                         </div>
                         <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
                             <SkillBox Icon={RiTailwindCssFill} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#3bb1af]'} />
@@ -233,28 +240,28 @@ function Home() {
                     </div>
                     <div className="flex flex-wrap gap-4">
                         <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={SiExpress} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-black'}/>
+                            <SkillBox Icon={SiExpress} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-black'} />
                         </div>
                         <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={FaPhp} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#294555]'}/>
+                            <SkillBox Icon={FaPhp} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#294555]'} />
                         </div>
                         <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={FaLaravel} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#f72211]'}/>
+                            <SkillBox Icon={FaLaravel} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#f72211]'} />
                         </div>
                         <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={FaNodeJs} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#7ec727]'}/>
+                            <SkillBox Icon={FaNodeJs} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#7ec727]'} />
                         </div>
                         <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={DiMsqlServer} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#e62b3a]'}/>
+                            <SkillBox Icon={DiMsqlServer} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#e62b3a]'} />
                         </div>
                         <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={GrMysql} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#255278]'}/>
+                            <SkillBox Icon={GrMysql} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#255278]'} />
                         </div>
                         <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={SiMongodb} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#3f9937]'}/>
+                            <SkillBox Icon={SiMongodb} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#3f9937]'} />
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <div className="flex flex-col gap-6 mb-10">
@@ -264,25 +271,67 @@ function Home() {
                         </h3>
                     </div>
                     <div className="flex flex-wrap gap-4">
+                        {/* Dataverse */}
                         <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={SiExpress} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-black'}/>
+                            <div className="flex flex-col gap-2 mb-1">
+                                <img src={DataverseIcon} width={20} height={20} alt="DataverseIcon" />
+                                <span className="font-poppins font-medium text-black/75">Dataverse</span>
+                            </div>
+                            <div className="text-[0.8rem] font-poppins text-text-muted flex flex-wrap gap-1">
+                                <span>Components, </span>
+                                <span>Hooks, </span>
+                                <span>States, </span>
+                            </div>
                         </div>
-                        
-                        
+                        {/* Power Apps */}
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <div className="flex flex-col gap-2 mb-1">
+                                <img src={PowerFxIcon} width={20} height={20} alt="PowerFxIcon" />
+                                <span className="font-poppins font-medium text-black/75">Dataverse</span>
+                            </div>
+                            <div className="text-[0.8rem] font-poppins text-text-muted flex flex-wrap gap-1">
+                                <span>Components, </span>
+                                <span>Hooks, </span>
+                                <span>States, </span>
+                            </div>
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <div className="flex flex-col gap-2 mb-1">
+                                <img src={PowerAppsIcon} width={20} height={20} alt="PowerAppsIcon" />
+                                <span className="font-poppins font-medium text-black/75">Dataverse</span>
+                            </div>
+                            <div className="text-[0.8rem] font-poppins text-text-muted flex flex-wrap gap-1">
+                                <span>Components, </span>
+                                <span>Hooks, </span>
+                                <span>States, </span>
+                            </div>
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <div className="flex flex-col gap-2 mb-1">
+                                <img src={PowerAutomateIcon} width={20} height={20} alt="PowerFxIcon" />
+
+                                <span className="font-poppins font-medium text-black/75">Dataverse</span>
+                            </div>
+                            <div className="text-[0.8rem] font-poppins text-text-muted flex flex-wrap gap-1">
+                                <span>Components, </span>
+                                <span>Hooks, </span>
+                                <span>States, </span>
+                            </div>
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <div className="flex flex-col gap-2 mb-1">
+                                <img src={PowerBiIcon} width={20} height={20} alt="PowerFxIcon" />
+
+                                <span className="font-poppins font-medium text-black/75">Dataverse</span>
+                            </div>
+                            <div className="text-[0.8rem] font-poppins text-text-muted flex flex-wrap gap-1">
+                                <span>Components, </span>
+                                <span>Hooks, </span>
+                                <span>States, </span>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
-
-                <div className="flex flex-col gap-6 mb-10">
-                    <div className="">
-                        <h3 className="font-rem text-[1.6rem] font-medium relative inline-flex">Soft Skills
-                            <span className="absolute bg-primary h-[0.15rem] w-[120%] rounded-full left-0 bottom-[-5px]"></span>
-                        </h3>
-                    </div>
-                    
-                </div>
-
-
             </section>
 
         </div >
