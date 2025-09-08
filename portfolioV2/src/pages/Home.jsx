@@ -15,6 +15,16 @@ import { IoLogoReact } from "react-icons/io5";
 import { FaFigma } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+import { FaPhp } from "react-icons/fa6";
+import { FaNodeJs } from "react-icons/fa";
+import { FaLaravel } from "react-icons/fa";
+import { DiMsqlServer } from "react-icons/di";
+import { GrMysql } from "react-icons/gr";
+import { SiMongodb } from "react-icons/si";
+
 
 import ProfilePictureV2 from "../assets/ProfilePictureV2.png"
 
@@ -183,8 +193,8 @@ function Home() {
 
                 {/* Title Div */}
                 <div className="text-center mb-10">
-                    <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Projects</span>
-                    <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">My Work</h2>
+                    <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Skills</span>
+                    <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">My Competencies</h2>
                 </div>
 
                 <div className="flex flex-col gap-6 mb-10">
@@ -206,6 +216,12 @@ function Home() {
                         <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
                             <SkillBox Icon={IoLogoJavascript} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#efd81d]'} />
                         </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={FaHtml5} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#dd4b25]'} />
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={FaCss3Alt} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#254bdd]'} />
+                        </div>
                     </div>
                 </div>
 
@@ -215,6 +231,29 @@ function Home() {
                             <span className="absolute bg-primary h-[0.15rem] w-[105%] rounded-full left-0 bottom-[-5px]"></span>
                         </h3>
                     </div>
+                    <div className="flex flex-wrap gap-4">
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={SiExpress} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-black'}/>
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={FaPhp} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#294555]'}/>
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={FaLaravel} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#f72211]'}/>
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={FaNodeJs} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#7ec727]'}/>
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={DiMsqlServer} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#e62b3a]'}/>
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={GrMysql} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#255278]'}/>
+                        </div>
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={SiMongodb} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#3f9937]'}/>
+                        </div>
+                    </div>
                     
                 </div>
 
@@ -223,6 +262,13 @@ function Home() {
                         <h3 className="font-rem text-[1.6rem] font-medium relative inline-flex">No-Code & Low-Code
                             <span className="absolute bg-primary h-[0.15rem] w-[120%] rounded-full left-0 bottom-[-5px]"></span>
                         </h3>
+                    </div>
+                    <div className="flex flex-wrap gap-4">
+                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
+                            <SkillBox Icon={SiExpress} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-black'}/>
+                        </div>
+                        
+                        
                     </div>
                     
                 </div>
