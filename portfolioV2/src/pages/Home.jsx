@@ -1,3 +1,7 @@
+//Library
+import { delay, motion } from "motion/react"
+
+
 //Components
 import Header from "../components/Header"
 import SidePanelMobile from "../components/SidePanelMobile";
@@ -7,6 +11,7 @@ import CareerTimeLine from "../components/CareerTimeLine";
 import EducationCard from "../components/EducationCard";
 import WorkCard from "../components/WorkCard";
 import SkillBox from "../components/SkillBox";
+import SkillSection from "../components/SkillSection";
 
 // Icons
 import { MdOutlineFileDownload } from "react-icons/md";
@@ -31,12 +36,68 @@ import PowerFxIcon from '../assets/PowerFx.png'
 import PowerAppsIcon from '../assets/PowerApps.png'
 import PowerAutomateIcon from '../assets/PowerAutomate.png'
 import PowerBiIcon from '../assets/PowerBI.webp'
-
-
 import ProfilePictureV2 from "../assets/ProfilePictureV2.png"
+
+const educations = [
+    {
+        id: 1,
+        title: 'Work-study Engineering Programme',
+        fromDate: '2021',
+        toDate: '2025',
+        school: 'CESI',
+        tags: ["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"],
+        borderUp: 'true',
+        borderDown: 'false',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. ...'
+    },
+    {
+        id: 2,
+        title: 'Integrated Preparatory Class',
+        fromDate: '2019',
+        toDate: '2021',
+        school: 'CESI',
+        tags: ["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"],
+        borderUp: 'true',
+        borderDown: 'false',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. ...'
+    },
+    {
+        id: 3,
+        title: 'General Baccalaureate (HighSchool Diploma)',
+        fromDate: '2016',
+        toDate: '2019',
+        school: 'CESI',
+        tags: ["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"],
+        borderUp: 'true',
+        borderDown: 'true',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. ...'
+    }
+];
 
 
 function Home() {
+
+
+    const titleAnimation = {
+        hidden: { opacity: 0, x: -20 },
+        visible: (custom) => ({ opacity: 1, x: 0, transition: { duration: 0.4, delay: custom } })
+    }
+
+    const SlowFadeIn = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: (custom) => ({ opacity: 1, scale: 1, transition: { duration: 0.6, delay: custom } })
+    }
+    const MediumFadeIn = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: (custom) => ({ opacity: 1, scale: 1, transition: { duration: 0.4, delay: custom } })
+    }
+    const FastFadeIn = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: (custom) => ({ opacity: 1, scale: 1, transition: { duration: 0.3, delay: custom } })
+    }
+
+
+
     return (
         <div className="bg-bg dark:bg-bg-dark min-h-screen">
             <Header />
@@ -46,32 +107,58 @@ function Home() {
                 {/* Hero */}
                 <div className="mb-8 flex flex-col
                                 lg:mb-0 lg:flex-3 lg:justify-between
-                                2xl:flex-4">
+                                2xl:flex-4"
+                >
                     <div>
                         {/* Student in Engineering */}
-                        <div className="mb-6 flex justify-center lg:justify-start">
+                        <motion.div className="mb-6 flex justify-center lg:justify-start"
+                            initial='hidden'
+                            variants={titleAnimation}
+                            custom={0}
+                            whileInView='visible'
+                            viewport={{ once: true }}
+                        >
                             <span className=" uppercase bg-gradient-to-l from-[#0D99FF] to-[#1483D5] bg-clip-text text-transparent tracking-widest font-poppins text-[0.8rem] font-semibold flex items-center gap-2">
                                 <span className="bg-primary h-[0.2rem] w-8 rounded-full hidden lg:flex"></span>student in engineering
                             </span>
-                        </div>
+                        </motion.div>
                         {/* Louis Jagueneau Portfolio */}
-                        <div className="mb-6 font-quattrocento font-bold text-[68px] text-center
+                        <motion.div className="mb-6 font-quattrocento font-bold text-[68px] text-center
                                         lg:mb-8 lg:text-start
-                                        xl:mb-4 xl:text-[80px] ">
+                                        xl:mb-4 xl:text-[80px] "
+                            initial='hidden'
+                            variants={titleAnimation}
+                            custom={0.3}
+                            whileInView='visible'
+                            viewport={{ once: true }}
+                        >
                             <h1 className="text-primary ">Louis <br className="md:hidden" /> JAGUENEAU</h1>
                             <h2 className="text-text dark:text-text-dark mt-[-20px]">Porfolio</h2>
-                        </div>
+                        </motion.div>
                         {/* Paragraphe */}
-                        <div className="mb-8 2xl:mb-6 text-center lg:text-justify font-poppins text-text-muted dark:text-text-muted-dark text-[0.9rem] leading-6 lg:leading-8 2xl:leading-6 2xl:w-158">
+                        <motion.div className="mb-8 2xl:mb-6 text-center lg:text-justify font-poppins text-text-muted dark:text-text-muted-dark text-[0.9rem] leading-6 lg:leading-8 2xl:leading-6 2xl:w-158"
+                            initial='hidden'
+                            variants={titleAnimation}
+                            custom={0.6}
+                            whileInView='visible'
+                            viewport={{ once: true }}
+                        >
                             <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et qui officiis ab incidunt alias, laudantium atque fuga, repellat corporis enim reprehenderit voluptatum minus amet dicta illum rem nihil est voluptates.</p>
-                        </div>
+                        </motion.div>
                     </div>
                     {/* Button */}
-                    <div className="flex justify-center lg:justify-start">
-                        <button className="bg-primary font-poppins text-white font-semibold rounded-sm py-2 px-4 flex items-center gap-2 text-[0.9rem] ">
+                    <motion.div className="flex justify-center lg:justify-start"
+                        initial='hidden'
+                        variants={titleAnimation}
+                        custom={0.9}
+                        whileInView='visible'
+                        viewport={{ once: true }}>
+                        <motion.button
+                            className="bg-primary hover:bg-primary-hover transition-colors outline-none duration-200 font-poppins cursor-pointer text-white font-semibold rounded-sm py-2 px-4 flex items-center gap-2 text-[0.9rem] "
+                            whileTap={{ scale: 0.9 }}>
                             Download CV <MdOutlineFileDownload className="text-xl" />
-                        </button>
-                    </div>
+                        </motion.button>
+                    </motion.div>
                 </div>
 
                 <div className="flex lg:flex-2 2xl:flex-3">
@@ -102,7 +189,12 @@ function Home() {
                         <div className="flex flex-col justify-center items-center gap-12
                                         lg:flex-row xl:items-stretch">
 
-                            <img src={ProfilePictureV2}
+                            <motion.img src={ProfilePictureV2}
+                                initial='hidden'
+                                variants={SlowFadeIn}
+                                custom={0}
+                                whileInView='visible'
+                                viewport={{ once: true }}
                                 alt="ProfilePictureV2"
                                 className="p-2 rounded-md w-80 xl:w-auto 2xl:w-3/4 bg-bg-light-secondary dark:bg-bg-ultralight-dark"
                             />
@@ -154,9 +246,14 @@ function Home() {
                         <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">Professional Pathway</h2>
                     </div>
 
-                    <div>
+                    <motion.div
+                        initial='hidden'
+                        variants={SlowFadeIn}
+                        custom={0}
+                        whileInView='visible'
+                        viewport={{ once: true }}>
                         <CareerTimeLine />
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -168,9 +265,33 @@ function Home() {
                 </div>
 
                 <div className="">
-                    <EducationCard title='Work-study Engineering Programme' fromDate='2021' toDate='2025' school='CESI' tags={["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"]} borderDown='false' borderUp='true' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus' />
-                    <EducationCard title='Integrated Preparatory Class' fromDate='2019' toDate='2021' school='CESI' tags={["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"]} borderDown='false' borderUp='true' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus' />
-                    <EducationCard title='General Baccalaureate (HighSchool Diploma)' fromDate='2016' toDate='2019' school='CESI' tags={["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"]} borderDown='true' borderUp='true' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus' />
+                    <motion.div
+                        initial='hidden'
+                        variants={MediumFadeIn}
+                        custom={0}
+                        whileInView='visible'
+                        viewport={{ once: true }}>
+                        <EducationCard title='Work-study Engineering Programme' fromDate='2021' toDate='2025' school='CESI' tags={["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"]} borderDown='false' borderUp='true' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus' />
+
+                    </motion.div>
+                    <motion.div
+                        initial='hidden'
+                        variants={MediumFadeIn}
+                        custom={0}
+                        whileInView='visible'
+                        viewport={{ once: true }}>
+                        <EducationCard title='Integrated Preparatory Class' fromDate='2019' toDate='2021' school='CESI' tags={["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"]} borderDown='false' borderUp='true' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus' />
+
+                    </motion.div>
+                    <motion.div
+                        initial='hidden'
+                        variants={MediumFadeIn}
+                        custom={0}
+                        whileInView='visible'
+                        viewport={{ once: true }}>
+                        <EducationCard title='General Baccalaureate (HighSchool Diploma)' fromDate='2016' toDate='2019' school='CESI' tags={["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"]} borderDown='true' borderUp='true' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus' />
+
+                    </motion.div>
                 </div>
             </section>
 
@@ -181,158 +302,83 @@ function Home() {
                         <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Projects</span>
                         <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">My Work</h2>
                     </div>
-                    <div className="border-2 gap-5 grid grid-cols-1 mb-8
+                    <div className="gap-5 grid grid-cols-1 mb-8 xl:mb-12 2xl:mb-15
                                     md:grid-cols-2  md:gap-8 
                                     lg:grid-cols-3 lg:gap-5 ">
-                        < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
-                        < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
-                        <div className="md:col-span-2 md:flex md:justify-center lg:flex-none lg:col-span-1">
+                        <motion.div
+                            initial='hidden'
+                            variants={FastFadeIn}
+                            custom={0}
+                            whileInView='visible'
+                            viewport={{ once: true }}>
                             < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
-                        </div>
+                        </motion.div>
+                        <motion.div
+                            initial='hidden'
+                            variants={FastFadeIn}
+                            custom={0.3}
+                            whileInView='visible'
+                            viewport={{ once: true }}>
+                            < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                        </motion.div>
+                        <motion.div className="md:col-span-2 md:flex md:justify-center lg:flex-none lg:col-span-1"
+                            initial='hidden'
+                            variants={FastFadeIn}
+                            custom={0.6}
+                            whileInView='visible'
+                            viewport={{ once: true }}>
+                            < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                        </motion.div>
                     </div>
                     <div className="flex justify-center">
-                        <button className="font-poppins text-white bg-primary px-4 py-2 rounded-md flex items-center font-medium gap-2">More Projects <FaArrowRightLong /></button>
+                        <motion.button className="font-poppins cursor-pointer text-white bg-primary px-4 py-2 rounded-md flex items-center font-medium gap-2 transition-colors outline-none duration-200 hover:bg-primary-hover"
+                            whileTap={{ scale: 0.9 }}>
+                            More Projects <FaArrowRightLong />
+                        </motion.button>
                     </div>
 
                 </div>
             </section>
             <section className="bg-bg dark:bg-bg-dark container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] py-[65px]">
 
-                {/* Title Div */}
-                <div className="text-center mb-10">
-                    <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Skills</span>
+                {/* Title */}
+                <div className="text-center mb-10 xl:mb-15 2xl:mb-20">
+                    <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem]">Skills</span>
                     <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">My Competencies</h2>
                 </div>
 
-                <div className="flex flex-col gap-6 mb-10">
-                    <div className="">
-                        <h3 className="font-rem text-[1.6rem] font-medium relative inline-flex">Front-End & Design
-                            <span className="absolute bg-primary h-[0.10rem] w-[105%] rounded-full left-0 bottom-[-5px]"></span>
-                        </h3>
-                    </div>
-                    <div className="flex flex-wrap gap-4">
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={IoLogoReact} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-primary'} />
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={FaFigma} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#f24e1f]'} />
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={RiTailwindCssFill} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#3bb1af]'} />
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={IoLogoJavascript} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#efd81d]'} />
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={FaHtml5} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#dd4b25]'} />
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={FaCss3Alt} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#254bdd]'} />
-                        </div>
-                    </div>
-                </div>
+                {/* Frontend & Design */}
+                <SkillSection title="Front-End & Design" skills={[
+                    { Icon: IoLogoReact, title: "React", color: "text-primary", keyWords: ["Components", "Hooks", "States"] },
+                    { Icon: FaFigma, title: "Figma", color: "text-[#f24e1f]", keyWords: ["UI Design", "Prototypes", "Wireframes"] },
+                    { Icon: RiTailwindCssFill, title: "Tailwind", color: "text-[#3bb1af]", keyWords: ["Utility CSS", "Responsive", "Custom Themes"] },
+                    { Icon: IoLogoJavascript, title: "JavaScript", color: "text-[#efd81d]", keyWords: ["ES6+", "DOM", "APIs"] },
+                    { Icon: FaHtml5, title: "HTML5", color: "text-[#dd4b25]", keyWords: ["Semantic", "Forms", "SEO"] },
+                    { Icon: FaCss3Alt, title: "CSS3", color: "text-[#254bdd]", keyWords: ["Flexbox", "Grid", "Animations"] },
+                ]} />
 
-                <div className="flex flex-col gap-6 mb-10">
-                    <div className="">
-                        <h3 className="font-rem text-[1.6rem] font-medium relative inline-flex">Back-end & Databases
-                            <span className="absolute bg-primary h-[0.15rem] w-[105%] rounded-full left-0 bottom-[-5px]"></span>
-                        </h3>
-                    </div>
-                    <div className="flex flex-wrap gap-4">
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={SiExpress} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-black'} />
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={FaPhp} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#294555]'} />
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={FaLaravel} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#f72211]'} />
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={FaNodeJs} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#7ec727]'} />
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={DiMsqlServer} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#e62b3a]'} />
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={GrMysql} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#255278]'} />
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <SkillBox Icon={SiMongodb} title='React' keyWords={['Components', 'Hooks', 'States']} color={'text-[#3f9937]'} />
-                        </div>
-                    </div>
+                {/* Backend & Databases */}
+                <SkillSection title="Back-end & Databases" skills={[
+                    { Icon: SiExpress, title: "Express.js", color: "text-black", keyWords: ["APIs", "Middleware", "Routing"] },
+                    { Icon: FaPhp, title: "PHP", color: "text-[#294555]", keyWords: ["OOP", "Laravel", "Symfony"] },
+                    { Icon: FaLaravel, title: "Laravel", color: "text-[#f72211]", keyWords: ["MVC", "Blade", "Eloquent"] },
+                    { Icon: FaNodeJs, title: "Node.js", color: "text-[#7ec727]", keyWords: ["Backend", "REST", "Async"] },
+                    { Icon: DiMsqlServer, title: "SQL Server", color: "text-[#e62b3a]", keyWords: ["Stored Proc", "Queries", "Joins"] },
+                    { Icon: GrMysql, title: "MySQL", color: "text-[#255278]", keyWords: ["CRUD", "Schemas", "Indexes"] },
+                    { Icon: SiMongodb, title: "MongoDB", color: "text-[#3f9937]", keyWords: ["Documents", "NoSQL", "Atlas"] },
+                ]} />
 
-                </div>
+                {/* No-Code & Low-Code */}
+                <SkillSection title="No-Code & Low-Code" skills={[
+                    { Icon: DataverseIcon, title: "Dataverse", isImage: true, keyWords: ["Tables", "Relationships", "Security"] },
+                    { Icon: PowerFxIcon, title: "Power Fx", isImage: true, keyWords: ["Formulas", "Logic", "Expressions"] },
+                    { Icon: PowerAppsIcon, title: "Power Apps", isImage: true, keyWords: ["Canvas", "Components", "Connectors"] },
+                    { Icon: PowerAutomateIcon, title: "Power Automate", isImage: true, keyWords: ["Flows", "Automation", "Triggers"] },
+                    { Icon: PowerBiIcon, title: "Power BI", isImage: true, keyWords: ["Dashboards", "Reports", "Data Viz"] },
+                ]} />
 
-                <div className="flex flex-col gap-6 mb-10">
-                    <div className="">
-                        <h3 className="font-rem text-[1.6rem] font-medium relative inline-flex">No-Code & Low-Code
-                            <span className="absolute bg-primary h-[0.15rem] w-[120%] rounded-full left-0 bottom-[-5px]"></span>
-                        </h3>
-                    </div>
-                    <div className="flex flex-wrap gap-4">
-                        {/* Dataverse */}
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <div className="flex flex-col gap-2 mb-1">
-                                <img src={DataverseIcon} width={20} height={20} alt="DataverseIcon" />
-                                <span className="font-poppins font-medium text-black/75">Dataverse</span>
-                            </div>
-                            <div className="text-[0.8rem] font-poppins text-text-muted flex flex-wrap gap-1">
-                                <span>Components, </span>
-                                <span>Hooks, </span>
-                                <span>States, </span>
-                            </div>
-                        </div>
-                        {/* Power Apps */}
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <div className="flex flex-col gap-2 mb-1">
-                                <img src={PowerFxIcon} width={20} height={20} alt="PowerFxIcon" />
-                                <span className="font-poppins font-medium text-black/75">Dataverse</span>
-                            </div>
-                            <div className="text-[0.8rem] font-poppins text-text-muted flex flex-wrap gap-1">
-                                <span>Components, </span>
-                                <span>Hooks, </span>
-                                <span>States, </span>
-                            </div>
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <div className="flex flex-col gap-2 mb-1">
-                                <img src={PowerAppsIcon} width={20} height={20} alt="PowerAppsIcon" />
-                                <span className="font-poppins font-medium text-black/75">Dataverse</span>
-                            </div>
-                            <div className="text-[0.8rem] font-poppins text-text-muted flex flex-wrap gap-1">
-                                <span>Components, </span>
-                                <span>Hooks, </span>
-                                <span>States, </span>
-                            </div>
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <div className="flex flex-col gap-2 mb-1">
-                                <img src={PowerAutomateIcon} width={20} height={20} alt="PowerFxIcon" />
-
-                                <span className="font-poppins font-medium text-black/75">Dataverse</span>
-                            </div>
-                            <div className="text-[0.8rem] font-poppins text-text-muted flex flex-wrap gap-1">
-                                <span>Components, </span>
-                                <span>Hooks, </span>
-                                <span>States, </span>
-                            </div>
-                        </div>
-                        <div className="bg-bg-light border-1 p-4 border-black/10 rounded-md w-45">
-                            <div className="flex flex-col gap-2 mb-1">
-                                <img src={PowerBiIcon} width={20} height={20} alt="PowerFxIcon" />
-
-                                <span className="font-poppins font-medium text-black/75">Dataverse</span>
-                            </div>
-                            <div className="text-[0.8rem] font-poppins text-text-muted flex flex-wrap gap-1">
-                                <span>Components, </span>
-                                <span>Hooks, </span>
-                                <span>States, </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section>
+
 
         </div >
     )

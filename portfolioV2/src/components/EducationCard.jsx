@@ -1,4 +1,7 @@
+
 function EducationCard({ tags = [], fromDate, toDate, school, description, title, borderUp, borderDown }) {
+    
+    
     return (
         <div>
             <div>

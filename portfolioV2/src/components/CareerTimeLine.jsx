@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { RiArrowRightSLine } from "react-icons/ri";
+import { motion, AnimatePresence } from "framer-motion";
 
 const experiences = [
     {
@@ -61,42 +62,52 @@ function CareerTimeLine() {
                     })}
                 </div>
             </div>
-            <div className="mt-10 xl:mt-0 bg-bg dark:bg-bg-dark">
-                <div className="text-center mb-6 xl:text-start">
-                    <h3 className="font-rem font-semibold text-[25px] text-text dark:text-text-dark">{isSelected.role}</h3>
-                    <div className="flex gap-2 justify-center xl:justify-start font-poppins">
-                        <span className="text-primary">@{isSelected.company}</span>
-                        <span className="text-text-muted dark:text-text-muted-dark">{isSelected.date}</span>
-                    </div>
-                </div>
-                <div className="flex flex-col md:flex-row gap-4 lg:gap-12 xl:gap-20">
-                    <div className="border-1 rounded-md border-black/20 px-5 py-4 bg-bg dark:bg-bg-dark dark:border-white/20
-                                    md:flex-1">
-                        <div className="flex flex-col gap-4">
-                            <div className="flex items-center gap-1">
-                                <RiArrowRightSLine className="text-primary text-[23px] xl:text-[27px]" />
-                                <h4 className="font-rem text-[20px] text-text dark:text-text-dark">Responsabilities</h4>
-                            </div>
-                            <p className="text-text-muted dark:text-text-muted-dark text-justify px-2 whitespace-pre-line text-[0.85rem]
-                                         2xl:text-[0.95rem]">
-                                {isSelected.responsabilities}
-                            </p>
-                        </div>
-                    </div>
-                    <div className="border-1 rounded-md border-black/20 px-5 py-4 bg-bg dark:bg-bg-dark dark:border-white/20
-                                    md:flex-1">
-                        <div className="flex flex-col gap-4">
-                            <div className="flex items-center gap-1">
-                                <RiArrowRightSLine className="text-primary text-[23px] xl:text-[27px]" />
-                                <h4 className="font-rem text-[20px] text-text dark:text-text-dark">Tools</h4>
-                            </div>
-                            <div>
 
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={isSelected.id}
+                    initial= {{y:20, opacity:0}}
+                    animate= {{y:0, opacity:1}}
+                    exit={{ y:-20, opacity:0}}
+                    transition= {{duration:0.3}}
+                    className="mt-10 xl:mt-0 bg-bg dark:bg-bg-dark"
+                >
+                    <div className="text-center mb-6 xl:text-start">
+                        <h3 className="font-rem font-semibold text-[25px] text-text dark:text-text-dark">{isSelected.role}</h3>
+                        <div className="flex gap-2 justify-center xl:justify-start font-poppins">
+                            <span className="text-primary">@{isSelected.company}</span>
+                            <span className="text-text-muted dark:text-text-muted-dark">{isSelected.date}</span>
+                        </div>
+                    </div>
+                    <div className="flex flex-col md:flex-row gap-4 lg:gap-12 xl:gap-20">
+                        <div className="border-1 rounded-md border-black/20 px-5 py-4 bg-bg dark:bg-bg-dark dark:border-white/20
+                                    md:flex-1">
+                            <div className="flex flex-col gap-4">
+                                <div className="flex items-center gap-1">
+                                    <RiArrowRightSLine className="text-primary text-[23px] xl:text-[27px]" />
+                                    <h4 className="font-rem text-[20px] text-text dark:text-text-dark">Responsabilities</h4>
+                                </div>
+                                <p className="text-text-muted dark:text-text-muted-dark text-justify px-2 whitespace-pre-line text-[0.85rem]
+                                         2xl:text-[0.95rem]">
+                                    {isSelected.responsabilities}
+                                </p>
+                            </div>
+                        </div>
+                        <div className="border-1 rounded-md border-black/20 px-5 py-4 bg-bg dark:bg-bg-dark dark:border-white/20
+                                    md:flex-1">
+                            <div className="flex flex-col gap-4">
+                                <div className="flex items-center gap-1">
+                                    <RiArrowRightSLine className="text-primary text-[23px] xl:text-[27px]" />
+                                    <h4 className="font-rem text-[20px] text-text dark:text-text-dark">Tools</h4>
+                                </div>
+                                <div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </motion.div>
+            </AnimatePresence>
         </div>
     )
 }
