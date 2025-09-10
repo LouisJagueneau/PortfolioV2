@@ -9,6 +9,8 @@ import { PiBagSimple } from "react-icons/pi";
 import { GoLightBulb } from "react-icons/go";
 import { FaPhoneAlt } from "react-icons/fa";
 
+import { Link } from "react-router-dom";
+
 function Nav() {
     const [isOpen, setIsOpen] = useState(false)
 
@@ -47,13 +49,13 @@ function Nav() {
                     <div className="mx-5 mt-8">
                         <ul className="flex flex-col gap-7">
                             <div>
-                                <li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <GoHome className="text-[1.2rem]" />Home</li>
+                                <Link to='/'><li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <GoHome className="text-[1.2rem]" />Home</li></Link>
                                 <li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <FaRegUser className="text-[1.0rem]" />About me</li>
                                 <li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <PiBagSimple className="text-[1.2rem]" />Experiences</li>
                                 <li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <IoSchoolOutline className="text-[1.2rem]" />Education</li>
-                                <li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <GoLightBulb className="text-[1.2rem]" />Projects</li>
+                                <Link to="/projects"><li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <GoLightBulb className="text-[1.2rem]" />Projects</li></Link>
                             </div>
-                            <li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <FaPhoneAlt className="text-[0.9rem]" />Contacts</li>
+                            <Link to="/contact"><li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <FaPhoneAlt className="text-[0.9rem]" />Contacts</li></Link>
                         </ul>
                     </div>
                 </div>

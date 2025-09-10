@@ -12,6 +12,7 @@ import EducationCard from "../components/EducationCard";
 import WorkCard from "../components/WorkCard";
 import SkillBox from "../components/SkillBox";
 import SkillSection from "../components/SkillSection";
+import Footer from "../components/Footer";
 
 // Icons
 import { MdOutlineFileDownload } from "react-icons/md";
@@ -379,6 +380,7 @@ function Home() {
 
             </section>
 
+            <Footer/>
 
         </div >
     )

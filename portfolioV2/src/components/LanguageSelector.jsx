@@ -23,7 +23,7 @@ function LanguageSelector() {
                 </div>
                 <div
                     className={`absolute top-full w-full ${isOpen ? 'block' : 'hidden'} transition-all duration-150 rounded-b-md bg-bg-light hover:bg-hover-bg-light dark:bg-bg-light-dark dark:hover:bg-hover-bg-light-dark`}
-                    onClick={''}>
+                    /* onClick={''}*/>
                     <ul className="">
                         {languages.map((language) => (
                             <li key={language}
