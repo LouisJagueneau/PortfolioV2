@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import { useTranslation } from "react-i18next";
 
 // Icons
 import { FaPhoneAlt } from "react-icons/fa";
@@ -6,10 +7,12 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 
 function Contact() {
+  const { t } = useTranslation();
+
   const contacts = [
-    { icon: <FaPhoneAlt />, name: "phone", value: "+33 6 01 01 17 23" },
-    { icon: <FaLocationDot />, name: "address", value: "Nouvelle Aquitaine, France" },
-    { icon: <IoIosMail />, name: "email", value: "louis.jagueneau@viacesi.fr" },
+    { icon: <FaPhoneAlt />, name: t('contact.phone_name'), value: "+33 6 01 01 17 23" },
+    { icon: <FaLocationDot />, name: t('contact.address_name'), value: "Nouvelle Aquitaine, France" },
+    { icon: <IoIosMail />, name: t('contact.email_name'), value: "louis.jagueneau@viacesi.fr" },
   ];
 
   return (
@@ -24,14 +27,14 @@ function Contact() {
           <section className="lg:w-1/2 flex justify-center">
             <div className="bg-bg-light dark:bg-bg-light-dark px-10 py-6 rounded-sm w-full max-w-md">
               <h2 className="text-text dark:text-text font-light font-rem text-[2rem] lg:text-[2.4rem] xl:text-[2.8rem] mb-8">
-                Contact us
+                {t('contact.title')}
               </h2>
               <form className="text-text dark:text-text placeholder-text-muted dark:placeholder-text-muted-dark font-poppins font-light flex flex-col gap-y-5">
-                <input type="text" name="name" placeholder="Name" className="px-4 py-5 h-[48px] border border-black/15 dark:border-white/15 focus:border-[#ec1c24] outline-none" />
-                <input type="email" name="email" placeholder="Email" className="px-4 py-5 h-[48px] border border-black/15 dark:border-white/15 focus:border-[#ec1c24] outline-none" />
-                <input type="text" name="subject" placeholder="Subject" className="px-4 py-5 h-[48px] border border-black/15 dark:border-white/15 focus:border-[#ec1c24] outline-none" />
-                <textarea name="message" placeholder="Type your message here ..." className="px-4 py-5 min-h-[150px] border border-black/15 dark:border-white/15 focus:border-[#ec1c24] outline-none"></textarea>
-                <input type="submit" className="bg-primary rounded-sm py-2 cursor-pointer text-white" />
+                <input type="text" name="name" placeholder={t('form.name_placeholder')} className="px-4 py-5 h-[48px] border border-black/15 dark:border-white/15 focus:border-[#ec1c24] outline-none" />
+                <input type="email" name="email" placeholder={t('form.email_placeholder')} className="px-4 py-5 h-[48px] border border-black/15 dark:border-white/15 focus:border-[#ec1c24] outline-none" />
+                <input type="text" name="subject" placeholder={t('form.subject_placeholder')} className="px-4 py-5 h-[48px] border border-black/15 dark:border-white/15 focus:border-[#ec1c24] outline-none" />
+                <textarea name="message" placeholder={t('form.message_placeholder')} className="px-4 py-5 min-h-[150px] border border-black/15 dark:border-white/15 focus:border-[#ec1c24] outline-none"></textarea>
+                <input type="submit" value={t('form.submit_button')} className="bg-primary rounded-sm py-2 cursor-pointer text-white" />
               </form>
             </div>
           </section>

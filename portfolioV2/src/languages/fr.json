@@ -1,0 +1,50 @@
+{
+  "contact": {
+    "title": "Nous contacter",
+    "phone_name": "téléphone",
+    "address_name": "adresse",
+    "email_name": "email"
+  },
+  "form": {
+    "name_placeholder": "Nom",
+    "email_placeholder": "Email",
+    "subject_placeholder": "Sujet",
+    "message_placeholder": "Tapez votre message ici ...",
+    "submit_button": "Envoyer"
+  },
+  "projects": {
+    "title_span": "Projets",
+    "title_h2": "Mes Réalisations",
+    "grill": {
+      "title": "GRILL",
+      "description": "Un projet scolaire dont l’objectif était de créer une plateforme web moderne avec la stack MERN. Conçu pour être performant et évolutif dans un contexte réel."
+    },
+    "bigband64": {
+      "title": "BigBand64",
+      "description": "Site officiel d’un groupe de musique, conçu pour présenter les événements, les membres et les médias. Développé avec React et Tailwind pour une expérience dynamique."
+    },
+    "forta": {
+      "title": "Forta ltd",
+      "description": "Site vitrine pour une entreprise spécialisée dans l’usinage CNC et l’ingénierie plastique. Met en valeur les services et projets grâce à un design professionnel et épuré."
+    },
+    "gupe": {
+      "title": "GUPE",
+      "description": "GUPE est une application développée avec PowerPlatform. Elle permet de cataloguer et de suivre avec précision les équipements sous pression."
+    },
+    "fsl": {
+      "title": "FSL",
+      "description": "FSL est une application logistique développée sur PowerPlatform. Elle facilite le suivi et la gestion des flexibles et des vannes. Mon rôle est d’assurer sa maintenance."
+    },
+    "inventory_software": {
+      "title": "Inventory Software",
+      "description": "Un projet scolaire visant à développer une application de bureau pour gérer les stocks et le suivi des inventaires. Réalisé en C++ pour la rapidité et la fiabilité."
+    }
+  },
+  "filters": {
+    "all": "Tous",
+    "powerplatform": "PowerPlatform",
+    "web": "Web",
+    "software": "Logiciel"
+  }
+  
+}

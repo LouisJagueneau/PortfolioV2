@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import WorkCard from '../components/WorkCard';
 import Header from '../components/Header';
 
@@ -6,39 +7,56 @@ import Header from '../components/Header';
 import tempImage from '../assets/tempImage.png';
 
 function Projects() {
+    const { t } = useTranslation();
     const [activeFilter, setActiveFilter] = useState('All');
 
     const filters = ['All', 'PowerPlatform', 'Web', 'Software'];
 
     const projects = [
         {
-            title: 'GUPE',
-            description: 'GUPE is an application developed using PowerPlatform. This logistics application is designed to accurately catalog and monitor pressure equipment.',
-            tags: ['PowerPlatform'],
+            title: t('projects.grill.title'),
+            description: t('projects.grill.description'),
+            tags: ['Web', 'MERN'],
             githubLink: '#',
             websiteLink: '#',
             image: tempImage
         },
         {
-            title: 'FSL',
-            description: 'FSL is a logistics application developed on PowerPlatform. It facilitates the tracking and management of hoses and valves. My job is to maintain this application.',
-            tags: ['PowerPlatform'],
-            githubLink: '#',
-            websiteLink: '#',
-            image: tempImage
-        },
-        {
-            title: 'Portfolio Website',
-            description: 'Personal portfolio built with React and TailwindCSS.',
+            title: t('projects.bigband64.title'),
+            description: t('projects.bigband64.description'),
             tags: ['Web', 'React', 'TailwindCSS'],
             githubLink: '#',
             websiteLink: '#',
             image: tempImage
         },
         {
-            title: 'Inventory Software',
-            description: 'A desktop software for managing inventory and stock levels.',
-            tags: ['Software', 'PHP'],
+            title: t('projects.forta.title'),
+            description: t('projects.forta.description'),
+            tags: ['Web', 'React', 'MySQL', 'Php'],
+            githubLink: '#',
+            websiteLink: '#',
+            image: tempImage
+        },
+        {
+            title: t('projects.gupe.title'),
+            description: t('projects.gupe.description'),
+            tags: ['PowerPlatform'],
+            githubLink: '#',
+            websiteLink: '#',
+            image: tempImage
+        },
+        {
+            title: t('projects.fsl.title'),
+            description: t('projects.fsl.description'),
+            tags: ['PowerPlatform'],
+            githubLink: '#',
+            websiteLink: '#',
+            image: tempImage
+        },
+        {
+            title: t('projects.inventory_software.title'),
+            description: t('projects.inventory_software.description'),
+            tags: ['Software', 'C++', 'MySQL'],
             githubLink: '#',
             websiteLink: '#',
             image: tempImage
@@ -53,8 +71,8 @@ function Projects() {
             <div className="container mx-auto px-5 md:px-14 lg:px-20 py-10 flex flex-col items-center">
                 {/* Title Div */}
                 <div className="text-center mb-10">
-                    <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Projects</span>
-                    <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">My Work</h2>
+                    <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">{t('projects.title_span')}</span>
+                    <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">{t('projects.title_h2')}</h2>
                 </div>
                 {/* Filters */}
                 <div className="flex gap-4 mb-10">
@@ -65,7 +83,7 @@ function Projects() {
                                 } transition-colors`}
                             onClick={() => setActiveFilter(filter)}
                         >
-                            {filter}
+                            {t(`filters.${filter.toLowerCase()}`)}
                         </button>
                     ))}
                 </div>

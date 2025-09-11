@@ -1,0 +1,49 @@
+{
+  "contact": {
+    "title": "Contact us",
+    "phone_name": "phone",
+    "address_name": "address",
+    "email_name": "email"
+  },
+  "form": {
+    "name_placeholder": "Name",
+    "email_placeholder": "Email",
+    "subject_placeholder": "Subject",
+    "message_placeholder": "Type your message here ...",
+    "submit_button": "Submit"
+  },
+  "projects": {
+    "title_span": "Projects",
+    "title_h2": "My Work",
+    "grill": {
+      "title": "GRILL",
+      "description": "A school project where the goal was to build a modern web platform built with the MERN stack. Focused on performance and scalability for real-world use."
+    },
+    "bigband64": {
+      "title": "BigBand64",
+      "description": "Official website for a music band, designed to showcase events, members, and media. Built with React and Tailwind for a dynamic experience."
+    },
+    "forta": {
+      "title": "Forta ltd",
+      "description": "Corporate website for a CNC and plastic engineering company. Highlights services and projects with a clean, professional design. Built with React, TailwindCSS and Php."
+    },
+    "gupe": {
+      "title": "GUPE",
+      "description": "GUPE is an application developed using PowerPlatform. This logistics application is designed to accurately catalog and monitor pressure equipment."
+    },
+    "fsl": {
+      "title": "FSL",
+      "description": "FSL is a logistics application developed on PowerPlatform. It facilitates the tracking and management of hoses and valves. My job is to maintain this application."
+    },
+    "inventory_software": {
+      "title": "Inventory Software",
+      "description": "A school project where the goal was to develop a desktop application to manage inventory and track stock levels efficiently. Built in C++ for speed and reliability."
+    }
+  },
+  "filters": {
+    "all": "All",
+    "powerplatform": "PowerPlatform",
+    "web": "Web",
+    "software": "Software"
+  }
+}

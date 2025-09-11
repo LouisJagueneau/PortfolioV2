@@ -144,7 +144,7 @@ function Home() {
                             whileInView='visible'
                             viewport={{ once: true }}
                         >
-                            <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et qui officiis ab incidunt alias, laudantium atque fuga, repellat corporis enim reprehenderit voluptatum minus amet dicta illum rem nihil est voluptates.</p>
+                            <p >I am currently pursuing a degree in IT engineering, with a strong focus on web development and software design. I am committed to buil efficient digital solutions, applying best practices and modern technologies.</p>
                         </motion.div>
                     </div>
                     {/* Button */}
@@ -204,7 +204,7 @@ function Home() {
 
                                 <div className="text-center lg:text-start flex flex-col gap-3">
                                     <h3 className="font-rem font-semibold text-[22px] 2xl:text-[28px] text-text dark:text-text-dark">Student in computer science</h3>
-                                    <p className="font-poppins text-[0.75rem] 2xl:text-[0.90rem] text-text-muted dark:text-text-muted-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula odio. Etiam laoreet nulla eu feugiat elementum. Ut ut pretium elit, eget finibus urna. Mauris a ante ut eros porttitor ullamcorper non eu ex. </p>
+                                    <p className="font-poppins text-[0.75rem] 2xl:text-[0.90rem] text-text-muted dark:text-text-muted-dark">I am a 22-year-old French student currently enrolled in an engineering school. I am passionate about technology, enjoy learning new skills, and aim to build practical and efficient web solutions.</p>
                                 </div>
 
                                 <div className="grid grid-cols-1 gap-y-3 
@@ -214,19 +214,19 @@ function Home() {
 
                                     <IntroductionCard
                                         title="Objectives"
-                                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula odio. Etiam laoreet nulla eu feugiat elementum"
+                                        description="To grow as a versatile developer, mastering both front-end and back-end technologies, and contribute to meaningful projects."
                                     />
                                     <IntroductionCard
                                         title="Philosophy"
-                                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula odio. Etiam laoreet nulla eu feugiat elementum"
+                                        description="I value thoughtful design, disciplined work habits, and continuous improvement in both code quality and problem-solving skills."
                                     />
                                     <IntroductionCard
                                         title="Team Spirit"
-                                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula odio. Etiam laoreet nulla eu feugiat elementum"
+                                        description="I enjoy collaborating with peers, exchanging ideas, and supporting team success."
                                     />
                                     <IntroductionCard
                                         title="Hobbies"
-                                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula odio. Etiam laoreet nulla eu feugiat elementum"
+                                        description="utside of technology, I enjoy padel and trail running, which help me maintain focus and discipline"
                                     />
 
                                 </div>

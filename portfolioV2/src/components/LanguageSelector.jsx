@@ -1,7 +1,10 @@
-import { useState } from "react"
+import { useState,  } from "react"
 import { IoIosArrowDown } from "react-icons/io";
+import { useTranslation } from "react-i18next";
+
 function LanguageSelector() {
 
+    const {i18n} = useTranslation()
     const [isOpen, setIsOpen] = useState(false);
     const [isSelected, setIsSelected] = useState('EN');
 
@@ -9,7 +12,7 @@ function LanguageSelector() {
 
     function changeLanguage(country) {
         setIsSelected(country);
-        // Le truc I8N
+        i18n.changeLanguage(country)
         setIsOpen(!isOpen);
     }
     return (
@@ -18,7 +21,7 @@ function LanguageSelector() {
                 <div
                     className={`inline-flex items-center gap-1  cursor-pointer px-4 py-2 ${isOpen ? 'rounded-t-md' : 'rounded-md'} bg-bg-light hover:bg-hover-bg-light dark:bg-bg-light-dark dark:hover:bg-hover-bg-light-dark`}
                     onClick={() => setIsOpen(!isOpen)}>
-                    <span className="font-poppins font-light">{isSelected}</span>
+                    <span className="font-poppins font-light">{isSelected.toLocaleUpperCase()}</span>
                     <IoIosArrowDown className={`${isOpen ? 'rotate-180' : 'rotate-0'} transition-all duration-200`} />
                 </div>
                 <div
@@ -27,8 +30,8 @@ function LanguageSelector() {
                     <ul className="">
                         {languages.map((language) => (
                             <li key={language}
-                                className={`${isSelected === language ? 'hidden' : 'flex'} cursor-pointer px-4 py-1 font-poppins font-light`}
-                                onClick={() => changeLanguage(language)}>
+                                className={`${isSelected.toLocaleUpperCase() === language ? 'hidden' : 'flex'} cursor-pointer px-4 py-1 font-poppins font-light`}
+                                onClick={() => changeLanguage(language.toLocaleLowerCase())}>
                                 {language}
                             </li>
                         ))}

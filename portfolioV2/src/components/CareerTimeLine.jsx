@@ -8,7 +8,7 @@ const experiences = [
         company: "TotalEnergies",
         date: "2021-2025",
         role: "Power Platform Developer",
-        responsabilities: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus.",
+        responsibilities: "Analyze and understand business requirements, develop and maintain applications on Power Platform, document solutions and provide training, collaborate with teams to optimize workflows and ensure data integrity.",
     },
     {
         id: 2,

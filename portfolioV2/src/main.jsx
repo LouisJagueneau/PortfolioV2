@@ -7,6 +7,7 @@ import Home from './pages/home.jsx'
 import Contact from './pages/Contacts.jsx'
 import Projects from './pages/Projects.jsx'
 import ScrollProgress from './components/ScrollProgress.jsx'
+import i18n from './i18n.js'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
