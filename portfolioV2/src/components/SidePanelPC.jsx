@@ -26,11 +26,11 @@ function SidePanelPC() {
 
 
     return (
-        <div className="lg:flex lg:flex-col lg:gap-3 
+        <div className="lg:flex lg:flex-col lg:gap-3 lg:justify-between 
                         xl:gap-4
                         2xl:flex 2xl:flex-col 2xl:gap-6">
 
-            <div className="flex flex-col 2xl:gap-6
+            <div className="flex flex-col 2xl:gap-10
                             2xl:grid 2xl:grid-cols-7 2xl:col-span-4">
                 <motion.div
                     initial='hidden'
@@ -49,7 +49,7 @@ function SidePanelPC() {
                 </motion.div>
             </div>
 
-            <div className="flex flex-col gap-3 2xl:gap-6
+            <div className="flex flex-col gap-3 2xl:gap-10
                             xl:gap-4
                             2xl:grid 2xl:grid-cols-3 2xl:col-span-2">
                 <motion.div className="col-span-1"

@@ -30,6 +30,9 @@ import { FaLaravel } from "react-icons/fa";
 import { DiMsqlServer } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
 import { SiMongodb } from "react-icons/si";
+import { RiArrowRightSLine } from "react-icons/ri";
+import { HiSparkles } from "react-icons/hi2";
+import { RiGraduationCapFill } from "react-icons/ri";
 
 //Images
 import DataverseIcon from '../assets/Dataverse.webp'
@@ -97,69 +100,107 @@ function Home() {
         visible: (custom) => ({ opacity: 1, scale: 1, transition: { duration: 0.3, delay: custom } })
     }
 
+    const FloatingParticles = () => (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {[...Array(6)].map((_, i) => (
+                <motion.div
+                    key={i}
+                    className="absolute w-2 h-2 bg-primary/20 rounded-full"
+                    initial={{
+                        x: Math.random() * window.innerWidth,
+                        y: Math.random() * window.innerHeight,
+                        scale: 0
+                    }}
+                    animate={{
+                        y: [null, -20, 20, -20],
+                        x: [null, 10, -10, 10],
+                        scale: [0, 1, 0.8, 1]
+                    }}
+                    transition={{
+                        duration: 8 + i * 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: i * 0.5
+                    }}
+                    style={{
+                        left: `${20 + i * 15}%`,
+                        top: `${10 + i * 10}%`
+                    }}
+                />
+            ))}
+        </div>
+    )
 
 
     return (
         <div className="bg-bg dark:bg-bg-dark min-h-screen">
+            <FloatingParticles />
             <Header />
-            <section className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] mt-[65px]
+            <section className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] my-[65px]
                                 flex flex-col items-stretch
                                 lg:flex-row">
-                {/* Hero */}
-                <div className="mb-8 flex flex-col
-                                lg:mb-0 lg:flex-3 lg:justify-between
-                                2xl:flex-4"
-                >
-                    <div>
-                        {/* Student in Engineering */}
-                        <motion.div className="mb-6 flex justify-center lg:justify-start"
-                            initial='hidden'
-                            variants={titleAnimation}
-                            custom={0}
-                            whileInView='visible'
-                            viewport={{ once: true }}
-                        >
-                            <span className=" uppercase bg-gradient-to-l from-[#0D99FF] to-[#1483D5] bg-clip-text text-transparent tracking-widest font-poppins text-[0.8rem] font-semibold flex items-center gap-2">
-                                <span className="bg-primary h-[0.2rem] w-8 rounded-full hidden lg:flex"></span>student in engineering
-                            </span>
-                        </motion.div>
-                        {/* Louis Jagueneau Portfolio */}
-                        <motion.div className="mb-6 font-quattrocento font-bold text-[68px] text-center
+                <div className="flex justify-between mb-8 lg:mb-0 lg:flex-3 2xl:flex-4">
+                    {/* Hero */}
+                    <div className="flex flex-col
+                                    lg:justify-between "
+                    >
+                        <div>
+                            {/* Student in Engineering */}
+                            <motion.div className="mb-6 flex justify-center lg:justify-start"
+                                initial='hidden'
+                                variants={titleAnimation}
+                                custom={0}
+                                whileInView='visible'
+                                viewport={{ once: true }}
+                            >
+                                <div className="relative group">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                                    <span className="relative uppercase bg-gradient-to-r from-[#0D99FF] via-[#1483D5] to-[#0D99FF] bg-clip-text text-transparent tracking-[0.2em] font-poppins text-[0.75rem] font-bold flex items-center gap-3 px-4 py-2 border border-primary/20 rounded-full backdrop-blur-sm">
+                                        <span className="bg-primary h-[0.15rem] w-6 rounded-full hidden lg:flex"></span>
+                                        student in engineering
+                                    </span>
+                                </div>
+                            </motion.div>
+                            {/* Louis Jagueneau Portfolio */}
+                            <motion.div className="mb-6 font-quattrocento font-bold text-[68px] text-center
                                         lg:mb-8 lg:text-start
                                         xl:mb-4 xl:text-[80px] "
+                                initial='hidden'
+                                variants={titleAnimation}
+                                custom={0.3}
+                                whileInView='visible'
+                                viewport={{ once: true }}
+                            >
+                                <h1 className="text-primary ">Louis <br className="md:hidden" /> JAGUENEAU</h1>
+                                <h2 className="text-text dark:text-text-dark mt-[-20px]">Porfolio</h2>
+                            </motion.div>
+                            {/* Paragraphe */}
+                            <motion.div className="mb-8 2xl:mb-6 text-center lg:text-justify font-poppins text-text-muted dark:text-text-muted-dark text-[0.9rem] leading-6 lg:leading-8 2xl:leading-6 2xl:w-158"
+                                initial='hidden'
+                                variants={titleAnimation}
+                                custom={0.6}
+                                whileInView='visible'
+                                viewport={{ once: true }}
+                            >
+                                <p >I am currently pursuing a degree in IT engineering, with a strong focus on web development and software design.</p>
+                            </motion.div>
+                        </div>
+                        {/* Button */}
+                        <motion.div className="flex justify-center lg:justify-start"
                             initial='hidden'
                             variants={titleAnimation}
-                            custom={0.3}
+                            custom={0.9}
                             whileInView='visible'
-                            viewport={{ once: true }}
-                        >
-                            <h1 className="text-primary ">Louis <br className="md:hidden" /> JAGUENEAU</h1>
-                            <h2 className="text-text dark:text-text-dark mt-[-20px]">Porfolio</h2>
-                        </motion.div>
-                        {/* Paragraphe */}
-                        <motion.div className="mb-8 2xl:mb-6 text-center lg:text-justify font-poppins text-text-muted dark:text-text-muted-dark text-[0.9rem] leading-6 lg:leading-8 2xl:leading-6 2xl:w-158"
-                            initial='hidden'
-                            variants={titleAnimation}
-                            custom={0.6}
-                            whileInView='visible'
-                            viewport={{ once: true }}
-                        >
-                            <p >I am currently pursuing a degree in IT engineering, with a strong focus on web development and software design. I am committed to buil efficient digital solutions, applying best practices and modern technologies.</p>
+                            viewport={{ once: true }}>
+                            <motion.button
+                                className="relative group bg-gradient-to-r from-primary to-primary-hover hover:from-primary-hover hover:to-primary transition-all duration-300 outline-none font-poppins cursor-pointer text-white font-bold rounded-xl py-3 px-4 flex items-center gap-3 text-[1rem] shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden"
+                                whileTap={{ scale: 0.90 }}>
+                                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <span className="relative z-10">Download CV</span>
+                                <MdOutlineFileDownload className="relative z-10 text-xl group-hover:rotate-12 transition-transform duration-300" />
+                            </motion.button>
                         </motion.div>
                     </div>
-                    {/* Button */}
-                    <motion.div className="flex justify-center lg:justify-start"
-                        initial='hidden'
-                        variants={titleAnimation}
-                        custom={0.9}
-                        whileInView='visible'
-                        viewport={{ once: true }}>
-                        <motion.button
-                            className="bg-primary hover:bg-primary-hover transition-colors outline-none duration-200 font-poppins cursor-pointer text-white font-semibold rounded-sm py-2 px-4 flex items-center gap-2 text-[0.9rem] "
-                            whileTap={{ scale: 0.9 }}>
-                            Download CV <MdOutlineFileDownload className="text-xl" />
-                        </motion.button>
-                    </motion.div>
                 </div>
 
                 <div className="flex lg:flex-2 2xl:flex-3">
@@ -173,70 +214,218 @@ function Home() {
 
             </section >
 
-            {/* About me Section */}
-            <section className="bg-bg-secondary dark:bg-bg-dark">
-                <div className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] mt-[65px]">
+            <section className="relative bg-gradient-to-br from-bg-secondary via-bg-secondary to-bg-light dark:from-bg-secondary-dark dark:via-bg-secondary-dark dark:to-bg-light-dark overflow-hidden">
+                {/* Background decorative elements */}
+                <div className="absolute inset-0">
+                    <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-primary/8 to-primary/3 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-primary/5 to-primary/2 rounded-full blur-3xl"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-br from-primary/4 to-transparent rounded-full blur-2xl"></div>
 
+                    {/* Floating particles */}
+                    {[...Array(8)].map((_, i) => (
+                        <motion.div
+                            key={i}
+                            className="absolute w-1 h-1 bg-primary/30 rounded-full"
+                            initial={{
+                                x: Math.random() * 100 + '%',
+                                y: Math.random() * 100 + '%',
+                                scale: 0
+                            }}
+                            animate={{
+                                y: [null, '-20px', '20px', '-20px'],
+                                x: [null, '10px', '-10px', '10px'],
+                                scale: [0, 1, 0.7, 1],
+                                opacity: [0, 0.6, 0.3, 0.6]
+                            }}
+                            transition={{
+                                duration: 6 + i * 1.5,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                                delay: i * 0.8
+                            }}
+                        />
+                    ))}
+                </div>
 
-                    <div className="py-[50px]">
-
-                        {/* Title Div */}
-                        <div className="text-center xl:text-start mb-10">
-                            <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">About me</span>
-                            <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">My profile</h2>
+                <div className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] relative z-10">
+                    <div className="py-[80px]">
+                        {/* Enhanced Title */}
+                        <div className="text-center xl:text-start mb-12">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6 }}
+                                className="flex items-center justify-center xl:justify-start gap-4 ">
+                                
+                                <span className="uppercase font-rem tracking-widest text-[0.95rem] bg-gradient-to-r from-primary via-primary to-primary-hover bg-clip-text text-transparent">
+                                    About me
+                                </span>
+                                
+                            </motion.div>
+                            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3, duration: 0.6 }}
+                                className="font-rem font-bold text-[35px] bg-gradient-to-r from-text via-text to-text-muted dark:from-text-dark dark:via-text-dark dark:to-text-muted-dark bg-clip-text text-transparent leading-tight">
+                                My Profile
+                            </motion.h2>
+                            
                         </div>
 
-
-                        <div className="flex flex-col justify-center items-center gap-12
-                                        lg:flex-row xl:items-stretch">
-
-                            <motion.img src={ProfilePictureV2}
-                                initial='hidden'
-                                variants={SlowFadeIn}
-                                custom={0}
-                                whileInView='visible'
+                        <div className="flex flex-col justify-between items-center lg:flex-row xl:items-stretch max-w-7xl mx-auto">
+                            {/* Enhanced Profile Image */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -50, rotateY: -15 }}
+                                whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
                                 viewport={{ once: true }}
-                                alt="ProfilePictureV2"
-                                className="p-2 rounded-md w-80 xl:w-auto 2xl:w-3/4 bg-bg-light-secondary dark:bg-bg-ultralight-dark"
-                            />
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                className="relative group perspective-1000"
+                            >
+                                {/* Glowing background */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-primary/5 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500 scale-110"></div>
 
-                            <div className="flex flex-col gap-8 items-center">
+                                {/* Main image container */}
+                                <div className="relative transform group-hover:scale-[1.02] transition-all duration-500 2xl:ml-[-20px]">
+                                    {/* Border gradient */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-primary/20 to-primary/10 rounded-3xl p-1">
+                                        <div className="w-full h-full bg-gradient-to-br from-white/15 to-white/5 dark:from-white/10 dark:to-white/3 backdrop-blur-xl rounded-3xl"></div>
+                                    </div>
 
-                                <div className="text-center lg:text-start flex flex-col gap-3">
-                                    <h3 className="font-rem font-semibold text-[22px] 2xl:text-[28px] text-text dark:text-text-dark">Student in computer science</h3>
-                                    <p className="font-poppins text-[0.75rem] 2xl:text-[0.90rem] text-text-muted dark:text-text-muted-dark">I am a 22-year-old French student currently enrolled in an engineering school. I am passionate about technology, enjoy learning new skills, and aim to build practical and efficient web solutions.</p>
+                                    {/* Image */}
+                                    <div className="relative p-4 bg-gradient-to-br from-white/20 to-white/10 dark:from-white/10 dark:to-white/5 backdrop-blur-xl rounded-3xl border border-white/30 dark:border-white/20 shadow-2xl">
+                                        <img
+                                            src={ProfilePictureV2}
+                                            alt="Louis Jagueneau - Student in Engineering"
+                                            className="rounded-2xl w-80 xl:w-96 object-cover transform group-hover:scale-[1.01] transition-transform duration-500 shadow-lg"
+                                        />
+
+                                        {/* Floating badge */}
+                                        <motion.div
+                                            className="absolute -bottom-3 -right-3 bg-gradient-to-br from-primary to-primary-hover text-white p-4 rounded-2xl shadow-2xl border-4 border-white/20 backdrop-blur-sm"
+                                            animate={{
+                                                y: [0, -5, 0],
+                                                rotate: [0, 5, -5, 0]
+                                            }}
+                                            transition={{
+                                                duration: 4,
+                                                repeat: Infinity,
+                                                ease: "easeInOut"
+                                            }}>
+                                            <RiGraduationCapFill className="text-2xl" />
+                                        </motion.div>
+
+                                        {/* Corner accents */}
+                                        <div className="absolute top-2 left-2 w-6 h-6 border-l-2 border-t-2 border-primary/50 rounded-tl-lg"></div>
+                                        <div className="absolute top-2 right-2 w-6 h-6 border-r-2 border-t-2 border-primary/50 rounded-tr-lg"></div>
+                                        <div className="absolute bottom-2 left-2 w-6 h-6 border-l-2 border-b-2 border-primary/50 rounded-bl-lg"></div>
+                                        <div className="absolute bottom-2 right-2 w-6 h-6 border-r-2 border-b-2 border-primary/50 rounded-br-lg"></div>
+                                    </div>
                                 </div>
+                            </motion.div>
 
-                                <div className="grid grid-cols-1 gap-y-3 
-                                                sm:w-4/5 
-                                                md:grid-cols-2 md:w-full md:gap-x-5 md:gap-y-5
-                                                2xl:gap-x-9 2xl:gap-y-9">
+                            {/* Enhanced Content */}
+                            <div className="flex flex-col gap-12 items-center max-w-3xl lg:max-w-2xl xl:max-w-3xl">
+                                {/* Header text with enhanced styling */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2, duration: 0.6 }}
+                                    className="text-center lg:text-start flex flex-col gap-6">
 
-                                    <IntroductionCard
-                                        title="Objectives"
-                                        description="To grow as a versatile developer, mastering both front-end and back-end technologies, and contribute to meaningful projects."
-                                    />
-                                    <IntroductionCard
-                                        title="Philosophy"
-                                        description="I value thoughtful design, disciplined work habits, and continuous improvement in both code quality and problem-solving skills."
-                                    />
-                                    <IntroductionCard
-                                        title="Team Spirit"
-                                        description="I enjoy collaborating with peers, exchanging ideas, and supporting team success."
-                                    />
-                                    <IntroductionCard
-                                        title="Hobbies"
-                                        description="utside of technology, I enjoy padel and trail running, which help me maintain focus and discipline"
-                                    />
+                                    <div className="relative">
+                                        <h3 className="font-rem font-bold text-[28px] md:text-[32px] 2xl:text-[36px] bg-gradient-to-r from-text to-text-muted dark:from-text-dark dark:to-text-muted-dark bg-clip-text text-transparent leading-tight">
+                                            Student in Computer Science
+                                        </h3>
+                                        <motion.div
+                                            className="absolute -bottom-1 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-20 h-0.5 bg-gradient-to-r from-primary to-primary-hover rounded-full"
+                                            initial={{ width: 0 }}
+                                            whileInView={{ width: 80 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: 0.8, duration: 0.6 }}
+                                        ></motion.div>
+                                    </div>
 
+                                    <div className="relative group">
+                                        {/* Subtle glow background */}
+                                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/2 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+
+                                        <div className="relative p-8 bg-gradient-to-br from-white/10 to-white/5 dark:from-white/8 dark:to-white/3 backdrop-blur-xl rounded-2xl border border-white/20 dark:border-white/10 shadow-md">
+                                            {/* Decorative corner elements */}
+                                            <div className="absolute top-0 left-0 w-8 h-8">
+                                                <div className="absolute top-2 left-2 w-4 h-0.5 bg-primary rounded-full"></div>
+                                                <div className="absolute top-2 left-2 w-0.5 h-4 bg-primary rounded-full"></div>
+                                            </div>
+                                            <div className="absolute top-0 right-0 w-8 h-8">
+                                                <div className="absolute top-2 right-2 w-4 h-0.5 bg-primary rounded-full"></div>
+                                                <div className="absolute top-2 right-2 w-0.5 h-4 bg-primary rounded-full"></div>
+                                            </div>
+
+                                            <p className="font-poppins text-[1rem] md:text-[1.1rem] text-text-muted dark:text-text-muted-dark leading-relaxed">
+                                                I am a <span className="font-bold bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">22-year-old French student</span> currently enrolled in an engineering school. I am passionate about technology, enjoy learning new skills, and aim to build <span className="text-primary font-bold bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">practical and efficient web solutions</span>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </motion.div>
+
+                                {/* Enhanced Cards Grid */}
+                                <div className="grid grid-cols-1 gap-8 w-full sm:w-4/5 md:grid-cols-2 md:w-full 2xl:gap-10">
+                                    {[
+                                        {
+                                            title: "Objectives",
+                                            description: "To grow as a versatile developer, mastering both front-end and back-end technologies, and contribute to meaningful projects.",
+                                            delay: 0.1,
+                                            direction: "left"
+                                        },
+                                        {
+                                            title: "Philosophy",
+                                            description: "I value thoughtful design, disciplined work habits, and continuous improvement in both code quality and problem-solving skills.",
+                                            delay: 0.2,
+                                            direction: "right"
+                                        },
+                                        {
+                                            title: "Team Spirit",
+                                            description: "I enjoy collaborating with peers, exchanging ideas, and supporting team success.",
+                                            delay: 0.3,
+                                            direction: "left"
+                                        },
+                                        {
+                                            title: "Hobbies",
+                                            description: "Outside of technology, I enjoy padel and trail running, which help me maintain focus and discipline.",
+                                            delay: 0.4,
+                                            direction: "right"
+                                        }
+                                    ].map((card, index) => (
+                                        <motion.div
+                                            key={index}
+                                            initial={{
+                                                opacity: 0,
+                                                x: card.direction === "left" ? -40 : 40,
+                                                y: 20
+                                            }}
+                                            whileInView={{
+                                                opacity: 1,
+                                                x: 0,
+                                                y: 0
+                                            }}
+                                            viewport={{ once: true }}
+                                            transition={{
+                                                delay: card.delay,
+                                                duration: 0.6,
+                                                ease: "easeOut"
+                                            }}
+                                            className="group"
+                                        >
+                                            <IntroductionCard
+                                                title={card.title}
+                                                description={card.description}
+                                            />
+                                        </motion.div>
+                                    ))}
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
-            </section >
+            </section>
 
             <section className="bg-bg dark:bg-bg-dark container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] my-[65px]">
                 <div>
@@ -380,7 +569,7 @@ function Home() {
 
             </section>
 
-            <Footer/>
+            <Footer />
 
         </div >
     )
