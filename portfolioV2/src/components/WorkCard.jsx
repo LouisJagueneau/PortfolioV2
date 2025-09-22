@@ -3,13 +3,13 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import { FiGithub } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
 
-function WorkCard({ tags = [], githubLink, websiteLink, description, title }) {
+function WorkCard({ tags = [], githubLink, websiteLink, description, title, img }) {
     return (
 
         <div className='max-w-[350px] mx-auto bg-bg dark:bg-bg-dark p-4 shadow-md rounded-md'>
 
             <div className='w-full mb-5'>
-                <img className='rounded-md w-full h-35 xl:h-40' src={tempImage} alt="tempImage" />
+                <img className='rounded-md w-full h-35 xl:h-40' src={img} alt="img" />
 
             </div>
             <div className=''>
@@ -31,9 +31,19 @@ function WorkCard({ tags = [], githubLink, websiteLink, description, title }) {
                         <FiGithub />
                     </a>
 
-                    <a href={websiteLink} target='_blank' rel='noopener noreferrer' className='rounded-full border-2 border-text-muted dark:border-text-muted-dark text-text-muted dark:text-text-muted-dark inline-flex p-2 cursor-pointer hover:bg-text-muted hover:text-white dark:hover:bg-text-muted-dark dark:hover:text-black transition-all duration-300'>
-                        <GoArrowRight />
-                    </a>
+                    {websiteLink && (
+                        <a
+                            href={websiteLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded-full border-2 border-text-muted dark:border-text-muted-dark 
+                                        text-text-muted dark:text-text-muted-dark inline-flex p-2 cursor-pointer 
+                                        hover:bg-text-muted hover:text-white dark:hover:bg-text-muted-dark 
+                                        dark:hover:text-black transition-all duration-300"
+                        >
+                            <GoArrowRight />
+                        </a>
+                    )}
                 </div>
             </div>
         </div>

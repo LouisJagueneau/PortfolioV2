@@ -33,7 +33,7 @@ function IntroductionCard({ title, description }) {
                 
                 {/* Description */}
                 <div className="flex-1 pl-2">
-                    <p className="font-poppins text-[0.8rem] 2xl:text-[0.9rem] text-justify text-text-muted dark:text-text-muted-dark leading-relaxed">
+                    <p className="font-poppins text-[0.8rem] 2xl:text-[0.8rem] text-justify text-text-muted dark:text-text-muted-dark leading-relaxed">
                         {description}
                     </p>
                 </div>

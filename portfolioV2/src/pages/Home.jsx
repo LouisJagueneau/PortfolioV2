@@ -41,6 +41,9 @@ import PowerAppsIcon from '../assets/PowerApps.png'
 import PowerAutomateIcon from '../assets/PowerAutomate.png'
 import PowerBiIcon from '../assets/PowerBI.webp'
 import ProfilePictureV2 from "../assets/ProfilePictureV2.png"
+import FortaProject from '../assets/FortaProject.png'
+import BigBand64Project from '../assets/BigBand64Project.png'
+import GrillProject from '../assets/GrillProject.png'
 
 const educations = [
     {
@@ -162,7 +165,7 @@ function Home() {
                                 </div>
                             </motion.div>
                             {/* Louis Jagueneau Portfolio */}
-                            <motion.div className="mb-6 font-quattrocento font-bold text-[68px] text-center
+                            <motion.div className="mb-6 font-quattrocento font-bold text-[45px] sm:text-[68px] text-center
                                         lg:mb-8 lg:text-start
                                         xl:mb-4 xl:text-[80px] "
                                 initial='hidden'
@@ -270,14 +273,14 @@ function Home() {
                             
                         </div>
 
-                        <div className="flex flex-col justify-between items-center lg:flex-row xl:items-stretch max-w-7xl mx-auto">
+                        <div className="flex flex-col justify-between items-center xl:flex-row xl:items-stretch max-w-7xl mx-auto">
                             {/* Enhanced Profile Image */}
                             <motion.div
                                 initial={{ opacity: 0, x: -50, rotateY: -15 }}
                                 whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="relative group perspective-1000"
+                                className="relative group perspective-1000 mb-10 lg-mb-0"
                             >
                                 {/* Glowing background */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-primary/5 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500 scale-110"></div>
@@ -329,14 +332,14 @@ function Home() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
-                                    className="text-center lg:text-start flex flex-col gap-6">
+                                    className="text-center xl:text-start flex flex-col gap-6">
 
                                     <div className="relative">
-                                        <h3 className="font-rem font-bold text-[28px] md:text-[32px] 2xl:text-[36px] bg-gradient-to-r from-text to-text-muted dark:from-text-dark dark:to-text-muted-dark bg-clip-text text-transparent leading-tight">
+                                        <h3 className="font-rem font-bold text-[28px] md:text-[32px] bg-gradient-to-r from-text to-text-muted dark:from-text-dark dark:to-text-muted-dark bg-clip-text text-transparent leading-tight">
                                             Student in Computer Science
                                         </h3>
                                         <motion.div
-                                            className="absolute -bottom-1 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-20 h-0.5 bg-gradient-to-r from-primary to-primary-hover rounded-full"
+                                            className="absolute -bottom-1 left-1/2 xl:left-0 transform -translate-x-1/2 xl:translate-x-0 w-20 h-0.5 bg-gradient-to-r from-primary to-primary-hover rounded-full"
                                             initial={{ width: 0 }}
                                             whileInView={{ width: 80 }}
                                             viewport={{ once: true }}
@@ -359,7 +362,7 @@ function Home() {
                                                 <div className="absolute top-2 right-2 w-0.5 h-4 bg-primary rounded-full"></div>
                                             </div>
 
-                                            <p className="font-poppins text-[1rem] md:text-[1.1rem] text-text-muted dark:text-text-muted-dark leading-relaxed">
+                                            <p className="font-poppins text-sm md:text-[1.0rem] text-text-muted dark:text-text-muted-dark leading-relaxed">
                                                 I am a <span className="font-bold bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">22-year-old French student</span> currently enrolled in an engineering school. I am passionate about technology, enjoy learning new skills, and aim to build <span className="text-primary font-bold bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">practical and efficient web solutions</span>.
                                             </p>
                                         </div>
@@ -501,7 +504,7 @@ function Home() {
                             custom={0}
                             whileInView='visible'
                             viewport={{ once: true }}>
-                            < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                            < WorkCard tags={['React', 'TailwindCSS', 'motion']} img={BigBand64Project} title='BigBand64' websiteLink={'https://www.bigband64.fr/'} description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
                         </motion.div>
                         <motion.div
                             initial='hidden'
@@ -509,7 +512,7 @@ function Home() {
                             custom={0.3}
                             whileInView='visible'
                             viewport={{ once: true }}>
-                            < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                            < WorkCard tags={['React', 'TailwindCSS', 'Php', 'MySQL']} img={FortaProject} title='Forta Website' websiteLink={'https://forta.hr/'} description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
                         </motion.div>
                         <motion.div className="md:col-span-2 md:flex md:justify-center lg:flex-none lg:col-span-1"
                             initial='hidden'
@@ -517,7 +520,7 @@ function Home() {
                             custom={0.6}
                             whileInView='visible'
                             viewport={{ once: true }}>
-                            < WorkCard tags={['React', 'TailwindCSS', 'Php']} title='Forta Website' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                            < WorkCard tags={['React', 'Express', 'Node.js', 'MongoDB']} img={GrillProject} title='GRILL'  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
                         </motion.div>
                     </div>
                     <div className="flex justify-center">
@@ -529,45 +532,72 @@ function Home() {
 
                 </div>
             </section>
-            <section className="bg-bg dark:bg-bg-dark container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] py-[65px]">
+            <section className="bg-gray-50 dark:bg-gray-900 pt-20 pb-10">
+            <div className="container mx-auto px-6 md:px-12 lg:px-20 xl:px-32">
+                
+                {/* Header */}
+                <motion.div 
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
+                    <span className="uppercase font-medium text-blue-600 dark:text-blue-400 tracking-widest text-sm mb-2 block">
+                        Technical Skills
+                    </span>
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                        My Competencies
+                    </h2>
+                </motion.div>
 
-                {/* Title */}
-                <div className="text-center mb-10 xl:mb-15 2xl:mb-20">
-                    <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem]">Skills</span>
-                    <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">My Competencies</h2>
+                {/* Skills Sections */}
+                <div className="space-y-20">
+                    
+                    {/* Frontend & Design */}
+                    <SkillSection 
+                        title="Frontend & Design" 
+                        category="frontend"
+                        skills={[
+                            { Icon: IoLogoReact, title: "React", color: "text-white", keyWords: ["Components", "Hooks", "States"] },
+                            { Icon: FaFigma, title: "Figma", color: "text-white", keyWords: ["UI Design", "Prototypes", "Wireframes"] },
+                            { Icon: RiTailwindCssFill, title: "Tailwind", color: "text-white", keyWords: ["Responsive", "Custom Themes"] },
+                            { Icon: IoLogoJavascript, title: "JavaScript", color: "text-white", keyWords: ["ES6+", "DOM", "APIs"] },
+                            { Icon: FaHtml5, title: "HTML5", color: "text-white", keyWords: ["Semantic", "Forms", "SEO"] },
+                            { Icon: FaCss3Alt, title: "CSS3", color: "text-white", keyWords: ["Flexbox", "Grid", "Animations"] },
+                        ]} 
+                    />
+
+                    {/* Backend & Databases */}
+                    <SkillSection 
+                        title="Backend & Databases" 
+                        category="backend"
+                        skills={[
+                            { Icon: SiExpress, title: "Express.js", color: "text-white", keyWords: ["APIs", "Middleware", "Routing"] },
+                            { Icon: FaPhp, title: "PHP", color: "text-white", keyWords: ["OOP", "Laravel", "Symfony"] },
+                            { Icon: FaLaravel, title: "Laravel", color: "text-white", keyWords: ["MVC", "Blade", "Eloquent"] },
+                            { Icon: FaNodeJs, title: "Node.js", color: "text-white", keyWords: ["Backend", "REST", "Async"] },
+                            { Icon: DiMsqlServer, title: "SQL Server", color: "text-white", keyWords: ["Stored Proc", "Queries", "Joins"] },
+                            { Icon: GrMysql, title: "MySQL", color: "text-white", keyWords: ["CRUD", "Schemas", "Indexes"] },
+                            { Icon: SiMongodb, title: "MongoDB", color: "text-white", keyWords: ["Documents", "NoSQL", "Atlas"] },
+                        ]} 
+                    />
+
+                    {/* No-Code & Low-Code */}
+                    <SkillSection 
+                        title="No-Code & Low-Code" 
+                        category="nocode"
+                        skills={[
+                            { Icon: DataverseIcon, title: "Dataverse", isImage: true, keyWords: ["Tables", "Relationships", "Security"] },
+                            { Icon: PowerFxIcon, title: "Power Fx", isImage: true, keyWords: ["Formulas", "Logic", "Expressions"] },
+                            { Icon: PowerAppsIcon, title: "Power Apps", isImage: true, keyWords: ["Canvas", "Components", "Connectors"] },
+                            { Icon: PowerAutomateIcon, title: "Power Automate", isImage: true, keyWords: ["Flows", "Automation", "Triggers"] },
+                            { Icon: PowerBiIcon, title: "Power BI", isImage: true, keyWords: ["Dashboards", "Reports", "Data Viz"] },
+                        ]} 
+                    />
                 </div>
-
-                {/* Frontend & Design */}
-                <SkillSection title="Front-End & Design" skills={[
-                    { Icon: IoLogoReact, title: "React", color: "text-primary", keyWords: ["Components", "Hooks", "States"] },
-                    { Icon: FaFigma, title: "Figma", color: "text-[#f24e1f]", keyWords: ["UI Design", "Prototypes", "Wireframes"] },
-                    { Icon: RiTailwindCssFill, title: "Tailwind", color: "text-[#3bb1af]", keyWords: ["Utility CSS", "Responsive", "Custom Themes"] },
-                    { Icon: IoLogoJavascript, title: "JavaScript", color: "text-[#efd81d]", keyWords: ["ES6+", "DOM", "APIs"] },
-                    { Icon: FaHtml5, title: "HTML5", color: "text-[#dd4b25]", keyWords: ["Semantic", "Forms", "SEO"] },
-                    { Icon: FaCss3Alt, title: "CSS3", color: "text-[#254bdd]", keyWords: ["Flexbox", "Grid", "Animations"] },
-                ]} />
-
-                {/* Backend & Databases */}
-                <SkillSection title="Back-end & Databases" skills={[
-                    { Icon: SiExpress, title: "Express.js", color: "text-black", keyWords: ["APIs", "Middleware", "Routing"] },
-                    { Icon: FaPhp, title: "PHP", color: "text-[#294555]", keyWords: ["OOP", "Laravel", "Symfony"] },
-                    { Icon: FaLaravel, title: "Laravel", color: "text-[#f72211]", keyWords: ["MVC", "Blade", "Eloquent"] },
-                    { Icon: FaNodeJs, title: "Node.js", color: "text-[#7ec727]", keyWords: ["Backend", "REST", "Async"] },
-                    { Icon: DiMsqlServer, title: "SQL Server", color: "text-[#e62b3a]", keyWords: ["Stored Proc", "Queries", "Joins"] },
-                    { Icon: GrMysql, title: "MySQL", color: "text-[#255278]", keyWords: ["CRUD", "Schemas", "Indexes"] },
-                    { Icon: SiMongodb, title: "MongoDB", color: "text-[#3f9937]", keyWords: ["Documents", "NoSQL", "Atlas"] },
-                ]} />
-
-                {/* No-Code & Low-Code */}
-                <SkillSection title="No-Code & Low-Code" skills={[
-                    { Icon: DataverseIcon, title: "Dataverse", isImage: true, keyWords: ["Tables", "Relationships", "Security"] },
-                    { Icon: PowerFxIcon, title: "Power Fx", isImage: true, keyWords: ["Formulas", "Logic", "Expressions"] },
-                    { Icon: PowerAppsIcon, title: "Power Apps", isImage: true, keyWords: ["Canvas", "Components", "Connectors"] },
-                    { Icon: PowerAutomateIcon, title: "Power Automate", isImage: true, keyWords: ["Flows", "Automation", "Triggers"] },
-                    { Icon: PowerBiIcon, title: "Power BI", isImage: true, keyWords: ["Dashboards", "Reports", "Data Viz"] },
-                ]} />
-
-            </section>
+            </div>
+        </section>
 
             <Footer />
 
