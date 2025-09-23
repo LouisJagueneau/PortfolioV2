@@ -1,6 +1,12 @@
 {
   "contact": {
-    "title": "Nous contacter",
+    "get_in_touch": "Entrer en contact",
+    "heading": "Me contacter",
+    "lets_connect": "Restons en contact",
+    "ready_to_collaborate": "Prêt à collaborer sur un projet ambitieux ? Je suis toujours ouvert aux nouvelles opportunités et aux échanges d’idées.",
+    "quick_response": "Réponse rapide",
+    "response_time": "Je réponds généralement sous 24 à 48 heures.",
+    "title": "Contact",
     "phone_name": "téléphone",
     "address_name": "adresse",
     "email_name": "email"
@@ -8,45 +14,213 @@
   "form": {
     "name_placeholder": "Nom",
     "email_placeholder": "Email",
-    "subject_placeholder": "Sujet",
-    "message_placeholder": "Tapez votre message ici ...",
+    "subject_placeholder": "Objet",
+    "message_placeholder": "Écrivez votre message ici ...",
     "submit_button": "Envoyer",
-    "sending": "Envoi...",
-    "success_message": "Merci ! Votre message a été envoyé",
-    "error_message": "Oups, une erreur est survenue"
+    "sending": "Envoi en cours...",
+    "success_message": "Merci ! Votre message a bien été envoyé.",
+    "error_message": "Oups, une erreur est survenue."
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "experiences": "Expériences",
+    "education": "Formation",
+    "projects": "Projets",
+    "contacts": "Contact"
+  },
+  "footer": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "contact": "Contact",
+    "rights": "Tous droits réservés"
   },
   "projects": {
-    "title_span": "Projets",
-    "title_h2": "Mes Réalisations",
+    "title_span": "Portfolio",
+    "title_h2": "Mes Projets",
     "grill": {
       "title": "GRILL",
-      "description": "Un projet scolaire dont l’objectif était de créer une plateforme web moderne avec la stack MERN. Conçu pour être performant et évolutif dans un contexte réel."
+      "description": "Projet scolaire consistant à créer un système de restauration inspiré d’Uber Eats, avec des applications web dédiées pour les restaurants, les clients et les livreurs, reproduisant un véritable écosystème numérique."
     },
     "bigband64": {
-      "title": "BigBand64",
-      "description": "Site officiel d’un groupe de musique, conçu pour présenter les événements, les membres et les médias. Développé avec React et Tailwind pour une expérience dynamique."
+      "title": "Site BigBand64",
+      "description": "Site moderne et responsive pour l’association BigBand64, un groupe de musique basé à Pau. L’objectif était de concevoir une vitrine professionnelle reflétant l’identité de l’association et accompagnant sa montée en popularité."
     },
     "forta": {
-      "title": "Forta ltd",
-      "description": "Site vitrine pour une entreprise spécialisée dans l’usinage CNC et l’ingénierie plastique. Met en valeur les services et projets grâce à un design professionnel et épuré."
+      "title": "Site Forta",
+      "description": "Site web professionnel réalisé dans le cadre d’un stage à l’étranger. Forta est une entreprise spécialisée dans la production de pièces plastiques et métalliques. Le site met en valeur ses services avec un design moderne."
     },
     "gupe": {
       "title": "GUPE",
-      "description": "GUPE est une application développée avec PowerPlatform. Elle permet de cataloguer et de suivre avec précision les équipements sous pression."
+      "description": "Solution Power Platform destinée à optimiser les processus métiers et la gestion des données, améliorant l’efficacité des flux de travail et l’accessibilité de l’information."
     },
     "fsl": {
       "title": "FSL",
-      "description": "FSL est une application logistique développée sur PowerPlatform. Elle facilite le suivi et la gestion des flexibles et des vannes. Mon rôle est d’assurer sa maintenance."
+      "description": "Système automatisé sur Power Platform visant à optimiser les opérations de service terrain et le reporting, réduisant les tâches manuelles et améliorant l’efficacité globale."
     },
     "inventory_software": {
-      "title": "Inventory Software",
-      "description": "Un projet scolaire visant à développer une application de bureau pour gérer les stocks et le suivi des inventaires. Réalisé en C++ pour la rapidité et la fiabilité."
-    }
+      "title": "Logiciel de gestion d’inventaire",
+      "description": "Application de bureau permettant une gestion en temps réel des stocks avec suivi et rapports détaillés, conçue pour les petites et moyennes entreprises."
+    },
+    "no_projects_found": "Aucun projet trouvé",
+    "try_another_filter": "Essayez un autre filtre pour découvrir plus de projets.",
+    "more_projects": "Plus de projets"
   },
   "filters": {
     "all": "Tous",
     "powerplatform": "PowerPlatform",
     "web": "Web",
     "software": "Logiciel"
+  },
+  "home": {
+    "student_in_engineering": "étudiant en ingénierie",
+    "portfolio": "Portfolio",
+    "intro_paragraph": "Je poursuis actuellement des études en ingénierie informatique, avec une spécialisation en développement web et conception logicielle.",
+    "download_cv": "Télécharger mon CV",
+    "about_me": "À propos",
+    "my_profile": "Mon profil",
+    "student_in_cs": "Étudiant en informatique",
+    "about_paragraph": "Je suis un étudiant français de 22 ans, actuellement en école d’ingénieur. Passionné par les technologies, j’aime apprendre de nouvelles compétences et concevoir des solutions web pratiques et efficaces.",
+    "objectives_title": "Objectifs",
+    "objectives_desc": "Évoluer en tant que développeur polyvalent, maîtriser le front-end comme le back-end, et contribuer à des projets porteurs de sens.",
+    "philosophy_title": "Philosophie",
+    "philosophy_desc": "Je privilégie un design réfléchi, une rigueur de travail, et une amélioration continue de la qualité du code et de mes capacités de résolution de problèmes.",
+    "team_spirit_title": "Esprit d’équipe",
+    "team_spirit_desc": "J’aime collaborer, échanger des idées et contribuer à la réussite collective.",
+    "hobbies_title": "Loisirs",
+    "hobbies_desc": "En dehors de l’informatique, je pratique le padel et le trail, des disciplines qui m’aident à garder concentration et discipline.",
+    "experiences": "Expériences",
+    "professional_pathway": "Parcours professionnel",
+    "education": "Formation",
+    "diploma_pathway": "Parcours scolaire",
+    "projects": "Projets",
+    "my_work": "Mes réalisations",
+    "more_projects": "Plus de projets",
+    "technical_skills": "Compétences techniques",
+    "my_competencies": "Mes compétences",
+    "frontend_design": "Frontend & Design",
+    "backend_databases": "Backend & Bases de données",
+    "nocode_lowcode": "No-Code & Low-Code"
+  },
+  "quote": {
+    "author": "Léonard de Vinci",
+    "text": "J’ai été impressionné par l’urgence d’agir. Savoir ne suffit pas, il faut appliquer. Vouloir ne suffit pas, il faut faire."
+  },
+  "navigation_box": {
+    "my_projects": "Mes projets",
+    "my_projects_sub": "Plus de 20 projets réalisés",
+    "my_education": "Ma formation",
+    "my_education_sub": "5 ans en informatique",
+    "my_experiences": "Mes expériences",
+    "my_experiences_sub": "5 postes occupés"
+  },
+  "career_timeline": {
+    "responsibilities": "Responsabilités",
+    "tools_skills": "Outils & Compétences"
+  },
+  "education": {
+    "engineering": {
+      "title": "Cycle ingénieur en alternance",
+      "school": "CESI",
+      "fromDate": "2023",
+      "toDate": "2026",
+      "tags": [
+        "Développement Web",
+        "Développement Logiciel",
+        "Big Data",
+        "Réseaux",
+        "Recherche opérationnelle",
+        "Optimisation industrielle",
+        "Management"
+      ],
+      "description": "Après deux années de classe préparatoire intégrée, j’ai intégré le cycle ingénieur en alternance à CESI, en partenariat avec TotalEnergies en tant que développeur Power Platform. Cette formation m’a permis d’alterner entre apprentissage académique et projets concrets, tout en développant des compétences en développement web, ingénierie logicielle, bases de données et systèmes informatiques."
+    },
+    "preparatory": {
+      "title": "Classe préparatoire intégrée",
+      "school": "CESI",
+      "fromDate": "2021",
+      "toDate": "2023",
+      "tags": [
+        "Développement Web",
+        "Développement Logiciel",
+        "Réseaux",
+        "Systèmes embarqués"
+      ],
+      "description": "J’ai débuté mon cursus par une classe préparatoire intégrée de deux ans au CESI. La première année était généraliste, incluant informatique, physique et génie civil. En deuxième année, je me suis spécialisé en informatique avec des cours et projets autour du développement web, du réseau, du développement d’applications et des systèmes embarqués (Arduino)."
+    },
+    "highschool": {
+      "title": "Baccalauréat général",
+      "school": "Immaculée Conception",
+      "fromDate": "2018",
+      "toDate": "2021",
+      "tags": [
+        "Mathématiques",
+        "Physique",
+        "Biologie"
+      ],
+      "description": "J’ai obtenu mon baccalauréat général avec spécialités Mathématiques, Physique et Biologie (SVT), mention Bien. J’ai suivi ce cursus au lycée privé Immaculée Conception à Pau."
+    }
+  },
+  "experiences": {
+    "totalenergies": {
+      "company": "TotalEnergies",
+      "date": "2021 - Aujourd’hui",
+      "role": "Développeur Power Platform",
+      "responsibilities": "En tant que développeur Power Platform, je conçois, développe et maintiens plusieurs applications métiers utilisées sur site. Mon rôle inclut également la rédaction de documentations techniques détaillées et de spécifications pour garantir l’adéquation avec les besoins fonctionnels.\n\nJ’anime aussi des sessions de formation pour accompagner les collaborateurs dans l’adoption de nouveaux outils.",
+      "tools": [
+        "Power Platform",
+        "Power Apps",
+        "Power Automate",
+        "SharePoint",
+        "SQL",
+        "JavaScript",
+        "Microsoft 365"
+      ]
+    },
+    "pula_university": {
+      "company": "Université de Pula",
+      "date": "04/2023 - 07/2023",
+      "role": "Développeur SharePoint",
+      "responsibilities": "En tant que développeur Full Stack, j’ai été chargé de réaliser le site officiel de la société forta.hr, en utilisant React, Tailwind CSS et PHP. J’ai travaillé à la fois sur le front-end et le back-end, garantissant un design responsive et un formulaire de contact fonctionnel.\n\nCe stage à l’étranger (Croatie) a duré cinq mois et s’inscrivait dans le cadre de mon cursus académique, me permettant d’acquérir une solide expérience pratique.",
+      "tools": [
+        "React",
+        "Tailwind CSS",
+        "PHP",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "MySQL",
+        "Git",
+        "Github"
+      ]
+    },
+    "safran": {
+      "company": "Safran HE",
+      "date": "2021",
+      "role": "Développeur SharePoint",
+      "responsibilities": "Mon rôle était de concevoir et mettre en place un portail départemental sous SharePoint. L’objectif était de structurer un espace de travail permettant de centraliser, organiser et partager efficacement les fichiers du service.\n\nCe stage s’inscrivait dans mon cursus académique et m’a permis de renforcer mes compétences techniques en SharePoint tout en apprenant à mieux comprendre les besoins organisationnels.",
+      "tools": [
+        "SharePoint",
+        "Microsoft 365",
+        "Power Platform",
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ]
+    },
+    "fishmonger": {
+      "company": "Emploi d’été",
+      "date": "07/2021 - 09/2021",
+      "role": "Poissonnier",
+      "responsibilities": "Lors de ce job d’été en poissonnerie, j’ai participé à la fois à la vente et à la préparation des produits, notamment au filetage du poisson. Ce poste exigeait rigueur, rapidité et respect strict des normes d’hygiène.\n\nCe fut ma première expérience professionnelle, qui m’a permis de développer des compétences relationnelles au contact de la clientèle et de travailler efficacement en équipe.",
+      "tools": [
+        "Relation client",
+        "Hygiène alimentaire",
+        "Gestion du temps",
+        "Travail d’équipe",
+        "Communication",
+        "Résolution de problèmes"
+      ]
+    }
   }
 }

@@ -8,7 +8,7 @@ function ScrollProgress({ children }) {
         <>
             <motion.div
                 style={{ scaleX: scrollYProgress }}
-                className="fixed top-0 left-0 right-0 origin-left bg-primary h-[0.2rem]"
+                className="fixed top-0 left-0 right-0 origin-left bg-primary h-[0.2rem] z-101"
             />
 
             {children}

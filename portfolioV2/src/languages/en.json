@@ -1,5 +1,11 @@
 {
   "contact": {
+    "get_in_touch": "Get in touch",
+    "heading": "Contact me",
+    "lets_connect": "Let's connect",
+    "ready_to_collaborate": "Ready to collaborate on an exciting project? I'm always open to new opportunities and exchanging ideas.",
+    "quick_response": "Quick response",
+    "response_time": "I usually reply within 24 to 48 hours.",
     "title": "Contact us",
     "phone_name": "phone",
     "address_name": "address",
@@ -15,38 +21,239 @@
     "success_message": "Thank you! Your message has been sent",
     "error_message": "Oops, an error occurred"
   },
+  "nav": {
+    "home": "Home",
+    "about": "About me",
+    "experiences": "Experiences",
+    "education": "Education",
+    "projects": "Projects",
+    "contacts": "Contacts"
+  },
+  "footer": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact",
+    "rights": "All rights reserved"
+  },
   "projects": {
-    "title_span": "Projects",
-    "title_h2": "My Work",
+    "title_span": "Portfolio",
+    "title_h2": "My Projects",
     "grill": {
       "title": "GRILL",
-      "description": "A school project where the goal was to build a modern web platform built with the MERN stack. Focused on performance and scalability for real-world use."
+      "description": "A comprehensive restaurant management system built with the MERN stack, featuring inventory management, order processing, and customer management capabilities for modern restaurants."
     },
     "bigband64": {
-      "title": "BigBand64",
-      "description": "Official website for a music band, designed to showcase events, members, and media. Built with React and Tailwind for a dynamic experience."
+      "title": "Big Band 64 Website",
+      "description": "Modern and responsive website for a jazz band, featuring event listings, music samples, and booking functionality with an elegant design that captures the essence of jazz."
     },
     "forta": {
-      "title": "Forta ltd",
-      "description": "Corporate website for a CNC and plastic engineering company. Highlights services and projects with a clean, professional design. Built with React, TailwindCSS and Php."
+      "title": "Forta Corporate Website",
+      "description": "Professional corporate website for an industrial company, featuring multilingual support, contact management, and comprehensive product showcase with modern design principles."
     },
     "gupe": {
       "title": "GUPE",
-      "description": "GUPE is an application developed using PowerPlatform. This logistics application is designed to accurately catalog and monitor pressure equipment."
+      "description": "Power Platform solution for streamlining business processes and data management within the organization, improving workflow efficiency and data accessibility."
     },
     "fsl": {
       "title": "FSL",
-      "description": "FSL is a logistics application developed on PowerPlatform. It facilitates the tracking and management of hoses and valves. My job is to maintain this application."
+      "description": "Automated workflow system built on Power Platform to optimize field service operations and reporting, reducing manual tasks and improving operational efficiency."
     },
     "inventory_software": {
-      "title": "Inventory Software",
-      "description": "A school project where the goal was to develop a desktop application to manage inventory and track stock levels efficiently. Built in C++ for speed and reliability."
-    }
+      "title": "Inventory Management Software",
+      "description": "Desktop application for inventory management with real-time tracking and reporting capabilities, designed for small to medium businesses with comprehensive stock management needs."
+    },
+    "no_projects_found": "No projects found",
+    "try_another_filter": "Try selecting a different filter to see more projects.",
+    "more_projects": "More Projects"
   },
   "filters": {
     "all": "All",
     "powerplatform": "PowerPlatform",
     "web": "Web",
     "software": "Software"
+  },
+  "home": {
+    "student_in_engineering": "student in engineering",
+    "portfolio": "Portfolio",
+    "intro_paragraph": "I am currently pursuing a degree in IT engineering, with a strong focus on web development and software design.",
+    "download_cv": "Download CV",
+    "about_me": "About me",
+    "my_profile": "My Profile",
+    "student_in_cs": "Student in Computer Science",
+    "about_paragraph": "I am a 22-year-old French student currently enrolled in an engineering school. I am passionate about technology, enjoy learning new skills, and aim to build practical and efficient web solutions.",
+    "objectives_title": "Objectives",
+    "objectives_desc": "To grow as a versatile developer, mastering both front-end and back-end technologies, and contribute to meaningful projects.",
+    "philosophy_title": "Philosophy",
+    "philosophy_desc": "I value thoughtful design, disciplined work habits, and continuous improvement in both code quality and problem-solving skills.",
+    "team_spirit_title": "Team Spirit",
+    "team_spirit_desc": "I enjoy collaborating with peers, exchanging ideas, and supporting team success.",
+    "hobbies_title": "Hobbies",
+    "hobbies_desc": "Outside of technology, I enjoy padel and trail running, which help me maintain focus and discipline.",
+    "experiences": "Experiences",
+    "professional_pathway": "Professional Pathway",
+    "education": "Education",
+    "diploma_pathway": "Diploma Pathway",
+    "projects": "Projects",
+    "my_work": "My Work",
+    "more_projects": "More Projects",
+    "technical_skills": "Technical Skills",
+    "my_competencies": "My Competencies",
+    "frontend_design": "Frontend & Design",
+    "backend_databases": "Backend & Databases",
+    "nocode_lowcode": "No-Code & Low-Code"
+  },
+  "quote": {
+    "author": "Leonardo da Vinci",
+    "text": "I have been impressed with the urgency of doing. Knowing is not enough; we must apply. Being willing is not enough; we must do."
+  },
+  "navigation_box": {
+    "my_projects": "My Projects",
+    "my_projects_sub": "Over +20 projects completed",
+    "my_education": "My Education",
+    "my_education_sub": "5 years in computer science",
+    "my_experiences": "My Experiences",
+    "my_experiences_sub": "5 position holded"
+  },
+  "career_timeline": {
+    "responsibilities": "Responsibilities",
+    "tools_skills": "Tools & Skills"
+  },
+  "education": {
+    "engineering": {
+      "title": "Work-study Engineering Programme",
+      "school": "CESI",
+      "fromDate": "2023",
+      "toDate": "2026",
+      "tags": [
+        "Web Development",
+        "Software Development",
+        "Big Data",
+        "Network",
+        "Operational Research",
+        "Industrial Optimisation",
+        "Management"
+      ],
+      "description": "After completing an integrated preparatory class, I joined the 3-year engineering program at CESI, in a work-study format with TotalEnergies as a Power Platform Developer. During this cycle, I was able to alternate between academic learning and real-world projects, gaining hands-on experience in various areas of computer science such as web development, software engineering, databases, and IT systems."
+    },
+    "preparatory": {
+      "title": "Integrated Preparatory Class",
+      "school": "CESI",
+      "fromDate": "2021",
+      "toDate": "2023",
+      "tags": [
+        "Web Development",
+        "Software Development",
+        "Network",
+        "Embedded systems"
+      ],
+      "description": "For my higher education, I started with a 2-year integrated preparatory program at CESI. The first year was general, covering not only computer science but also physics and civil engineering. In the second year, I specialized in computer science, with courses and projects focused on web development, networking, application development, and even embedded systems using Arduino."
+    },
+    "highschool": {
+      "title": "General Baccalaureate (High School Diploma)",
+      "school": "Immaculée Conception",
+      "fromDate": "2018",
+      "toDate": "2021",
+      "tags": [
+        "Mathematics",
+        "Physics",
+        "Biology"
+      ],
+      "description": "I completed my French General Baccalaureate with majors in Mathematics, Physics, and Biology (SVT), graduating with honors (mention bien). I pursued my high school studies at Immaculée Conception, a private school in Pau."
+    }
+  },
+  "experiences": {
+    "totalenergies": {
+      "company": "TotalEnergies",
+      "date": "2021 - Today",
+      "role": "Power Platform Developer",
+      "responsibilities": "As a Power Platform Developer, I am responsible for designing, developing, and maintaining multiple business applications that are actively used on site. My role includes drafting detailed technical documentation and writing clear specifications to ensure alignment with business needs.\n\nI also deliver training sessions for employees to help them adopt and use new tools.",
+      "tools": [
+        "Power Platform",
+        "Power Apps",
+        "Power Automate",
+        "SharePoint",
+        "SQL",
+        "JavaScript",
+        "Microsoft 365"
+      ]
+    },
+    "pula_university": {
+      "company": "Pula University",
+      "date": "04/2023 - 07/2023",
+      "role": "SharePoint Developer",
+      "responsibilities": "As a Full Stack Developer, I was responsible for creating the official website of the company forta.hr, using React, Tailwind CSS, and PHP. During this project, I worked on both the front-end and back-end, ensuring a responsive design and a contact form for client communication.\n\nThis abroad internship (Croatia) lasted five months and was part of my academic curriculum, providing valuable practical experience.",
+      "tools": [
+        "React",
+        "Tailwind CSS",
+        "PHP",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "MySQL",
+        "Git",
+        "Github"
+      ]
+    },
+    "safran": {
+      "company": "Safran HE",
+      "date": "2021",
+      "role": "SharePoint Developer",
+      "responsibilities": "As a SharePoint Developer, my main objective was to design and implement a departmental portal in SharePoint. The project involved structuring a workspace where all files of the department could be stored, organized, and accessed efficiently.\n\nThis internship was part of my academic curriculum, allowing me to strengthen both my technical skills in SharePoint and my ability to understand organizational needs.",
+      "tools": [
+        "SharePoint",
+        "Microsoft 365",
+        "Power Platform",
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ]
+    },
+    "fishmonger": {
+      "company": "Summer Job",
+      "date": "07/2021 - 09/2021",
+      "role": "Fishmonger",
+      "responsibilities": "During this summer job in a fish shop, I was involved in both customer service and product preparation, including tasks such as filleting fish. This role required strong attention to detail, speed, and respect for hygiene standards.\n\nIt was my first professional experience, where I gained valuable social skills through daily interactions with customers and teamwork with colleagues.",
+      "tools": [
+        "Customer Service",
+        "Food Safety",
+        "Time Management",
+        "Team Work",
+        "Communication",
+        "Problem Solving"
+      ]
+    }
+  },
+  "projects": {
+    "bigband64": {
+      "title": "BigBand64",
+      "description": "Website for the BigBand64 association, a music group based in Pau. The objective was to design a professional website that reflects the identity of the association and supports its growing popularity.",
+      "websiteLink": "https://www.bigband64.fr/",
+      "tags": [
+        "React",
+        "TailwindCSS",
+        "motion"
+      ]
+    },
+    "forta": {
+      "title": "Forta Website",
+      "description": "A professional website created during an internship. Forta is a company producing plastic and metal components for other businesses. The project showcased the company’s expertise with a modern design and clear structure.",
+      "websiteLink": "https://forta.hr/",
+      "tags": [
+        "React",
+        "TailwindCSS",
+        "Php",
+        "MySQL"
+      ]
+    },
+    "grill": {
+      "title": "GRILL",
+      "description": "A school project simulating a food delivery system similar to Uber Eats, with dedicated web applications for restaurants, customers, and delivery staff. The project aimed to recreate a complete digital ecosystem for modern food services.",
+      "tags": [
+        "React",
+        "Express",
+        "Node.js",
+        "MongoDB"
+      ]
+    }
   }
 }

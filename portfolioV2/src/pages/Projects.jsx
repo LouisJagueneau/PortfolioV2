@@ -18,7 +18,7 @@ function Projects() {
     const projects = [
         {
             title: t('projects.grill.title', 'Restaurant Management System'),
-            description: t('projects.grill.description', 'A comprehensive restaurant management system built with the MERN stack, featuring inventory management, order processing, and customer management capabilities for modern restaurants.'),
+            description: t('projects.grill.description'),
             tags: ['Web', 'MERN', 'MongoDB', 'Express'],
             githubLink: '#',
             websiteLink: '#',
@@ -26,15 +26,15 @@ function Projects() {
         },
         {
             title: t('projects.bigband64.title', 'Big Band 64 Website'),
-            description: t('projects.bigband64.description', 'Modern and responsive website for a jazz band, featuring event listings, music samples, and booking functionality with an elegant design that captures the essence of jazz.'),
-            tags: ['Web', 'React', 'TailwindCSS', 'Responsive'],
+            description: t('projects.bigband64.description'),
+            tags: ['Web', 'React', 'TailwindCSS'],
             githubLink: '#',
             websiteLink: '#',
             image: tempImage
         },
         {
             title: t('projects.forta.title', 'Forta Corporate Website'),
-            description: t('projects.forta.description', 'Professional corporate website for an industrial company, featuring multilingual support, contact management, and comprehensive product showcase with modern design principles.'),
+            description: t('projects.forta.description'),
             tags: ['Web', 'React', 'MySQL', 'PHP'],
             githubLink: '#',
             websiteLink: '#',
@@ -42,7 +42,7 @@ function Projects() {
         },
         {
             title: t('projects.gupe.title', 'GUPE Management System'),
-            description: t('projects.gupe.description', 'Power Platform solution for streamlining business processes and data management within the organization, improving workflow efficiency and data accessibility.'),
+            description: t('projects.gupe.description'),
             tags: ['PowerPlatform', 'Power Apps', 'Dataverse'],
             githubLink: '#',
             websiteLink: '#',
@@ -50,15 +50,15 @@ function Projects() {
         },
         {
             title: t('projects.fsl.title', 'FSL Workflow Automation'),
-            description: t('projects.fsl.description', 'Automated workflow system built on Power Platform to optimize field service operations and reporting, reducing manual tasks and improving operational efficiency.'),
-            tags: ['PowerPlatform', 'Power Automate', 'SharePoint'],
+            description: t('projects.fsl.description'),
+            tags: ['PowerPlatform', 'SharePoint', 'Dataverse'],
             githubLink: '#',
             websiteLink: '#',
             image: tempImage
         },
         {
             title: t('projects.inventory_software.title', 'Inventory Management Software'),
-            description: t('projects.inventory_software.description', 'Desktop application for inventory management with real-time tracking and reporting capabilities, designed for small to medium businesses with comprehensive stock management needs.'),
+            description: t('projects.inventory_software.description'),
             tags: ['Software', 'C++', 'MySQL', 'Desktop'],
             githubLink: '#',
             websiteLink: '#',
@@ -203,18 +203,7 @@ function Projects() {
                         </p>
                     </motion.div>
                 )}
-
-                {/* More Projects Button dans le style original */}
-                <div className="flex justify-center">
-                    <motion.button 
-                        className="font-poppins cursor-pointer text-white bg-primary px-6 py-3 rounded-md flex items-center font-medium gap-3 transition-all duration-300 hover:bg-primary-hover hover:shadow-lg outline-none"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        More Projects 
-                        <FaArrowRightLong className="transition-transform duration-200 group-hover:translate-x-1" />
-                    </motion.button>
-                </div>
+               
             </div>
         </div>
     );

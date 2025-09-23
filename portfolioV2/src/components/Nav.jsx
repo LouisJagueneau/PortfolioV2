@@ -10,12 +10,14 @@ import { GoLightBulb } from "react-icons/go";
 import { FaPhoneAlt } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Nav() {
     const [isOpen, setIsOpen] = useState(false)
+    const { t } = useTranslation();
 
     return (
-        <div>
+        <div className="z-100">
             {/* Menu Button */}
             <button
                 className="relative inline-flex items-center px-4 h-10 bg-bg-light dark:bg-bg-light-dark rounded-md hover:bg-hover-bg-light dark:hover:bg-hover-bg-light-dark"
@@ -49,13 +51,13 @@ function Nav() {
                     <div className="mx-5 mt-8">
                         <ul className="flex flex-col gap-7">
                             <div>
-                                <Link to='/'><li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <GoHome className="text-[1.2rem]" />Home</li></Link>
-                                <li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <FaRegUser className="text-[1.0rem]" />About me</li>
-                                <li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <PiBagSimple className="text-[1.2rem]" />Experiences</li>
-                                <li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <IoSchoolOutline className="text-[1.2rem]" />Education</li>
-                                <Link to="/projects"><li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <GoLightBulb className="text-[1.2rem]" />Projects</li></Link>
+                                <Link to='/'><li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <GoHome className="text-[1.2rem]" />{t('nav.home')}</li></Link>
+                                <li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <FaRegUser className="text-[1.0rem]" />{t('nav.about')}</li>
+                                <li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <PiBagSimple className="text-[1.2rem]" />{t('nav.experiences')}</li>
+                                <li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <IoSchoolOutline className="text-[1.2rem]" />{t('nav.education')}</li>
+                                <Link to="/projects"><li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <GoLightBulb className="text-[1.2rem]" />{t('nav.projects')}</li></Link>
                             </div>
-                            <Link to="/contact"><li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <FaPhoneAlt className="text-[0.9rem]" />Contacts</li></Link>
+                            <Link to="/contact"><li className="text-text-muted dark:text-text-muted-dark font-poppins text-[1.0rem] flex gap-4 items-center py-3 rounded-md hover:bg-bg-ultralight hover:dark:bg-bg-ultralight-dark cursor-pointer px-2"> <FaPhoneAlt className="text-[0.9rem]" />{t('nav.contacts')}</li></Link>
                         </ul>
                     </div>
                 </div>

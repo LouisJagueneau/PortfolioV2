@@ -2,26 +2,28 @@ import { FaArrowRightLong } from "react-icons/fa6"
 import { GoLightBulb } from "react-icons/go"
 import { LuGraduationCap } from "react-icons/lu"
 import { PiBagSimple } from "react-icons/pi"
-
-const navItems = [
-  {
-    icon: <GoLightBulb />,
-    title: "My Projects",
-    subtitle: "Over +20 projects completed",
-  },
-  {
-    icon: <LuGraduationCap />,
-    title: "My Education",
-    subtitle: "5 years in computer science",
-  },
-  {
-    icon: <PiBagSimple />,
-    title: "My Experiences",
-    subtitle: "5 position holded",
-  },
-]
+import { useTranslation } from "react-i18next"
 
 function NavigationBox() {
+  const { t } = useTranslation()
+  const navItems = [
+    {
+      icon: <GoLightBulb />,
+      title: t("navigation_box.my_projects"),
+      subtitle: t("navigation_box.my_projects_sub"),
+    },
+    {
+      icon: <LuGraduationCap />,
+      title: t("navigation_box.my_education"),
+      subtitle: t("navigation_box.my_education_sub"),
+    },
+    {
+      icon: <PiBagSimple />,
+      title: t("navigation_box.my_experiences"),
+      subtitle: t("navigation_box.my_experiences_sub"),
+    },
+  ]
+
   return (
     <div className="flex flex-col bg-bg-light dark:bg-bg-light-dark w-full rounded-md">
       {navItems.map((item, index) => (

@@ -1,6 +1,6 @@
 //Library
 import { delay, motion } from "motion/react"
-
+import { useTranslation } from "react-i18next";
 
 //Components
 import Header from "../components/Header"
@@ -83,7 +83,7 @@ const educations = [
 
 
 function Home() {
-
+    const { t } = useTranslation();
 
     const titleAnimation = {
         hidden: { opacity: 0, x: -20 },
@@ -160,7 +160,7 @@ function Home() {
                                     <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
                                     <span className="relative uppercase bg-gradient-to-r from-[#0D99FF] via-[#1483D5] to-[#0D99FF] bg-clip-text text-transparent tracking-[0.2em] font-poppins text-[0.75rem] font-bold flex items-center gap-3 px-4 py-2 border border-primary/20 rounded-full backdrop-blur-sm">
                                         <span className="bg-primary h-[0.15rem] w-6 rounded-full hidden lg:flex"></span>
-                                        student in engineering
+                                        {t("home.student_in_engineering")}
                                     </span>
                                 </div>
                             </motion.div>
@@ -175,7 +175,7 @@ function Home() {
                                 viewport={{ once: true }}
                             >
                                 <h1 className="text-primary ">Louis <br className="md:hidden" /> JAGUENEAU</h1>
-                                <h2 className="text-text dark:text-text-dark mt-[-20px]">Porfolio</h2>
+                                <h2 className="text-text dark:text-text-dark mt-[-20px]">{t("home.portfolio")}</h2>
                             </motion.div>
                             {/* Paragraphe */}
                             <motion.div className="mb-8 2xl:mb-6 text-center lg:text-justify font-poppins text-text-muted dark:text-text-muted-dark text-[0.9rem] leading-6 lg:leading-8 2xl:leading-6 2xl:w-158"
@@ -185,7 +185,7 @@ function Home() {
                                 whileInView='visible'
                                 viewport={{ once: true }}
                             >
-                                <p >I am currently pursuing a degree in IT engineering, with a strong focus on web development and software design.</p>
+                                <p >{t("home.intro_paragraph")}</p>
                             </motion.div>
                         </div>
                         {/* Button */}
@@ -199,7 +199,7 @@ function Home() {
                                 className="relative group bg-gradient-to-r from-primary to-primary-hover hover:from-primary-hover hover:to-primary transition-all duration-300 outline-none font-poppins cursor-pointer text-white font-bold rounded-xl py-3 px-4 flex items-center gap-3 text-[1rem] shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden"
                                 whileTap={{ scale: 0.90 }}>
                                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <span className="relative z-10">Download CV</span>
+                                <span className="relative z-10">{t("home.download_cv")}</span>
                                 <MdOutlineFileDownload className="relative z-10 text-xl group-hover:rotate-12 transition-transform duration-300" />
                             </motion.button>
                         </motion.div>
@@ -260,17 +260,14 @@ function Home() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
                                 className="flex items-center justify-center xl:justify-start gap-4 ">
-                                
                                 <span className="uppercase font-rem tracking-widest text-[0.95rem] bg-gradient-to-r from-primary via-primary to-primary-hover bg-clip-text text-transparent">
-                                    About me
+                                    {t("home.about_me")}
                                 </span>
-                                
                             </motion.div>
                             <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3, duration: 0.6 }}
                                 className="font-rem font-bold text-[35px] bg-gradient-to-r from-text via-text to-text-muted dark:from-text-dark dark:via-text-dark dark:to-text-muted-dark bg-clip-text text-transparent leading-tight">
-                                My Profile
+                                {t("home.my_profile")}
                             </motion.h2>
-                            
                         </div>
 
                         <div className="flex flex-col justify-between items-center xl:flex-row xl:items-stretch max-w-7xl mx-auto">
@@ -336,7 +333,7 @@ function Home() {
 
                                     <div className="relative">
                                         <h3 className="font-rem font-bold text-[28px] md:text-[32px] bg-gradient-to-r from-text to-text-muted dark:from-text-dark dark:to-text-muted-dark bg-clip-text text-transparent leading-tight">
-                                            Student in Computer Science
+                                            {t("home.student_in_cs")}
                                         </h3>
                                         <motion.div
                                             className="absolute -bottom-1 left-1/2 xl:left-0 transform -translate-x-1/2 xl:translate-x-0 w-20 h-0.5 bg-gradient-to-r from-primary to-primary-hover rounded-full"
@@ -363,7 +360,7 @@ function Home() {
                                             </div>
 
                                             <p className="font-poppins text-sm md:text-[1.0rem] text-text-muted dark:text-text-muted-dark leading-relaxed">
-                                                I am a <span className="font-bold bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">22-year-old French student</span> currently enrolled in an engineering school. I am passionate about technology, enjoy learning new skills, and aim to build <span className="text-primary font-bold bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">practical and efficient web solutions</span>.
+                                                {t("home.about_paragraph")}
                                             </p>
                                         </div>
                                     </div>
@@ -373,26 +370,26 @@ function Home() {
                                 <div className="grid grid-cols-1 gap-8 w-full sm:w-4/5 md:grid-cols-2 md:w-full 2xl:gap-10">
                                     {[
                                         {
-                                            title: "Objectives",
-                                            description: "To grow as a versatile developer, mastering both front-end and back-end technologies, and contribute to meaningful projects.",
+                                            title: t("home.objectives_title"),
+                                            description: t("home.objectives_desc"),
                                             delay: 0.1,
                                             direction: "left"
                                         },
                                         {
-                                            title: "Philosophy",
-                                            description: "I value thoughtful design, disciplined work habits, and continuous improvement in both code quality and problem-solving skills.",
+                                            title: t("home.philosophy_title"),
+                                            description: t("home.philosophy_desc"),
                                             delay: 0.2,
                                             direction: "right"
                                         },
                                         {
-                                            title: "Team Spirit",
-                                            description: "I enjoy collaborating with peers, exchanging ideas, and supporting team success.",
+                                            title: t("home.team_spirit_title"),
+                                            description: t("home.team_spirit_desc"),
                                             delay: 0.3,
                                             direction: "left"
                                         },
                                         {
-                                            title: "Hobbies",
-                                            description: "Outside of technology, I enjoy padel and trail running, which help me maintain focus and discipline.",
+                                            title: t("home.hobbies_title"),
+                                            description: t("home.hobbies_desc"),
                                             delay: 0.4,
                                             direction: "right"
                                         }
@@ -435,8 +432,8 @@ function Home() {
 
                     {/* Title Div */}
                     <div className="text-center xl:text-start mb-10">
-                        <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Experiences</span>
-                        <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">Professional Pathway</h2>
+                        <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">{t("home.experiences")}</span>
+                        <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">{t("home.professional_pathway")}</h2>
                     </div>
 
                     <motion.div
@@ -453,8 +450,8 @@ function Home() {
             <section className="bg-bg dark:bg-bg-dark container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] my-[65px]">
                 {/* Title Div */}
                 <div className="text-center xl:text-start mb-10">
-                    <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Education</span>
-                    <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">Diploma Pathway</h2>
+                    <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">{t("home.education")}</span>
+                    <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">{t("home.diploma_pathway")}</h2>
                 </div>
 
                 <div className="">
@@ -464,8 +461,16 @@ function Home() {
                         custom={0}
                         whileInView='visible'
                         viewport={{ once: true }}>
-                        <EducationCard title='Work-study Engineering Programme' fromDate='2021' toDate='2025' school='CESI' tags={["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"]} borderDown='false' borderUp='true' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus' />
-
+                        <EducationCard
+                            title={t('education.engineering.title')}
+                            fromDate={t('education.engineering.fromDate')}
+                            toDate={t('education.engineering.toDate')}
+                            school={t('education.engineering.school')}
+                            tags={t('education.engineering.tags', { returnObjects: true })}
+                            borderDown='false'
+                            borderUp='true'
+                            description={t('education.engineering.description')}
+                        />
                     </motion.div>
                     <motion.div
                         initial='hidden'
@@ -473,8 +478,16 @@ function Home() {
                         custom={0}
                         whileInView='visible'
                         viewport={{ once: true }}>
-                        <EducationCard title='Integrated Preparatory Class' fromDate='2019' toDate='2021' school='CESI' tags={["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"]} borderDown='false' borderUp='true' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus' />
-
+                        <EducationCard
+                            title={t('education.preparatory.title')}
+                            fromDate={t('education.preparatory.fromDate')}
+                            toDate={t('education.preparatory.toDate')}
+                            school={t('education.preparatory.school')}
+                            tags={t('education.preparatory.tags', { returnObjects: true })}
+                            borderDown='false'
+                            borderUp='true'
+                            description={t('education.preparatory.description')}
+                        />
                     </motion.div>
                     <motion.div
                         initial='hidden'
@@ -482,8 +495,16 @@ function Home() {
                         custom={0}
                         whileInView='visible'
                         viewport={{ once: true }}>
-                        <EducationCard title='General Baccalaureate (HighSchool Diploma)' fromDate='2016' toDate='2019' school='CESI' tags={["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"]} borderDown='true' borderUp='true' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. Praesent consequat, tellus ornare rhoncus pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus' />
-
+                        <EducationCard
+                            title={t('education.highschool.title')}
+                            fromDate={t('education.highschool.fromDate')}
+                            toDate={t('education.highschool.toDate')}
+                            school={t('education.highschool.school')}
+                            tags={t('education.highschool.tags', { returnObjects: true })}
+                            borderDown='true'
+                            borderUp='true'
+                            description={t('education.highschool.description')}
+                        />
                     </motion.div>
                 </div>
             </section>
@@ -492,8 +513,8 @@ function Home() {
                 <div className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] py-[65px]">
                     {/* Title Div */}
                     <div className="text-center mb-10">
-                        <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">Projects</span>
-                        <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">My Work</h2>
+                        <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">{t("home.projects")}</span>
+                        <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">{t("home.my_work")}</h2>
                     </div>
                     <div className="gap-5 grid grid-cols-1 mb-8 xl:mb-12 2xl:mb-15
                                     md:grid-cols-2  md:gap-8 
@@ -504,7 +525,13 @@ function Home() {
                             custom={0}
                             whileInView='visible'
                             viewport={{ once: true }}>
-                            < WorkCard tags={['React', 'TailwindCSS', 'motion']} img={BigBand64Project} title='BigBand64' websiteLink={'https://www.bigband64.fr/'} description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                            <WorkCard
+                                tags={t("projects.bigband64.tags", { returnObjects: true })}
+                                img={BigBand64Project}
+                                title={t("projects.bigband64.title")}
+                                websiteLink={t("projects.bigband64.websiteLink")}
+                                description={t("projects.bigband64.description")}
+                            />
                         </motion.div>
                         <motion.div
                             initial='hidden'
@@ -512,7 +539,13 @@ function Home() {
                             custom={0.3}
                             whileInView='visible'
                             viewport={{ once: true }}>
-                            < WorkCard tags={['React', 'TailwindCSS', 'Php', 'MySQL']} img={FortaProject} title='Forta Website' websiteLink={'https://forta.hr/'} description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                            <WorkCard
+                                tags={t("projects.forta.tags", { returnObjects: true })}
+                                img={FortaProject}
+                                title={t("projects.forta.title")}
+                                websiteLink={t("projects.forta.websiteLink")}
+                                description={t("projects.forta.description")}
+                            />
                         </motion.div>
                         <motion.div className="md:col-span-2 md:flex md:justify-center lg:flex-none lg:col-span-1"
                             initial='hidden'
@@ -520,84 +553,89 @@ function Home() {
                             custom={0.6}
                             whileInView='visible'
                             viewport={{ once: true }}>
-                            < WorkCard tags={['React', 'Express', 'Node.js', 'MongoDB']} img={GrillProject} title='GRILL'  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate nisl et viverra volutpat. Morbi ut leo nunc. Suspendisse finibus.' />
+                            <WorkCard
+                                tags={t("projects.grill.tags", { returnObjects: true })}
+                                img={GrillProject}
+                                title={t("projects.grill.title")}
+                                description={t("projects.grill.description")}
+                            />
                         </motion.div>
                     </div>
                     <div className="flex justify-center">
                         <motion.button className="font-poppins cursor-pointer text-white bg-primary px-4 py-2 rounded-md flex items-center font-medium gap-2 transition-colors outline-none duration-200 hover:bg-primary-hover"
                             whileTap={{ scale: 0.9 }}>
-                            More Projects <FaArrowRightLong />
+                            {t("home.more_projects")} <FaArrowRightLong />
                         </motion.button>
                     </div>
 
                 </div>
             </section>
             <section className="bg-gray-50 dark:bg-gray-900 pt-20 pb-10">
-            <div className="container mx-auto px-6 md:px-12 lg:px-20 xl:px-32">
-                
-                {/* Header */}
-                <motion.div 
-                    className="text-center mb-16"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                >
-                    <span className="uppercase font-medium text-blue-600 dark:text-blue-400 tracking-widest text-sm mb-2 block">
-                        Technical Skills
-                    </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-                        My Competencies
-                    </h2>
-                </motion.div>
+                <div className="container mx-auto px-6 md:px-12 lg:px-20 xl:px-32">
 
-                {/* Skills Sections */}
-                <div className="space-y-20">
-                    
-                    {/* Frontend & Design */}
-                    <SkillSection 
-                        title="Frontend & Design" 
-                        category="frontend"
-                        skills={[
-                            { Icon: IoLogoReact, title: "React", color: "text-white", keyWords: ["Components", "Hooks", "States"] },
-                            { Icon: FaFigma, title: "Figma", color: "text-white", keyWords: ["UI Design", "Prototypes", "Wireframes"] },
-                            { Icon: RiTailwindCssFill, title: "Tailwind", color: "text-white", keyWords: ["Responsive", "Custom Themes"] },
-                            { Icon: IoLogoJavascript, title: "JavaScript", color: "text-white", keyWords: ["ES6+", "DOM", "APIs"] },
-                            { Icon: FaHtml5, title: "HTML5", color: "text-white", keyWords: ["Semantic", "Forms", "SEO"] },
-                            { Icon: FaCss3Alt, title: "CSS3", color: "text-white", keyWords: ["Flexbox", "Grid", "Animations"] },
-                        ]} 
-                    />
+                    {/* Header */}
+                    <motion.div
+                        className="text-center mb-16"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <span className="uppercase font-medium text-blue-600 dark:text-blue-400 tracking-widest text-sm mb-2 block">
+                            {t("home.technical_skills")}
+                        </span>
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                            {t("home.my_competencies")}
+                        </h2>
+                    </motion.div>
 
-                    {/* Backend & Databases */}
-                    <SkillSection 
-                        title="Backend & Databases" 
-                        category="backend"
-                        skills={[
-                            { Icon: SiExpress, title: "Express.js", color: "text-white", keyWords: ["APIs", "Middleware", "Routing"] },
-                            { Icon: FaPhp, title: "PHP", color: "text-white", keyWords: ["OOP", "Laravel", "Symfony"] },
-                            { Icon: FaLaravel, title: "Laravel", color: "text-white", keyWords: ["MVC", "Blade", "Eloquent"] },
-                            { Icon: FaNodeJs, title: "Node.js", color: "text-white", keyWords: ["Backend", "REST", "Async"] },
-                            { Icon: DiMsqlServer, title: "SQL Server", color: "text-white", keyWords: ["Stored Proc", "Queries", "Joins"] },
-                            { Icon: GrMysql, title: "MySQL", color: "text-white", keyWords: ["CRUD", "Schemas", "Indexes"] },
-                            { Icon: SiMongodb, title: "MongoDB", color: "text-white", keyWords: ["Documents", "NoSQL", "Atlas"] },
-                        ]} 
-                    />
+                    {/* Skills Sections */}
+                    <div className="space-y-20">
 
-                    {/* No-Code & Low-Code */}
-                    <SkillSection 
-                        title="No-Code & Low-Code" 
-                        category="nocode"
-                        skills={[
-                            { Icon: DataverseIcon, title: "Dataverse", isImage: true, keyWords: ["Tables", "Relationships", "Security"] },
-                            { Icon: PowerFxIcon, title: "Power Fx", isImage: true, keyWords: ["Formulas", "Logic", "Expressions"] },
-                            { Icon: PowerAppsIcon, title: "Power Apps", isImage: true, keyWords: ["Canvas", "Components", "Connectors"] },
-                            { Icon: PowerAutomateIcon, title: "Power Automate", isImage: true, keyWords: ["Flows", "Automation", "Triggers"] },
-                            { Icon: PowerBiIcon, title: "Power BI", isImage: true, keyWords: ["Dashboards", "Reports", "Data Viz"] },
-                        ]} 
-                    />
+                        {/* Frontend & Design */}
+                        <SkillSection
+                            title={t("home.frontend_design")}
+                            category="frontend"
+                            skills={[
+                                { Icon: IoLogoReact, title: "React", color: "text-white", keyWords: ["Components", "Hooks", "States"] },
+                                { Icon: FaFigma, title: "Figma", color: "text-white", keyWords: ["UI Design", "Prototypes", "Wireframes"] },
+                                { Icon: RiTailwindCssFill, title: "Tailwind", color: "text-white", keyWords: ["Responsive", "Custom Themes"] },
+                                { Icon: IoLogoJavascript, title: "JavaScript", color: "text-white", keyWords: ["ES6+", "DOM", "APIs"] },
+                                { Icon: FaHtml5, title: "HTML5", color: "text-white", keyWords: ["Semantic", "Forms", "SEO"] },
+                                { Icon: FaCss3Alt, title: "CSS3", color: "text-white", keyWords: ["Flexbox", "Grid", "Animations"] },
+                            ]}
+                        />
+
+                        {/* Backend & Databases */}
+                        <SkillSection
+                            title={t("home.backend_databases")}
+                            category="backend"
+                            skills={[
+                                { Icon: SiExpress, title: "Express.js", color: "text-white", keyWords: ["APIs", "Middleware", "Routing"] },
+                                { Icon: FaPhp, title: "PHP", color: "text-white", keyWords: ["OOP", "Laravel", "Symfony"] },
+                                { Icon: FaLaravel, title: "Laravel", color: "text-white", keyWords: ["MVC", "Blade", "Eloquent"] },
+                                { Icon: FaNodeJs, title: "Node.js", color: "text-white", keyWords: ["Backend", "REST", "Async"] },
+                                { Icon: DiMsqlServer, title: "SQL Server", color: "text-white", keyWords: ["Stored Proc", "Queries", "Joins"] },
+                                { Icon: GrMysql, title: "MySQL", color: "text-white", keyWords: ["CRUD", "Schemas", "Indexes"] },
+                                { Icon: SiMongodb, title: "MongoDB", color: "text-white", keyWords: ["Documents", "NoSQL", "Atlas"] },
+                            ]}
+                        />
+
+                        {/* No-Code & Low-Code */}
+                        <SkillSection
+                            title={t("home.nocode_lowcode")}
+                            category="nocode"
+                            skills={[
+                                { Icon: DataverseIcon, title: "Dataverse", isImage: true, keyWords: ["Tables", "Relationships", "Security"] },
+                                { Icon: PowerFxIcon, title: "Power Fx", isImage: true, keyWords: ["Formulas", "Logic", "Expressions"] },
+                                { Icon: PowerAppsIcon, title: "Power Apps", isImage: true, keyWords: ["Canvas", "Components", "Connectors"] },
+                                { Icon: PowerAutomateIcon, title: "Power Automate", isImage: true, keyWords: ["Flows", "Automation", "Triggers"] },
+                                { Icon: PowerBiIcon, title: "Power BI", isImage: true, keyWords: ["Dashboards", "Reports", "Data Viz"] },
+                            ]}
+                        />
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
             <Footer />
 
