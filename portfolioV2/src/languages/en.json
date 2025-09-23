@@ -10,7 +10,10 @@
     "email_placeholder": "Email",
     "subject_placeholder": "Subject",
     "message_placeholder": "Type your message here ...",
-    "submit_button": "Submit"
+    "submit_button": "Submit",
+    "sending": "Sending...",
+    "success_message": "Thank you! Your message has been sent",
+    "error_message": "Oops, an error occurred"
   },
   "projects": {
     "title_span": "Projects",

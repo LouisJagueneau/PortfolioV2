@@ -10,7 +10,10 @@
     "email_placeholder": "Email",
     "subject_placeholder": "Sujet",
     "message_placeholder": "Tapez votre message ici ...",
-    "submit_button": "Envoyer"
+    "submit_button": "Envoyer",
+    "sending": "Envoi...",
+    "success_message": "Merci ! Votre message a été envoyé",
+    "error_message": "Oups, une erreur est survenue"
   },
   "projects": {
     "title_span": "Projets",
@@ -46,5 +49,4 @@
     "web": "Web",
     "software": "Logiciel"
   }
-  
 }
