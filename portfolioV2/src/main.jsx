@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Home from './pages/home.jsx'
+import Home from './pages/Home.jsx'
 import Contact from './pages/Contacts.jsx'
 import Projects from './pages/Projects.jsx'
 import ScrollProgress from './components/ScrollProgress.jsx'
