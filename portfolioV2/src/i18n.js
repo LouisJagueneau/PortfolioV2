@@ -7,7 +7,6 @@ import fr from "./languages/fr.json";
 import en from "./languages/en.json";
 
 i18n
-  .use(LanguageDetector) // 👈 active la détection
   .use(initReactI18next) // 👈 lie à React
   .init({
     resources: {
@@ -19,7 +18,7 @@ i18n
       escapeValue: false,
     },
     detection: {
-      order: ["querystring", "localStorage", "navigator"], 
+      order: ["localStorage"], 
       // priorité : ?lng=fr > localStorage > langue du navigateur
       caches: ["localStorage"], // stocke le choix pour la prochaine visite
     },
