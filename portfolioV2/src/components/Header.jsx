@@ -1,6 +1,6 @@
 import LanguageSelector from "./LanguageSelector"
 import DarkModeToggle from "./DarkModeToggle"
-import Nav from "./nav"
+import Nav from "./Nav"
 import { Link } from "react-router-dom"
 
 function Header() {
