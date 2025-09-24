@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 function QuoteBox() {
     const { t } = useTranslation();
     return (
-        <div className="flex flex-col gap-4 p-4  bg-bg-light dark:bg-bg-light-dark rounded-md
+        <div className="flex flex-col gap-4 p-4  bg-bg-light dark:bg-bg-dark rounded-md
                         md:h-full">
             <div className="flex flex-row justify-between">
                 <span className="text-text dark:text-text-dark font-poppins font-semibold flex items-center gap-2 2xl:text-[1.05rem]">

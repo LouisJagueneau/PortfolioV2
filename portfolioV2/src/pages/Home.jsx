@@ -1,6 +1,8 @@
 //Library
 import { delay, motion } from "motion/react"
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+
 
 //Components
 import Header from "../components/Header"
@@ -45,45 +47,11 @@ import FortaProject from '../assets/FortaProject.png'
 import BigBand64Project from '../assets/BigBand64Project.png'
 import GrillProject from '../assets/GrillProject.png'
 
-const educations = [
-    {
-        id: 1,
-        title: 'Work-study Engineering Programme',
-        fromDate: '2021',
-        toDate: '2025',
-        school: 'CESI',
-        tags: ["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"],
-        borderUp: 'true',
-        borderDown: 'false',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. ...'
-    },
-    {
-        id: 2,
-        title: 'Integrated Preparatory Class',
-        fromDate: '2019',
-        toDate: '2021',
-        school: 'CESI',
-        tags: ["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"],
-        borderUp: 'true',
-        borderDown: 'false',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. ...'
-    },
-    {
-        id: 3,
-        title: 'General Baccalaureate (HighSchool Diploma)',
-        fromDate: '2016',
-        toDate: '2019',
-        school: 'CESI',
-        tags: ["Web Developement", "Software Development", "Big Data", "Network", "Operational Research", "Industrial Optimisation"],
-        borderUp: 'true',
-        borderDown: 'true',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nunc tellus. ...'
-    }
-];
-
 
 function Home() {
-    const { t } = useTranslation();
+    const { i18n, t } = useTranslation();
+
+    const cvFile = i18n.language === "fr" ? "../../public/CV-LJ-fr.pdf" : "../../public/CV-LJ-en.pdf"
 
     const titleAnimation = {
         hidden: { opacity: 0, x: -20 },
@@ -136,7 +104,7 @@ function Home() {
 
 
     return (
-        <div className="bg-bg dark:bg-bg-dark min-h-screen">
+        <div className="bg-bg dark:bg-bg-secondary-dark min-h-screen">
             <FloatingParticles />
             <Header />
             <section className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] my-[65px]
@@ -153,8 +121,8 @@ function Home() {
                                 initial='hidden'
                                 variants={titleAnimation}
                                 custom={0}
-                                whileInView='visible'
-                                viewport={{ once: true }}
+                                animate="visible"
+                                viewport={{ once: false }}
                             >
                                 <div className="relative group">
                                     <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
@@ -171,8 +139,8 @@ function Home() {
                                 initial='hidden'
                                 variants={titleAnimation}
                                 custom={0.3}
-                                whileInView='visible'
-                                viewport={{ once: true }}
+                                animate="visible"
+                                viewport={{ once: false }}
                             >
                                 <h1 className="text-primary ">Louis <br className="md:hidden" /> JAGUENEAU</h1>
                                 <h2 className="text-text dark:text-text-dark mt-[-20px]">{t("home.portfolio")}</h2>
@@ -182,8 +150,8 @@ function Home() {
                                 initial='hidden'
                                 variants={titleAnimation}
                                 custom={0.6}
-                                whileInView='visible'
-                                viewport={{ once: true }}
+                                animate="visible"
+                                viewport={{ once: false }}
                             >
                                 <p >{t("home.intro_paragraph")}</p>
                             </motion.div>
@@ -193,15 +161,17 @@ function Home() {
                             initial='hidden'
                             variants={titleAnimation}
                             custom={0.9}
-                            whileInView='visible'
-                            viewport={{ once: true }}>
-                            <motion.button
+                            animate="visible"
+                            viewport={{ once: false }}>
+                            <motion.a
+                                href={cvFile}
+                                download
                                 className="relative group bg-gradient-to-r from-primary to-primary-hover hover:from-primary-hover hover:to-primary transition-all duration-300 outline-none font-poppins cursor-pointer text-white font-bold rounded-xl py-3 px-4 flex items-center gap-3 text-[1rem] shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden"
                                 whileTap={{ scale: 0.90 }}>
                                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <span className="relative z-10">{t("home.download_cv")}</span>
                                 <MdOutlineFileDownload className="relative z-10 text-xl group-hover:rotate-12 transition-transform duration-300" />
-                            </motion.button>
+                            </motion.a>
                         </motion.div>
                     </div>
                 </div>
@@ -217,7 +187,7 @@ function Home() {
 
             </section >
 
-            <section className="relative bg-gradient-to-br from-bg-secondary via-bg-secondary to-bg-light dark:from-bg-secondary-dark dark:via-bg-secondary-dark dark:to-bg-light-dark overflow-hidden">
+            <section id="about" className="relative bg-gradient-to-br from-bg-secondary via-bg-secondary to-bg-light dark:from-bg-secondary-dark dark:via-bg-secondary-dark dark:to-bg-light-dark overflow-hidden">
                 {/* Background decorative elements */}
                 <div className="absolute inset-0">
                     <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-primary/8 to-primary/3 rounded-full blur-3xl"></div>
@@ -257,14 +227,14 @@ function Home() {
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: false }}
                                 transition={{ duration: 0.6 }}
                                 className="flex items-center justify-center xl:justify-start gap-4 ">
                                 <span className="uppercase font-rem tracking-widest text-[0.95rem] bg-gradient-to-r from-primary via-primary to-primary-hover bg-clip-text text-transparent">
                                     {t("home.about_me")}
                                 </span>
                             </motion.div>
-                            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3, duration: 0.6 }}
+                            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }} transition={{ delay: 0.3, duration: 0.6 }}
                                 className="font-rem font-bold text-[35px] bg-gradient-to-r from-text via-text to-text-muted dark:from-text-dark dark:via-text-dark dark:to-text-muted-dark bg-clip-text text-transparent leading-tight">
                                 {t("home.my_profile")}
                             </motion.h2>
@@ -275,7 +245,7 @@ function Home() {
                             <motion.div
                                 initial={{ opacity: 0, x: -50, rotateY: -15 }}
                                 whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: false }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}
                                 className="relative group perspective-1000 mb-10 lg-mb-0"
                             >
@@ -327,7 +297,7 @@ function Home() {
                                 <motion.div
                                     initial={{ opacity: 0, y: 40 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
+                                    viewport={{ once: false }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
                                     className="text-center xl:text-start flex flex-col gap-6">
 
@@ -339,7 +309,7 @@ function Home() {
                                             className="absolute -bottom-1 left-1/2 xl:left-0 transform -translate-x-1/2 xl:translate-x-0 w-20 h-0.5 bg-gradient-to-r from-primary to-primary-hover rounded-full"
                                             initial={{ width: 0 }}
                                             whileInView={{ width: 80 }}
-                                            viewport={{ once: true }}
+                                            viewport={{ once: false }}
                                             transition={{ delay: 0.8, duration: 0.6 }}
                                         ></motion.div>
                                     </div>
@@ -406,7 +376,7 @@ function Home() {
                                                 x: 0,
                                                 y: 0
                                             }}
-                                            viewport={{ once: true }}
+                                            viewport={{ once: false }}
                                             transition={{
                                                 delay: card.delay,
                                                 duration: 0.6,
@@ -427,7 +397,7 @@ function Home() {
                 </div>
             </section>
 
-            <section className="bg-bg dark:bg-bg-dark container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] my-[65px]">
+            <section id="work" className="bg-bg dark:bg-bg-secondary-dark container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] my-[65px]">
                 <div>
 
                     {/* Title Div */}
@@ -441,13 +411,13 @@ function Home() {
                         variants={SlowFadeIn}
                         custom={0}
                         whileInView='visible'
-                        viewport={{ once: true }}>
+                        viewport={{ once: false }}>
                         <CareerTimeLine />
                     </motion.div>
                 </div>
             </section>
 
-            <section className="bg-bg dark:bg-bg-dark container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] my-[65px]">
+            <section id="education" className="bg-bg dark:bg-bg-secondary-dark container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] my-[65px]">
                 {/* Title Div */}
                 <div className="text-center xl:text-start mb-10">
                     <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">{t("home.education")}</span>
@@ -460,7 +430,7 @@ function Home() {
                         variants={MediumFadeIn}
                         custom={0}
                         whileInView='visible'
-                        viewport={{ once: true }}>
+                        viewport={{ once: false }}>
                         <EducationCard
                             title={t('education.engineering.title')}
                             fromDate={t('education.engineering.fromDate')}
@@ -477,7 +447,7 @@ function Home() {
                         variants={MediumFadeIn}
                         custom={0}
                         whileInView='visible'
-                        viewport={{ once: true }}>
+                        viewport={{ once: false }}>
                         <EducationCard
                             title={t('education.preparatory.title')}
                             fromDate={t('education.preparatory.fromDate')}
@@ -494,7 +464,7 @@ function Home() {
                         variants={MediumFadeIn}
                         custom={0}
                         whileInView='visible'
-                        viewport={{ once: true }}>
+                        viewport={{ once: false }}>
                         <EducationCard
                             title={t('education.highschool.title')}
                             fromDate={t('education.highschool.fromDate')}
@@ -509,7 +479,7 @@ function Home() {
                 </div>
             </section>
 
-            <section className="bg-bg-secondary dark:bg-bg-secondary-dark">
+            <section id="projects" className="bg-bg-secondary dark:bg-bg-secondary-dark">
                 <div className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] py-[65px]">
                     {/* Title Div */}
                     <div className="text-center mb-10">
@@ -524,10 +494,10 @@ function Home() {
                             variants={FastFadeIn}
                             custom={0}
                             whileInView='visible'
-                            viewport={{ once: true }}>
+                            viewport={{ once: false }}>
                             <WorkCard
                                 tags={t("projects.bigband64.tags", { returnObjects: true })}
-                                img={BigBand64Project}
+                                image={BigBand64Project}
                                 title={t("projects.bigband64.title")}
                                 websiteLink={t("projects.bigband64.websiteLink")}
                                 description={t("projects.bigband64.description")}
@@ -538,10 +508,10 @@ function Home() {
                             variants={FastFadeIn}
                             custom={0.3}
                             whileInView='visible'
-                            viewport={{ once: true }}>
+                            viewport={{ once: false }}>
                             <WorkCard
                                 tags={t("projects.forta.tags", { returnObjects: true })}
-                                img={FortaProject}
+                                image={FortaProject}
                                 title={t("projects.forta.title")}
                                 websiteLink={t("projects.forta.websiteLink")}
                                 description={t("projects.forta.description")}
@@ -552,20 +522,23 @@ function Home() {
                             variants={FastFadeIn}
                             custom={0.6}
                             whileInView='visible'
-                            viewport={{ once: true }}>
+                            viewport={{ once: false }}>
                             <WorkCard
                                 tags={t("projects.grill.tags", { returnObjects: true })}
-                                img={GrillProject}
+                                image={GrillProject}
                                 title={t("projects.grill.title")}
                                 description={t("projects.grill.description")}
                             />
                         </motion.div>
                     </div>
                     <div className="flex justify-center">
-                        <motion.button className="font-poppins cursor-pointer text-white bg-primary px-4 py-2 rounded-md flex items-center font-medium gap-2 transition-colors outline-none duration-200 hover:bg-primary-hover"
-                            whileTap={{ scale: 0.9 }}>
-                            {t("home.more_projects")} <FaArrowRightLong />
-                        </motion.button>
+                        <Link to={'/projects'}>
+                            <motion.button className="font-poppins cursor-pointer text-white bg-primary px-4 py-2 rounded-md flex items-center font-medium gap-2 transition-colors outline-none duration-200 hover:bg-primary-hover"
+                                whileTap={{ scale: 0.9 }}>
+
+                                {t("home.more_projects")} <FaArrowRightLong />
+                            </motion.button>
+                        </Link>
                     </div>
 
                 </div>
@@ -579,7 +552,7 @@ function Home() {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                     >
                         <span className="uppercase font-medium text-blue-600 dark:text-blue-400 tracking-widest text-sm mb-2 block">
                             {t("home.technical_skills")}

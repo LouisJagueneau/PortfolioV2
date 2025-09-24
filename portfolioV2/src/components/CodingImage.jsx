@@ -1,6 +1,6 @@
 function CodingImage() {
     return (
-        <div className="bg-bg-light dark:bg-bg-light-dark rounded-md p-3 h-full w-full flex items-center justify-center">
+        <div className="bg-bg-light dark:bg-bg-dark rounded-md p-3 h-full w-full flex items-center justify-center">
             <svg width="220" height="190" viewBox="0 0 239 179" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_29_30)">
                     <path d="M139.217 31.5556C143.696 31.5556 147.328 27.8163 147.328 23.2037C147.328 18.5911 143.696 14.8518 139.217 14.8518C134.738 14.8518 131.107 18.5911 131.107 23.2037C131.107 27.8163 134.738 31.5556 139.217 31.5556Z" fill="#F2F2F2" />

@@ -6,28 +6,50 @@ import { useTranslation } from "react-i18next"
 
 function NavigationBox() {
   const { t } = useTranslation()
+
+  const handleNavigation = (scrollDestination) => {
+    try {
+      if (scrollDestination) {
+        const section = document.getElementById(scrollDestination)
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" })
+        } else {
+          console.error(`Section with id "${scrollDestination}" not found`)
+        }
+      } else {
+        throw new Error("Missing scrollDestination")
+      }
+    } catch (error) {
+      console.error("Navigation error:", error.message)
+    }
+  }
+
   const navItems = [
     {
       icon: <GoLightBulb />,
       title: t("navigation_box.my_projects"),
       subtitle: t("navigation_box.my_projects_sub"),
+      destination : 'projects'
     },
     {
       icon: <LuGraduationCap />,
       title: t("navigation_box.my_education"),
       subtitle: t("navigation_box.my_education_sub"),
+      destination : "education"
     },
     {
       icon: <PiBagSimple />,
       title: t("navigation_box.my_experiences"),
       subtitle: t("navigation_box.my_experiences_sub"),
+      destination : 'work'
     },
   ]
 
   return (
-    <div className="flex flex-col bg-bg-light dark:bg-bg-light-dark w-full rounded-md">
+    <div className="flex flex-col bg-bg-light dark:dark:bg-bg-dark w-full rounded-md">
       {navItems.map((item, index) => (
         <div
+          onClick={() => {handleNavigation(item.destination)}}
           key={index}
           className="flex items-center justify-between w-full
                      hover:bg-hover-bg-light hover:dark:bg-hover-bg-light-dark

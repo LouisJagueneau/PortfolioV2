@@ -35,7 +35,7 @@ function SidePanelPC() {
                 <motion.div
                     initial='hidden'
                     variants={cardVariants}
-                    whileInView='visible'
+                    animate="visible"
                     viewport={{ once: true }}
                     className="col-span-4">
                     <NavigationBox />
@@ -43,7 +43,7 @@ function SidePanelPC() {
                 <motion.div className="hidden 2xl:flex col-span-3"
                     initial='hidden'
                     variants={cardVariants2}
-                    whileInView='visible'
+                    animate="visible"
                     viewport={{ once: true }}>
                     <CodingImage />
                 </motion.div>
@@ -55,14 +55,14 @@ function SidePanelPC() {
                 <motion.div className="col-span-1"
                     initial='hidden'
                     variants={cardVariants3}
-                    whileInView='visible'
+                    animate="visible"
                     viewport={{ once: true }}>
                     <MediaSideBar />
                 </motion.div>
                 <motion.div className="col-span-2"
                     initial='hidden'
                     variants={cardVariants4}
-                    whileInView='visible'
+                    animate="visible"
                     viewport={{ once: true }}>
                     <QuoteBox />
                 </motion.div>

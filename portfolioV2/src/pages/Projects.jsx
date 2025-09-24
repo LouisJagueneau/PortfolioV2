@@ -4,9 +4,14 @@ import WorkCard from '../components/WorkCard';
 import Header from '../components/Header';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowRightLong } from "react-icons/fa6";
+import Footer from '../components/Footer';
 
-// Exemple d'images temporaires
+
 import tempImage from '../assets/tempImage.png';
+import FortaProject from '../assets/FortaProject.png'
+import BigBand64Project from '../assets/BigBand64Project.png'
+import GrillProject from '../assets/GrillProject.png'
+
 
 // Composant principal
 function Projects() {
@@ -22,7 +27,7 @@ function Projects() {
             tags: ['Web', 'MERN', 'MongoDB', 'Express'],
             githubLink: '#',
             websiteLink: '#',
-            image: tempImage
+            image: GrillProject
         },
         {
             title: t('projects.bigband64.title', 'Big Band 64 Website'),
@@ -30,7 +35,7 @@ function Projects() {
             tags: ['Web', 'React', 'TailwindCSS'],
             githubLink: '#',
             websiteLink: '#',
-            image: tempImage
+            image: BigBand64Project
         },
         {
             title: t('projects.forta.title', 'Forta Corporate Website'),
@@ -38,32 +43,32 @@ function Projects() {
             tags: ['Web', 'React', 'MySQL', 'PHP'],
             githubLink: '#',
             websiteLink: '#',
-            image: tempImage
-        },
-        {
-            title: t('projects.gupe.title', 'GUPE Management System'),
-            description: t('projects.gupe.description'),
-            tags: ['PowerPlatform', 'Power Apps', 'Dataverse'],
-            githubLink: '#',
-            websiteLink: '#',
-            image: tempImage
-        },
-        {
-            title: t('projects.fsl.title', 'FSL Workflow Automation'),
-            description: t('projects.fsl.description'),
-            tags: ['PowerPlatform', 'SharePoint', 'Dataverse'],
-            githubLink: '#',
-            websiteLink: '#',
-            image: tempImage
-        },
-        {
-            title: t('projects.inventory_software.title', 'Inventory Management Software'),
-            description: t('projects.inventory_software.description'),
-            tags: ['Software', 'C++', 'MySQL', 'Desktop'],
-            githubLink: '#',
-            websiteLink: '#',
-            image: tempImage
-        },
+            image: FortaProject
+        }
+        // {
+        //     title: t('projects.gupe.title', 'GUPE Management System'),
+        //     description: t('projects.gupe.description'),
+        //     tags: ['PowerPlatform', 'Power Apps', 'Dataverse'],
+        //     githubLink: '#',
+        //     websiteLink: '#',
+        //     image: tempImage
+        // },
+        // {
+        //     title: t('projects.fsl.title', 'FSL Workflow Automation'),
+        //     description: t('projects.fsl.description'),
+        //     tags: ['PowerPlatform', 'SharePoint', 'Dataverse'],
+        //     githubLink: '#',
+        //     websiteLink: '#',
+        //     image: tempImage
+        // },
+        // {
+        //     title: t('projects.inventory_software.title', 'Inventory Management Software'),
+        //     description: t('projects.inventory_software.description'),
+        //     tags: ['Software', 'C++', 'MySQL', 'Desktop'],
+        //     githubLink: '#',
+        //     websiteLink: '#',
+        //     image: tempImage
+        // },
     ];
 
     const filteredProjects = activeFilter === 'All' ? projects : projects.filter(project => project.tags.includes(activeFilter));
@@ -89,10 +94,10 @@ function Projects() {
     };
 
     return (
-        <div className="bg-bg dark:bg-bg-dark min-h-screen">
+        <div className="bg-bg dark:bg-bg-secondary-dark min-h-screen">
             <Header/>
             {/* Hero Section dans le style original */}
-            <section className="relative bg-bg-secondary dark:bg-bg-secondary-dark overflow-hidden">
+            <section className="relative bg-bg-secondary dark:bg-bg-dark overflow-hidden">
                 {/* Background decorative elements */}
                 <div className="absolute inset-0">
                     <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-primary/8 to-primary/3 rounded-full blur-3xl"></div>
@@ -205,6 +210,7 @@ function Projects() {
                 )}
                
             </div>
+            <Footer />
         </div>
     );
 }

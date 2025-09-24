@@ -20,7 +20,7 @@ function LanguageSelector() {
         <div
           className={`inline-flex items-center gap-1 cursor-pointer px-4 py-2 ${
             isOpen ? "rounded-t-md" : "rounded-md"
-          } bg-bg-light hover:bg-hover-bg-light dark:bg-bg-light-dark dark:hover:bg-hover-bg-light-dark`}
+          } bg-bg-light hover:bg-hover-bg-light dark:bg-bg-dark dark:hover:bg-hover-bg-light-dark`}
           onClick={() => setIsOpen(!isOpen)}
         >
           <span className="font-poppins font-light">
@@ -37,7 +37,7 @@ function LanguageSelector() {
         <div
           className={`absolute top-full w-full ${
             isOpen ? "block" : "hidden"
-          } transition-all duration-150 rounded-b-md bg-bg-light dark:bg-bg-light-dark`}
+          } transition-all duration-150 rounded-b-md bg-bg-light dark:dark:bg-bg-dark`}
         >
           <ul>
             {languages.map((lang) => (

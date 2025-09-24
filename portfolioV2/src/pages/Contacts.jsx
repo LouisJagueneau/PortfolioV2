@@ -5,7 +5,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot, FaArrowRightLong } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { RiArrowRightSLine } from "react-icons/ri";
-
+import Footer from "../components/Footer";
 // Toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -64,10 +64,10 @@ function Contact() {
   };
 
   return (
-    <div className="bg-bg dark:bg-bg-dark min-h-screen">
+    <div className="bg-bg dark:bg-bg-secondary-dark min-h-screen">
       <Header />
       {/* Hero Section */}
-      <section className="relative bg-bg-secondary dark:bg-bg-secondary-dark overflow-hidden">
+      <section className="relative bg-bg-secondary dark:bg-bg-dark overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-primary/8 to-primary/3 rounded-full blur-3xl"></div>
@@ -91,7 +91,7 @@ function Contact() {
       <div className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] py-[80px]">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 max-w-7xl mx-auto">
           {/* Contact Information */}
-          <motion.section className="lg:w-1/2" initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.section className="lg:w-1/2" initial="hidden" animate="visible" viewport={{ once: false }}>
             <motion.div className="mb-12" variants={slideInLeft} custom={0.1}>
               <div className="flex items-center gap-3 mb-4">
                 <RiArrowRightSLine className="text-primary text-2xl" />
@@ -108,7 +108,7 @@ function Contact() {
               {contacts.map((contact, index) => (
                 <motion.div
                   key={contact.name}
-                  className="group flex items-center gap-6 p-4 bg-bg-light dark:bg-bg-light-dark rounded-lg border border-black/10 dark:border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-md"
+                  className="group flex items-center gap-6 p-4 bg-bg-light dark:bg-bg-dark rounded-lg border border-black/10 dark:border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-md"
                   variants={slideInLeft}
                   custom={0.2 + index * 0.1}
                 >
@@ -149,9 +149,9 @@ function Contact() {
           </motion.section>
 
           {/* Contact Form */}
-          <motion.section className="lg:w-1/2" initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.section className="lg:w-1/2" initial="hidden" animate="visible" viewport={{ once: false }}>
             <motion.div
-              className="bg-bg-light dark:bg-bg-light-dark p-8 lg:p-10 rounded-lg border border-black/10 dark:border-white/10 shadow-lg"
+              className="bg-bg-light dark:bg-bg-dark p-8 lg:p-10 rounded-lg border border-black/10 dark:border-white/10 shadow-lg"
               variants={slideInRight}
               custom={0.1}
             >
@@ -214,6 +214,7 @@ function Contact() {
 
       {/* Toast Container */}
       <ToastContainer position="bottom-right" autoClose={3000} theme="colored" className="font-poppins" />
+      <Footer />
     </div>
   );
 }

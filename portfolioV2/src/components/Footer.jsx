@@ -7,12 +7,12 @@ function Footer() {
     const { t } = useTranslation();
     return (
         <div className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] mt-5">
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center text-text dark:text-text-dark">
                 <span className="flex items-center gap-1 font-poppins mb-4  font-semibold text-[1.75rem] tracking-wide">
                     Louis
                     <span className="text-primary">.</span>
                 </span>
-                <div className="font-poppins mb-6 flex flex-col items-center sm:flex-row gap-6 text-[1.1rem] text-text dark:text-text ">
+                <div className="font-poppins mb-6 flex flex-col items-center sm:flex-row gap-6 text-[1.1rem] text-text dark:text-text-dark ">
                     <Link to='/' className="hover:text-primary">{t('footer.home')}</Link>
                     <Link to='/projects' className="hover:text-primary">{t('footer.projects')}</Link>
                     <Link to='/contact' className="hover:text-primary">{t('footer.contact')}</Link>

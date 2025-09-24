@@ -67,15 +67,15 @@ function CareerTimeLine() {
                 <button
                   className={`w-full text-left p-4 pl-6 rounded-r-lg transition-all duration-300 border-l-4 ${
                     isActive
-                      ? "bg-blue-50 border-l-blue-500 shadow-md"
-                      : "bg-white border-l-gray-200 hover:bg-gray-50 hover:border-l-gray-300"
+                      ? "bg-blue-50 dark:bg-bg-dark border-l-blue-500 shadow-md"
+                      : "bg-white dark:bg-bg-dark dark:hover:bg-hover-bg-light-dark border-l-gray-200 hover:bg-gray-50 hover:border-l-gray-300"
                   }`}
                   onClick={() => setIsSelected(experiences[index])}
                 >
                   <div className="flex flex-col">
                     <span
                       className={`font-semibold text-lg transition-colors duration-300 ${
-                        isActive ? "text-blue-600" : "text-gray-800"
+                        isActive ? "text-primary" : "text-gray-  800 dark:text-text-dark"
                       }`}
                     >
                       {exp.company}
@@ -89,7 +89,7 @@ function CareerTimeLine() {
                     </span>
                     <span
                       className={`text-xs mt-1 transition-colors duration-300 ${
-                        isActive ? "text-gray-700" : "text-gray-400"
+                        isActive ? "text-gray-700 dark:text-gray-300" : "text-gray-400 dark:text-gray-500"
                       }`}
                     >
                       {exp.role}
@@ -128,13 +128,13 @@ function CareerTimeLine() {
             <div className="grid md:grid-cols-2 gap-8">
               {/* Responsibilities Card */}
               <motion.div
-                className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden h-full py-4 px-6"
+                className="bg-bg dark:bg-bg-dark rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden h-full py-4 px-6"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
               >
                 <div className="mb-4">
-                  <div className="flex items-center gap-2 text-text dark:text-text">
+                  <div className="flex items-center gap-2 text-text dark:text-text-dark">
                     <RiArrowRightSLine className="text-2xl text-primary" />
                     <h4 className="text-xl font-semibold">
                       {t("career_timeline.responsibilities")}
@@ -142,7 +142,7 @@ function CareerTimeLine() {
                   </div>
                 </div>
                 <div className="p-2">
-                  <p className="text-gray-700 text-sm text-justify leading-relaxed whitespace-pre-line">
+                  <p className="text-text-muted dark:text-text-muted-dark text-sm text-justify leading-relaxed whitespace-pre-line">
                     {isSelected.responsabilities}
                   </p>
                 </div>
@@ -150,7 +150,7 @@ function CareerTimeLine() {
 
               {/* Tools & Skills Card */}
               <motion.div
-                className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden h-full py-4 px-6"
+                className="bg-bg dark:bg-bg-dark rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden h-full py-4 px-6"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 }}

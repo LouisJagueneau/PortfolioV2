@@ -15,8 +15,8 @@ function WorkCard({ tags = [], githubLink, websiteLink, description, title, imag
             {/* Image Container */}
             <div className="relative w-full mb-5 overflow-hidden">
                 <img 
-                    className="rounded-t-md w-full h-35 xl:h-40 object-cover transition-transform duration-300 group-hover:scale-105" 
-                    src={image || tempImage} 
+                    className="rounded-t-md w-full h-35 xl:h-50 object-cover transition-transform duration-300 group-hover:scale-105" 
+                    src={image} 
                     alt={title}
                 />
                 
