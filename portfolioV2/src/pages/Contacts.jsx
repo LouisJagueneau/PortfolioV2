@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot, FaArrowRightLong } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { RiArrowRightSLine } from "react-icons/ri";
@@ -17,7 +16,6 @@ function Contact() {
   const [loading, setLoading] = useState(false);
 
   const contacts = [
-    { icon: <FaPhoneAlt />, name: t("contact.phone_name"), value: "+33 6 01 01 17 23" },
     { icon: <FaLocationDot />, name: t("contact.address_name"), value: "Nouvelle Aquitaine, France" },
     { icon: <IoIosMail />, name: t("contact.email_name"), value: "louis.jagueneau@viacesi.fr" },
   ];
