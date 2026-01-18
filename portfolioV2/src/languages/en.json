@@ -35,40 +35,48 @@
     "contact": "Contact",
     "rights": "All rights reserved"
   },
-  "projects": {
-    "title_span": "Portfolio",
-    "title_h2": "My Projects",
+  "projects_work": {
+    "view_site": "View Site",
+    "no_projects": "No projects found",
+    "try_filter": "Try selecting a different filter to see more projects.",
+    
+    "pfl": {
+      "title": "PFL - Training Tracking",
+      "description": "Training tracking application developed with Power Apps and Dataverse. Enables monitoring of training completed within a department with Power BI dashboards for analysis and performance indicators tracking.",
+      "tags": ["PowerPlatform", "Power Apps", "Dataverse", "Power BI"],
+      "githubLink": "",
+      "websiteLink": ""
+    },
+    "bcl": {
+      "title": "BCL - Inventory Management",
+      "description": "Complete inventory management tool developed with Power Apps and Dataverse. Automation of inventory and restocking processes through Power Automate to optimize resource management.",
+      "tags": ["PowerPlatform", "Power Apps", "Dataverse", "Power Automate"],
+      "githubLink": "",
+      "websiteLink": ""
+    },
+    "gesp": {
+      "title": "GESP - Asset Management",
+      "description": "IT asset management solution based on Power Apps and Dataverse. Equipment tracking, preventive maintenance, and workflow automation with Power Automate for efficient hardware fleet management.",
+      "tags": ["PowerPlatform", "Power Apps", "Dataverse", "Power Automate"],
+      "githubLink": "",
+      "websiteLink": ""
+    },
     "grill": {
-      "title": "GRILL",
-      "description": "A comprehensive restaurant management system built with the MERN stack, featuring inventory management, order processing, and customer management capabilities for modern restaurants."
+      "githubLink": "",
+      "websiteLink": ""
     },
     "bigband64": {
-      "title": "Big Band 64 Website",
-      "description": "Modern and responsive website for a jazz band, featuring event listings, music samples, and booking functionality with an elegant design that captures the essence of jazz."
+      "githubLink": "",
+      "websiteLink": ""
     },
     "forta": {
-      "title": "Forta Corporate Website",
-      "description": "Professional corporate website for an industrial company, featuring multilingual support, contact management, and comprehensive product showcase with modern design principles."
-    },
-    "gupe": {
-      "title": "GUPE",
-      "description": "Power Platform solution for streamlining business processes and data management within the organization, improving workflow efficiency and data accessibility."
-    },
-    "fsl": {
-      "title": "FSL",
-      "description": "Automated workflow system built on Power Platform to optimize field service operations and reporting, reducing manual tasks and improving operational efficiency."
-    },
-    "inventory_software": {
-      "title": "Inventory Management Software",
-      "description": "Desktop application for inventory management with real-time tracking and reporting capabilities, designed for small to medium businesses with comprehensive stock management needs."
-    },
-    "no_projects_found": "No projects found",
-    "try_another_filter": "Try selecting a different filter to see more projects.",
-    "more_projects": "More Projects"
+      "githubLink": "",
+      "websiteLink": ""
+    }
   },
   "filters": {
     "all": "All",
-    "powerplatform": "PowerPlatform",
+    "powerplatform": "Power Platform",
     "web": "Web",
     "software": "Software"
   },
@@ -80,13 +88,13 @@
     "about_me": "About me",
     "my_profile": "My Profile",
     "student_in_cs": "Student in Computer Science",
-    "about_paragraph": "I am a 22-year-old French student currently enrolled in an engineering school. I am passionate about technology, enjoy learning new skills, and aim to build practical and efficient web solutions.",
+    "about_paragraph": "As an engineering student, I am focusing on the Power Platform to design business applications, automate processes and exploit data. I enjoy transforming concrete needs into simple, reliable and maintainable solutions that serve users.",
     "objectives_title": "Objectives",
-    "objectives_desc": "To grow as a versatile developer, mastering both front-end and back-end technologies, and contribute to meaningful projects.",
-    "philosophy_title": "Philosophy",
-    "philosophy_desc": "I value thoughtful design, disciplined work habits, and continuous improvement in both code quality and problem-solving skills.",
-    "team_spirit_title": "Team Spirit",
-    "team_spirit_desc": "I enjoy collaborating with peers, exchanging ideas, and supporting team success.",
+    "objectives_desc": "Join a team as a Power Platform developer to design low-code solutions tailored to business challenges and move on to high-impact projects.",
+    "philosophy_title": "Approach & methodology",
+    "philosophy_desc": "Understanding the need, modelling the data, automating processes and delivering a clear, documented and scalable solution.",
+    "team_spirit_title": "Key skills (Power Platform)",
+    "team_spirit_desc": "Power Apps (Canvas & Model-driven), Power Automate, Dataverse, integration with Microsoft 365, and low-code governance concepts.",
     "hobbies_title": "Hobbies",
     "hobbies_desc": "Outside of technology, I enjoy padel and trail running, which help me maintain focus and discipline.",
     "experiences": "Experiences",
@@ -104,7 +112,7 @@
   },
   "quote": {
     "author": "Leonardo da Vinci",
-    "text": "I have been impressed with the urgency of doing. Knowing is not enough; we must apply. Being willing is not enough; we must do."
+    "text": "What we do matters as much as how we do it."
   },
   "navigation_box": {
     "my_projects": "My Projects",
@@ -254,6 +262,40 @@
         "Node.js",
         "MongoDB"
       ]
+    }
+  },
+  "home_cert": {
+    "certifications": "Certifications",
+    "my_certifications": "My Certifications"
+  },
+  "certifications": {
+    "cybersecurity_methods": {
+      "title": "Cybersecurity Methods Overview",
+      "date": "April 08, 2025"
+    },
+    "cybersecurity_career": {
+      "title": "Prepare Your Cybersecurity Career by Microsoft and LinkedIn",
+      "date": "April 08, 2025"
+    },
+    "cybersecurity_terminology": {
+      "title": "Cybersecurity Awareness: Cybersecurity Terminology",
+      "date": "April 07, 2025"
+    },
+    "front_end_dev": {
+      "title": "Introduction to Front-End Development",
+      "date": "April 01, 2025"
+    },
+    "javascript": {
+      "title": "Programming with JavaScript",
+      "date": "April 07, 2025"
+    },
+    "version_control": {
+      "title": "Version Control",
+      "date": "April 03, 2024"
+    },
+    "html_css": {
+      "title": "HTML, Introduction to Networks",
+      "date": "March 07, 2025"
     }
   }
 }

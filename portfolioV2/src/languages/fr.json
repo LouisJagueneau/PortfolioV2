@@ -35,40 +35,50 @@
     "contact": "Contact",
     "rights": "Tous droits réservés"
   },
-  "projects": {
+  "projects_work": {
     "title_span": "Portfolio",
     "title_h2": "Mes Projets",
+    "view_site": "Voir le site",
+    "no_projects": "Aucun projet trouvé",
+    "try_filter": "Essayez de sélectionner un autre filtre pour voir plus de projets.",
+    
+    "pfl": {
+      "title": "PFL - Suivi des Formations",
+      "description": "Application de suivi des formations développée avec Power Apps et Dataverse. Permet de suivre les formations réalisées au sein d'un département avec des tableaux de bord Power BI pour l'analyse et le suivi des indicateurs de performance.",
+      "tags": ["PowerPlatform", "Power Apps", "Dataverse", "Power BI"],
+      "githubLink": "",
+      "websiteLink": ""
+    },
+    "bcl": {
+      "title": "BCL - Gestion de Stock",
+      "description": "Outil complet de gestion de stock développé avec Power Apps et Dataverse. Automatisation des processus d'inventaire et de réapprovisionnement grâce à Power Automate pour optimiser la gestion des ressources.",
+      "tags": ["PowerPlatform", "Power Apps", "Dataverse", "Power Automate"],
+      "githubLink": "",
+      "websiteLink": ""
+    },
+    "gesp": {
+      "title": "GESP - Gestion de Parc",
+      "description": "Solution de gestion de parc informatique basée sur Power Apps et Dataverse. Suivi des équipements, maintenance préventive et automatisation des workflows avec Power Automate pour une gestion efficace du parc matériel.",
+      "tags": ["PowerPlatform", "Power Apps", "Dataverse", "Power Automate"],
+      "githubLink": "",
+      "websiteLink": ""
+    },
     "grill": {
-      "title": "GRILL",
-      "description": "Projet scolaire consistant à créer un système de restauration inspiré d’Uber Eats, avec des applications web dédiées pour les restaurants, les clients et les livreurs, reproduisant un véritable écosystème numérique."
+      "githubLink": "",
+      "websiteLink": ""
     },
     "bigband64": {
-      "title": "Site BigBand64",
-      "description": "Site moderne et responsive pour l’association BigBand64, un groupe de musique basé à Pau. L’objectif était de concevoir une vitrine professionnelle reflétant l’identité de l’association et accompagnant sa montée en popularité."
+      "githubLink": "",
+      "websiteLink": ""
     },
     "forta": {
-      "title": "Site Forta",
-      "description": "Site web professionnel réalisé dans le cadre d’un stage à l’étranger. Forta est une entreprise spécialisée dans la production de pièces plastiques et métalliques. Le site met en valeur ses services avec un design moderne."
-    },
-    "gupe": {
-      "title": "GUPE",
-      "description": "Solution Power Platform destinée à optimiser les processus métiers et la gestion des données, améliorant l’efficacité des flux de travail et l’accessibilité de l’information."
-    },
-    "fsl": {
-      "title": "FSL",
-      "description": "Système automatisé sur Power Platform visant à optimiser les opérations de service terrain et le reporting, réduisant les tâches manuelles et améliorant l’efficacité globale."
-    },
-    "inventory_software": {
-      "title": "Logiciel de gestion d’inventaire",
-      "description": "Application de bureau permettant une gestion en temps réel des stocks avec suivi et rapports détaillés, conçue pour les petites et moyennes entreprises."
-    },
-    "no_projects_found": "Aucun projet trouvé",
-    "try_another_filter": "Essayez un autre filtre pour découvrir plus de projets.",
-    "more_projects": "Plus de projets"
+      "githubLink": "",
+      "websiteLink": ""
+    }
   },
   "filters": {
     "all": "Tous",
-    "powerplatform": "PowerPlatform",
+    "powerplatform": "Power Platform",
     "web": "Web",
     "software": "Logiciel"
   },
@@ -80,13 +90,13 @@
     "about_me": "À propos",
     "my_profile": "Mon profil",
     "student_in_cs": "Étudiant en informatique",
-    "about_paragraph": "Je suis un étudiant français de 22 ans, actuellement en école d’ingénieur. Passionné par les technologies, j’aime apprendre de nouvelles compétences et concevoir des solutions web pratiques et efficaces.",
+    "about_paragraph": "Étudiant en école d’ingénieur, je m’oriente vers la Power Platform pour concevoir des applications métiers, automatiser des processus et exploiter la donnée. J’aime transformer des besoins concrets en solutions simples, fiables et maintenables, au service des utilisateurs.",
     "objectives_title": "Objectifs",
-    "objectives_desc": "Évoluer en tant que développeur polyvalent, maîtriser le front-end comme le back-end, et contribuer à des projets porteurs de sens.",
-    "philosophy_title": "Philosophie",
-    "philosophy_desc": "Je privilégie un design réfléchi, une rigueur de travail, et une amélioration continue de la qualité du code et de mes capacités de résolution de problèmes.",
-    "team_spirit_title": "Esprit d’équipe",
-    "team_spirit_desc": "J’aime collaborer, échanger des idées et contribuer à la réussite collective.",
+    "objectives_desc": "Intégrer une équipe en tant que développeur Power Platform, afin de concevoir des solutions low-code adaptées aux enjeux métiers et évoluer vers des projets à fort impact.",
+    "philosophy_title": "Approche & méthodologie",
+    "philosophy_desc": "Comprendre le besoin, modéliser la donnée, automatiser les processus et livrer une solution claire, documentée et évolutive.",
+    "team_spirit_title": "Compétences clés (Power Platform)",
+    "team_spirit_desc": "Power Apps (Canvas & Model-driven), Power Automate, Dataverse, intégration avec Microsoft 365 et notions de gouvernance low-code.",
     "hobbies_title": "Loisirs",
     "hobbies_desc": "En dehors de l’informatique, je pratique le padel et le trail, des disciplines qui m’aident à garder concentration et discipline.",
     "experiences": "Expériences",
@@ -104,7 +114,7 @@
   },
   "quote": {
     "author": "Léonard de Vinci",
-    "text": "J’ai été impressionné par l’urgence d’agir. Savoir ne suffit pas, il faut appliquer. Vouloir ne suffit pas, il faut faire."
+    "text": "Ce que l’on fait compte autant que la manière de le faire."
   },
   "navigation_box": {
     "my_projects": "Mes projets",
@@ -222,5 +232,40 @@
         "Résolution de problèmes"
       ]
     }
+  },
+  "home_cert": {
+    "certifications": "Certifications",
+    "my_certifications": "Mes Certifications"
+  },
+  "certifications": {
+    "cybersecurity_methods": {
+      "title": "Aperçu des méthodes de cybersécurité",
+      "date": "08 avril 2025"
+    },
+    "cybersecurity_career": {
+      "title": "Préparer votre carrière dans la cybersécurité par Microsoft et LinkedIn",
+      "date": "08 avril 2025"
+    },
+    "cybersecurity_terminology": {
+      "title": "Sensibilisation à la cybersécurité : La terminologie de la cybersécurité",
+      "date": "07 avril 2025"
+    },
+    "front_end_dev": {
+      "title": "Introduction to Front-End Development",
+      "date": "01 avril 2025"
+    },
+    "javascript": {
+      "title": "Programming with JavaScript",
+      "date": "07 avril 2025"
+    },
+    "version_control": {
+      "title": "Version Control",
+      "date": "03 avril 2024"
+    },
+    "html_css": {
+      "title": "HTML, Introduction to Networks",
+      "date": "07 mars 2025"
+    }
   }
+  
 }

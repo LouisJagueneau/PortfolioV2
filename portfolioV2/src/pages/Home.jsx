@@ -609,6 +609,101 @@ function Home() {
                     </div>
                 </div>
             </section>
+             <section id="certifications" className="bg-bg dark:bg-bg-secondary-dark">
+                <div className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] py-[65px]">
+                    {/* Title Div */}
+                    {/* Title Div */}
+                    <div className="text-center mb-10">
+                        <span className="uppercase font-rem text-primary tracking-widest text-[0.85rem] ">{t("home_cert.certifications")}</span>
+                        <h2 className="font-rem font-bold text-[35px] text-text dark:text-text-dark">{t("home_cert.my_certifications")}</h2>
+                    </div>
+                  
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {[
+                            {
+                                title: t("certifications.cybersecurity_methods.title"),
+                                organization: "LinkedIn",
+                                date: t("certifications.cybersecurity_methods.date"),
+                                delay: 0
+                            },
+                            {
+                                title: t("certifications.cybersecurity_career.title"),
+                                organization: "Microsoft & LinkedIn",
+                                date: t("certifications.cybersecurity_career.date"),
+                                delay: 0.1
+                            },
+                            {
+                                title: t("certifications.cybersecurity_terminology.title"),
+                                organization: "LinkedIn",
+                                date: t("certifications.cybersecurity_terminology.date"),
+                                delay: 0.2
+                            },
+                            {
+                                title: t("certifications.front_end_dev.title"),
+                                organization: "Meta",
+                                date: t("certifications.front_end_dev.date"),
+                                delay: 0.3
+                            },
+                            {
+                                title: t("certifications.javascript.title"),
+                                organization: "Meta",
+                                date: t("certifications.javascript.date"),
+                                delay: 0.4
+                            },
+                            {
+                                title: t("certifications.version_control.title"),
+                                organization: "Meta",
+                                date: t("certifications.version_control.date"),
+                                delay: 0.5
+                            },
+                            {
+                                title: t("certifications.html_css.title"),
+                                organization: "Meta",
+                                date: t("certifications.html_css.date"),
+                                delay: 0.6
+                            }
+                        ].map((cert, index) => (
+                            <motion.div
+                                key={index}
+                                initial='hidden'
+                                variants={FastFadeIn}
+                                custom={cert.delay}
+                                whileInView='visible'
+                                viewport={{ once: false }}
+                                className="group relative"
+                            >
+                                <div className="relative p-6 bg-gradient-to-br from-white/10 to-white/5 dark:from-white/8 dark:to-white/3 backdrop-blur-xl rounded-xl border border-white/20 dark:border-white/10 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    {/* Decorative corner */}
+                                    <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-3xl rounded-tr-xl"></div>
+                                    
+                                    {/* Icon */}
+                                    <div className="mb-4 flex items-center gap-3">
+                                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-primary-hover flex items-center justify-center shadow-lg">
+                                            <HiSparkles className="text-white text-xl" />
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-xs text-text-muted dark:text-text-muted-dark font-poppins">
+                                                {cert.organization}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Content */}
+                                    <h3 className="font-rem font-semibold text-lg text-text dark:text-text-dark mb-2 line-clamp-2">
+                                        {cert.title}
+                                    </h3>
+                                    
+                                    <div className="flex items-center gap-2 text-sm text-text-muted dark:text-text-muted-dark font-poppins">
+                                        <span>{cert.date}</span>
+                                    </div>
+
+                                    
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             <Footer />
 

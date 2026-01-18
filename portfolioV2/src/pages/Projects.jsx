@@ -3,72 +3,70 @@ import { useTranslation } from 'react-i18next';
 import WorkCard from '../components/WorkCard';
 import Header from '../components/Header';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaArrowRightLong } from "react-icons/fa6";
 import Footer from '../components/Footer';
-
 
 import tempImage from '../assets/tempImage.png';
 import FortaProject from '../assets/FortaProject.png'
 import BigBand64Project from '../assets/BigBand64Project.png'
 import GrillProject from '../assets/GrillProject.png'
 
-
-// Composant principal
 function Projects() {
     const { t } = useTranslation();
     const [activeFilter, setActiveFilter] = useState('All');
 
-    const filters = ['All', 'PowerPlatform', 'Web', 'Software'];
+    const filters = ['All', 'PowerPlatform', 'Web'];
 
     const projects = [
+        // Projets Web existants
         {
-            title: t('projects.grill.title', 'Restaurant Management System'),
-            description: t('projects.grill.description'),
+            title: t('projects_work.grill.title'),
+            description: t('projects_work.grill.description'),
             tags: ['Web', 'MERN', 'MongoDB', 'Express'],
-            githubLink: '#',
-            websiteLink: '#',
+            githubLink: t('projects_work.grill.githubLink'),
+            websiteLink: t('projects_work.grill.websiteLink'),
             image: GrillProject
         },
         {
-            title: t('projects.bigband64.title', 'Big Band 64 Website'),
-            description: t('projects.bigband64.description'),
-            tags: ['Web', 'React', 'TailwindCSS'],
-            githubLink: '#',
-            websiteLink: '#',
+            title: t('projects_work.bigband64.title'),
+            description: t('projects_work.bigband64.description'),
+            tags: t('projects_work.bigband64.tags', { returnObjects: true }),
+            githubLink: t('projects_work.bigband64.githubLink'),
+            websiteLink: t('projects_work.bigband64.websiteLink'),
             image: BigBand64Project
         },
         {
-            title: t('projects.forta.title', 'Forta Corporate Website'),
-            description: t('projects.forta.description'),
-            tags: ['Web', 'React', 'MySQL', 'PHP'],
-            githubLink: '#',
-            websiteLink: '#',
+            title: t('projects_work.forta.title'),
+            description: t('projects_work.forta.description'),
+            tags: t('projects_work.forta.tags', { returnObjects: true }),
+            githubLink: t('projects_work.forta.githubLink'),
+            websiteLink: t('projects_work.forta.websiteLink'),
             image: FortaProject
+        },
+        // Nouveaux projets PowerPlatform
+        {
+            title: t('projects_work.pfl.title'),
+            description: t('projects_work.pfl.description'),
+            tags: t('projects_work.pfl.tags', { returnObjects: true }),
+            githubLink: t('projects_work.pfl.githubLink'),
+            websiteLink: t('projects_work.pfl.websiteLink'),
+            image: tempImage
+        },
+        {
+            title: t('projects_work.bcl.title'),
+            description: t('projects_work.bcl.description'),
+            tags: t('projects_work.bcl.tags', { returnObjects: true }),
+            githubLink: t('projects_work.bcl.githubLink'),
+            websiteLink: t('projects_work.bcl.websiteLink'),
+            image: tempImage
+        },
+        {
+            title: t('projects_work.gesp.title'),
+            description: t('projects_work.gesp.description'),
+            tags: t('projects_work.gesp.tags', { returnObjects: true }),
+            githubLink: t('projects_work.gesp.githubLink'),
+            websiteLink: t('projects_work.gesp.websiteLink'),
+            image: tempImage
         }
-        // {
-        //     title: t('projects.gupe.title', 'GUPE Management System'),
-        //     description: t('projects.gupe.description'),
-        //     tags: ['PowerPlatform', 'Power Apps', 'Dataverse'],
-        //     githubLink: '#',
-        //     websiteLink: '#',
-        //     image: tempImage
-        // },
-        // {
-        //     title: t('projects.fsl.title', 'FSL Workflow Automation'),
-        //     description: t('projects.fsl.description'),
-        //     tags: ['PowerPlatform', 'SharePoint', 'Dataverse'],
-        //     githubLink: '#',
-        //     websiteLink: '#',
-        //     image: tempImage
-        // },
-        // {
-        //     title: t('projects.inventory_software.title', 'Inventory Management Software'),
-        //     description: t('projects.inventory_software.description'),
-        //     tags: ['Software', 'C++', 'MySQL', 'Desktop'],
-        //     githubLink: '#',
-        //     websiteLink: '#',
-        //     image: tempImage
-        // },
     ];
 
     const filteredProjects = activeFilter === 'All' ? projects : projects.filter(project => project.tags.includes(activeFilter));
@@ -96,7 +94,7 @@ function Projects() {
     return (
         <div className="bg-bg dark:bg-bg-secondary-dark min-h-screen">
             <Header/>
-            {/* Hero Section dans le style original */}
+            {/* Hero Section */}
             <section className="relative bg-bg-secondary dark:bg-bg-dark overflow-hidden">
                 {/* Background decorative elements */}
                 <div className="absolute inset-0">
@@ -149,7 +147,7 @@ function Projects() {
             {/* Main Content */}
             <div className="container mx-auto px-[20px] md:px-[40px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] py-[65px]">
                 
-                {/* Filters dans le style original */}
+                {/* Filters */}
                 <motion.div 
                     className="flex flex-wrap gap-4 justify-center mb-12"
                     initial={{ opacity: 0, y: 20 }}
@@ -201,10 +199,10 @@ function Projects() {
                     >
                         <div className="text-6xl mb-4">🔍</div>
                         <h3 className="font-rem text-xl font-semibold text-text dark:text-text-dark mb-2">
-                            No projects found
+                            {t('projects.no_projects', 'No projects found')}
                         </h3>
                         <p className="font-poppins text-text-muted dark:text-text-muted-dark">
-                            Try selecting a different filter to see more projects.
+                            {t('projects.try_filter', 'Try selecting a different filter to see more projects.')}
                         </p>
                     </motion.div>
                 )}

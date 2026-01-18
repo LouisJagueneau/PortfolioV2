@@ -1,11 +1,13 @@
-import tempImage from '../assets/tempImage.png'
 import { RiArrowRightSLine } from "react-icons/ri";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { FiGithub } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 function WorkCard({ tags = [], githubLink, websiteLink, description, title, image }) {
+    // S'assurer que tags est toujours un tableau
+    const tagArray = Array.isArray(tags) ? tags : [];
+    
     return (
         <motion.div 
             className="group max-w-[350px] mx-auto bg-bg dark:bg-bg-dark border border-black/10 dark:border-white/10 rounded-md shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
@@ -33,52 +35,56 @@ function WorkCard({ tags = [], githubLink, websiteLink, description, title, imag
                 </div>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-3 mb-6">
-                    {tags.map((tag, index) => (
-                        <motion.span
-                            key={index}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.3, delay: index * 0.05 }}
-                            className="font-poppins text-[0.80rem] text-primary px-2 py-[1px] border-1 border-primary rounded-md hover:bg-primary hover:text-white transition-colors duration-200"
-                        >
-                            {tag}
-                        </motion.span>
-                    ))}
-                </div>
+                {tagArray.length > 0 && (
+                    <div className="flex flex-wrap gap-3 mb-6">
+                        {tagArray.map((tag, index) => (
+                            <motion.span
+                                key={index}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.3, delay: index * 0.05 }}
+                                className="font-poppins text-[0.80rem] text-primary px-2 py-[1px] border-1 border-primary rounded-md hover:bg-primary hover:text-white transition-colors duration-200"
+                            >
+                                {tag}
+                            </motion.span>
+                        ))}
+                    </div>
+                )}
 
                 {/* Description */}
                 <p className="mb-8 text-text-muted dark:text-text-muted-dark text-justify text-[0.80rem] font-poppins leading-6">
                     {description}
                 </p>
 
-                {/* Action buttons */}
-                <div className="flex gap-3">
-                    {githubLink && (
-                        <a
-                            href={githubLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="rounded-full border-2 border-text-muted dark:border-text-muted-dark text-text-muted dark:text-text-muted-dark inline-flex p-2 cursor-pointer hover:bg-text-muted hover:text-white dark:hover:bg-text-muted-dark dark:hover:text-black transition-all duration-300 hover:scale-110"
-                        >
-                            <FiGithub />
-                        </a>
-                    )}
+                {/* Action buttons - Only show if at least one link exists */}
+                {(githubLink || websiteLink) && (
+                    <div className="flex gap-3">
+                        {githubLink && (
+                            <a
+                                href={githubLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="rounded-full border-2 border-text-muted dark:border-text-muted-dark text-text-muted dark:text-text-muted-dark inline-flex p-2 cursor-pointer hover:bg-text-muted hover:text-white dark:hover:bg-text-muted-dark dark:hover:text-black transition-all duration-300 hover:scale-110"
+                            >
+                                <FiGithub />
+                            </a>
+                        )}
 
-                    {websiteLink && (
-                        <a
-                            href={websiteLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="rounded-full border-2 border-text-muted dark:border-text-muted-dark text-text-muted dark:text-text-muted-dark inline-flex p-2 cursor-pointer hover:bg-text-muted hover:text-white dark:hover:bg-text-muted-dark dark:hover:text-black transition-all duration-300 hover:scale-110"
-                        >
-                            <GoArrowRight />
-                        </a>
-                    )}
-                </div>
+                        {websiteLink && (
+                            <a
+                                href={websiteLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="rounded-full border-2 border-text-muted dark:border-text-muted-dark text-text-muted dark:text-text-muted-dark inline-flex p-2 cursor-pointer hover:bg-text-muted hover:text-white dark:hover:bg-text-muted-dark dark:hover:text-black transition-all duration-300 hover:scale-110"
+                            >
+                                <GoArrowRight />
+                            </a>
+                        )}
+                    </div>
+                )}
             </div>
         </motion.div>
     );
 }
 
-export default WorkCard
+export default WorkCard;
