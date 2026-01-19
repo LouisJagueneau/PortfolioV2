@@ -51,7 +51,7 @@ import GrillProject from '../assets/GrillProject.png'
 function Home() {
     const { i18n, t } = useTranslation();
 
-    const cvFile = i18n.language === "fr" ? "../../public/CV-LJ-fr.pdf" : "../../public/CV-LJ-en.pdf"
+    const cvFile = i18n.language === "fr" ? "/CV-LJ-fr.pdf" : "/CV-LJ-en.pdf"
 
     const titleAnimation = {
         hidden: { opacity: 0, x: -20 },
